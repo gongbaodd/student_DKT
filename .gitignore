@@ -216,5 +216,10 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Node
+node_modules/
+math/dist/
+math/public/ort/
+
 # Streamlit
 .streamlit/secrets.toml

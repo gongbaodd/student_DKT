@@ -1,0 +1,11 @@
+{
+  "numSkills": 3,
+  "inputDim": 6,
+  "hiddenDim": 50,
+  "skills": [
+    "Addition",
+    "Subtraction",
+    "Multiplication"
+  ],
+  "opset": 17
+}
