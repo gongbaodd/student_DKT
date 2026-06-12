@@ -31,8 +31,6 @@ npm install
 npm run dev
 ```
 
-`npm install` copies ONNX Runtime WASM files into `public/ort/` so the browser can load them during development.
-
 Open the URL shown in the terminal (typically `http://localhost:5173`).
 
 ## Build for production
