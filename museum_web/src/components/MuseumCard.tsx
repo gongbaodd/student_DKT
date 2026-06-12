@@ -108,14 +108,12 @@ export function MuseumCard({
       />
 
       <Stack gap="xs" p="md">
-        <Group justify="space-between" align="flex-start" wrap="nowrap">
-          <Title order={3} lineClamp={2} style={{ flex: 1 }}>
-            {museum.name}
-          </Title>
-          <Badge color="teal" variant="light" style={{ flexShrink: 0 }}>
-            {museum.clusterName}
-          </Badge>
-        </Group>
+        <Title order={3} lineClamp={2}>
+          {museum.name}
+        </Title>
+        <Badge color="teal" variant="light" w="fit-content">
+          {museum.clusterName}
+        </Badge>
 
         <Group gap={6}>
           <IconMapPin size={16} stroke={1.5} />
