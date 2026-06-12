@@ -1,0 +1,122 @@
+museum_id,cluster,name,city,cluster_name
+27315,0,Pernova Nature House,Pärnu,Pärnu art and nature
+31335,0,The Art Gallery of the Narva Museum,Narva,Pärnu art and nature
+8853,0,The Red Tower,Pärnu,Pärnu art and nature
+9217,0,Museum of New Art in Pärnu,Pärnu,Pärnu art and nature
+9223,0,The Koidula Museum,Pärnu,Pärnu art and nature
+15570,1,Palmse Manor,Palmse,Coastal and regional museums
+19491,1,MOMU Motorsports Museum(temporarily closed),Turba,Coastal and regional museums
+19495,1,The Wittenstein Time Center,Paide,Coastal and regional museums
+19499,1,The Wittenstein Activity Center,Paide,Coastal and regional museums
+30897,1,Pokuland,Urvaste,Coastal and regional museums
+34174,1,Padise Monastery Visitor Centre,Padise,Coastal and regional museums
+8930,1,Amandus Adamson Studio Museum,Paldiski,Coastal and regional museums
+9120,1,Palamuse O. Luts’s Parish School Museum,Palamuse,Coastal and regional museums
+9231,1,The Rudolf Tobias House Museum,Selja,Coastal and regional museums
+9244,1,Obinitsa  Museum,Obinitsa,Coastal and regional museums
+12735,2,The Under and Tuglas Literature Centre of the Estonian Academy of Sciences,Tallinn,Tallinn cultural institutions
+12771,2,The Kai Art Center,Tallinn,Tallinn cultural institutions
+12921,2,The PROTO Invention Factory,Tallinn,Tallinn cultural institutions
+14252,2,The Tallinn Art Hall Lasnamäe Pavilion,Tallinn,Tallinn cultural institutions
+14285,2,Peter the Great’s House,Tallinn,Tallinn cultural institutions
+14456,2,Maarjamäe Palace,Tallinn,Tallinn cultural institutions
+14475,2,Film Museum,Tallinn,Tallinn cultural institutions
+14524,2,Estonian Theatre and Music Museum,Tallinn,Tallinn cultural institutions
+14536,2,The Great Guild Hall,Tallinn,Tallinn cultural institutions
+19487,2,Eduard Vilde Museum,Tallinn,Tallinn cultural institutions
+19625,2,Adamson-Eric Museum,Tallinn,Tallinn cultural institutions
+19641,2,Kadriorg Art Museum,Tallinn,Tallinn cultural institutions
+19704,2,Gallery Seek,Tallinn,Tallinn cultural institutions
+21129,2,Museum of Photography,Tallinn,Tallinn cultural institutions
+29971,2,The Banned Books Museum,Tallinn,Tallinn cultural institutions
+33288,2,Energy Discovery Center,Tallinn,Tallinn cultural institutions
+8890,2,Contemporary Art Museum of Estonia,Tallinn,Tallinn cultural institutions
+8914,2,Computer Museum,Tallinn,Tallinn cultural institutions
+8984,2,Estonian Health Museum,Tallinn,Tallinn cultural institutions
+9069,2,Estonian Applied Art and Design Museum,Tallinn,Tallinn cultural institutions
+9110,2,The Estonian Museum of Natural History,Tallinn,Tallinn cultural institutions
+9158,2,Estonian Open Air Museum,Tallinn,Tallinn cultural institutions
+9175,2,Estonian Museum of Architecture,Tallinn,Tallinn cultural institutions
+9246,2,Museum of Puppetry Arts,Tallinn,Tallinn cultural institutions
+9262,2,Seaplane Harbour – The Estonian Maritime Museum,Tallinn,Tallinn cultural institutions
+12796,3,KGB Prison Cells in Tallinn,Tallinn,Tallinn city history museums
+12874,3,The Vabamu Museum of Occupations and Freedom,Tallinn,Tallinn city history museums
+15044,3,Juhan Kuus Documentary Photo Centre,Tallinn,Tallinn city history museums
+19341,3,Kiek in de Kök Fortification Museum,Tallinn,Tallinn city history museums
+19479,3,Mati Unt Museum,Tallinn,Tallinn city history museums
+19483,3,Tammsaare’s Apartment-Museum in Tallinn,Tallinn,Tallinn city history museums
+19644,3,Kumu Art Museum,Tallinn,Tallinn city history museums
+19680,3,Mikkel Museum,Tallinn,Tallinn city history museums
+20323,3,Children&#8217;s Museum Miiamilla,Tallinn,Tallinn city history museums
+33316,3,Nõmme Museum,Tallinn,Tallinn city history museums
+8827,3,Tallinn Museum of Orders of Knighthood,Tallinn,Tallinn city history museums
+8873,3,The People’s Museum of Tallinn,Tallinn,Tallinn city history museums
+9030,3,Kalamaja Museum,Tallinn,Tallinn city history museums
+9124,3,The Museum and Visitor Centre of Fat Margaret,Tallinn,Tallinn city history museums
+9229,3,Tallinn City Life Museum,Tallinn,Tallinn city history museums
+25373,4,Estonian Bicycle Museum,Väätsa,Transport history museums
+8936,4,Estonian Road Museum,Varbuse,Transport history museums
+12727,5,The Heavy Artillery Hall of the Estonian War Museum,Viimsi,Haapsalu history museums
+19325,5,Haapsalu Town Hall,Haapsalu,Haapsalu history museums
+21459,5,Haapsalu Castle,Haapsalu,Haapsalu history museums
+8869,5,Estonian Police Museum,,Haapsalu history museums
+9042,5,The Railway and Communications Museum,Haapsalu,Haapsalu history museums
+9116,5,Estonian War Museum,Viimsi,Haapsalu history museums
+9154,5,Museum of the Coastal Swedes,Haapsalu,Haapsalu history museums
+21656,6,Mihkli Farm Museum in Saaremaa,Viki,Rural life and farming museums
+8814,6,Tori Horse Breeding Farm Museum,Tori,Rural life and farming museums
+9052,6,Estonian Dairy Museum,Imavere,Rural life and farming museums
+9075,6,The Värska Farm Museum,Värska,Rural life and farming museums
+9128,6,A. H. Tammsaare Museum in Vargamäe,Vetepere,Rural life and farming museums
+9203,6,Estonian Agricultural Museum,Ülenurme,Rural life and farming museums
+9221,6,The Carl Robert Jakobson Farm Museum,Kurgja,Rural life and farming museums
+9241,6,The Mihkli Farm Museum in Hiiumaa,Malvaste,Rural life and farming museums
+31888,7,The House Museum of Johannes and Joosep Aavik,Kuressaare,Saaremaa museum
+31644,8,Virtual Time Travel Experience &#8220;VR Tallinn 1939/44&#8243;(Closed in January 2026),Tallinn,Virtual time travel experiences
+31648,8,Virtual Time Travel Experience &#8220;VR Toila 1938&#8221;,Pühajõe,Virtual time travel experiences
+13038,9,The Old Observatory,Tartu,Tartu cultural and academic sites
+14327,9,TYPA Printing and Paper Arts Centre,Tartu,Tartu cultural and academic sites
+14433,9,Botanical Garden of the University of Tartu,Tartu,Tartu cultural and academic sites
+34195,9,Tartu Art House,Tartu,Tartu cultural and academic sites
+8906,9,Estonian National Museum,Tartu,Tartu cultural and academic sites
+8990,9,The Tartu Art Museum,Tartu,Tartu cultural and academic sites
+9012,9,19th Century Tartu Citizen’s Museum,Tartu,Tartu cultural and academic sites
+9101,9,Estonian Sports and Olympic Museum,Tartu,Tartu cultural and academic sites
+9118,9,Tartu City Museum,Tartu,Tartu cultural and academic sites
+9132,9,Tartu Toy Museum,Tartu,Tartu cultural and academic sites
+9134,9,KGB Cells Museum in Tartu,Tartu,Tartu cultural and academic sites
+9152,9,The Song Celebration Museum,Tartu,Tartu cultural and academic sites
+9160,9,A. Le Coq Beer Museum,Tartu,Tartu cultural and academic sites
+9213,9,Natural History Museum of the University of Tartu,Tartu,Tartu cultural and academic sites
+9225,9,The University of Tartu Museum,Tartu,Tartu cultural and academic sites
+9254,9,The Oskar Luts House Museum,Tartu,Tartu cultural and academic sites
+12768,10,The Ice Age Centre,Äksi,Rural and Local History Museums
+12790,10,The Kehra Museum,Kehra,Rural and Local History Museums
+12821,10,Värska visitor centre (General Reek&#8217;s House),Värska,Rural and Local History Museums
+12839,10,The Kondas Centre,Viljandi,Rural and Local History Museums
+12926,10,The Museum of Coastal Folk,Pringi,Rural and Local History Museums
+19116,10,Ants Laikmaa Museum,Kadarpiku,Rural and Local History Museums
+21178,10,Iisaku Parish Museum,Iisaku,Rural and Local History Museums
+24647,10,Heimtali Museum,Heimtali,Rural and Local History Museums
+26826,10,Mulgi Experience Center(Closed in October),Helme,Rural and Local History Museums
+30097,10,Kolkja Museum of Old Believers,Kolkja,Rural and Local History Museums
+30268,10,Ruhnu Museum,Ruhnu,Rural and Local History Museums
+31247,10,Audru Museum,Audru,Rural and Local History Museums
+31271,10,Sagadi Forest Museum,Sagadi,Rural and Local History Museums
+31475,10,Mahtra Peasantry Museum,Juuru,Rural and Local History Museums
+31485,10,"Rehbinder House(temporarily closed, reopening on 20 January 2026)",Sõmeru,Rural and Local History Museums
+9022,10,Long House,Kärdla,Rural and Local History Museums
+9038,10,The Kohtla-Järve Museum of Oil Shale,Kohtla-Järve,Rural and Local History Museums
+9059,10,Dr. Fr. R. Kreutzwald Memorial Museum,Antsla,Rural and Local History Museums
+9063,10,Museum of Viljandi,Viljandi,Rural and Local History Museums
+9081,10,The Juhan Liiv Museum,Rupsi,Rural and Local History Museums
+9104,10,Mart Saar Museum,Karjasoo,Rural and Local History Museums
+9122,10,The Mõniste Rural Life Museum,Kuutsi,Rural and Local History Museums
+9136,10,Kihnu Museum,Linaküla,Rural and Local History Museums
+9146,10,Saatse Museum,Samarina,Rural and Local History Museums
+9173,10,Rakvere Town Citizen’s Home Museum,Rakvere,Rural and Local History Museums
+9181,10,The Viimsi Open Air Museum,Pringi,Rural and Local History Museums
+9189,10,The Kassari Museum House,Kassari village,Rural and Local History Museums
+9233,10,The Valga Museum,Valga,Rural and Local History Museums
+9239,10,Karilatsi Open Air Museum,Karilatsi,Rural and Local History Museums
+9260,10,Harju County Museum,Keila,Rural and Local History Museums
