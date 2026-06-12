@@ -219,6 +219,7 @@ __marimo__/
 # Node
 node_modules/
 math/dist/
+museum_web/dist/
 
 # Streamlit
 .streamlit/secrets.toml

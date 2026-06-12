@@ -1,0 +1,1212 @@
+[
+  {
+    "museumId": 8814,
+    "name": "Tori Horse Breeding Farm Museum",
+    "city": "Tori",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16851/tori-2-1-290x150-c.png",
+    "url": "https://muuseumikaart.ee/en/museums/tori-horse-breeding-farm-museum/",
+    "location": "Pärnu mnt 8a, Tori, Pärnumaa"
+  },
+  {
+    "museumId": 8827,
+    "name": "Tallinn Museum of Orders of Knighthood",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/973/1b540b9a580ed4b17bff371925521425-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tallinn-museum-of-orders-of-knighthood/",
+    "location": "Kuninga 3, Tallinn"
+  },
+  {
+    "museumId": 8853,
+    "name": "The Red Tower",
+    "city": "Pärnu",
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/883/b5816971aa95f3c58f42adfc9c22c415-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-red-tower/",
+    "location": "Hommiku 11, Pärnu"
+  },
+  {
+    "museumId": 8869,
+    "name": "Estonian Police Museum",
+    "city": "",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/1062/408eab08f9ef4ae7290ef264f7a7e639-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-police-museum/",
+    "location": "Tallinna 3, Rakvere, Lääne-Virumaa"
+  },
+  {
+    "museumId": 8873,
+    "name": "The People’s Museum of Tallinn",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21570/Naise_j6ud_MeeliKyttim-114-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tallinn-peoples-museum/",
+    "location": "Pikk 29a, Tallinn"
+  },
+  {
+    "museumId": 8890,
+    "name": "Contemporary Art Museum of Estonia",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/1109/e586764208532444df0cc01106d8d717-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/contemporary-art-museum-of-estonia/",
+    "location": "Kursi 5, Tallinn"
+  },
+  {
+    "museumId": 8906,
+    "name": "Estonian National Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20357/ak0233-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-national-museum/",
+    "location": "Muuseumi tee 2, Tartu"
+  },
+  {
+    "museumId": 8914,
+    "name": "Computer Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16381/NB_MAIN_PHOTO_-_author_ARVUTIMUUSEUM-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/computer-museum/",
+    "location": "Tuuliku tee 4c, Tallinn"
+  },
+  {
+    "museumId": 8930,
+    "name": "Amandus Adamson Studio Museum",
+    "city": "Paldiski",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/6710/749e281d1266ec4ab5f7530ab0e88ecf-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/amandus-adamson-studio-museum/",
+    "location": "A. Adamsoni 3, Paldiski"
+  },
+  {
+    "museumId": 8936,
+    "name": "Estonian Road Museum",
+    "city": "Varbuse",
+    "clusterId": 4,
+    "clusterName": "Transport history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19533/maanteemuuseum-DSC_0232foto_Ulle-Jukk-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-road-museum/",
+    "location": "Varbuse, Kanepi vald, Põlvamaa"
+  },
+  {
+    "museumId": 8984,
+    "name": "Estonian Health Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/1315/56d957332799e4a75854805ea99d3ee2-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-health-museum/",
+    "location": "Lai 28/30, Tallinn"
+  },
+  {
+    "museumId": 8990,
+    "name": "The Tartu Art Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/7270/c0f6ebdeb794b968d9115ed205c0fdd4-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tartu-art-museum/",
+    "location": "Raekoja plats 18, Tartu"
+  },
+  {
+    "museumId": 9012,
+    "name": "19th Century Tartu Citizen’s Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21798/65_Tartu-Linnaajaloo-Muuseumid-autor-Mikko-Leo-Selg-1-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/19th-century-tartu-citizens-museum/",
+    "location": "Jaani 16, Tartu"
+  },
+  {
+    "museumId": 9022,
+    "name": "Long House",
+    "city": "Kärdla",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/7504/a1452b80c869cc7892bb5283659d2d4d-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/long-house-of-the-hiiumaa-museum/",
+    "location": "Vabrikuväljak 8, Kärdla, Hiiumaa"
+  },
+  {
+    "museumId": 9030,
+    "name": "Kalamaja Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20176/Vaade-Kalamaja-muuseumi-ekspositsiooni-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kalamaja-museum/",
+    "location": "Kotzebue 16, Tallinn"
+  },
+  {
+    "museumId": 9038,
+    "name": "The Kohtla-Järve Museum of Oil Shale",
+    "city": "Kohtla-Järve",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/356/108eeec647840b4bbbfe64663416abfe-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kohtla-jarve-oil-shale-museum/",
+    "location": "Tuuslari 22, Kohtla-Järve, Ida-Virumaa"
+  },
+  {
+    "museumId": 9042,
+    "name": "The Railway and Communications Museum",
+    "city": "Haapsalu",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/364/d8404d8bbdd8507044de39431836e135-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/railway-and-communications-museum/",
+    "location": "Raudtee 2, Haapsalu"
+  },
+  {
+    "museumId": 9052,
+    "name": "Estonian Dairy Museum",
+    "city": "Imavere",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/17211/51255710054_ed5be69068_o-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-dairy-museum/",
+    "location": "H. Rebase tee 1, Imavere küla, Järvamaa"
+  },
+  {
+    "museumId": 9059,
+    "name": "Dr. Fr. R. Kreutzwald Memorial Museum",
+    "city": "Antsla",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/7843/4d08b26fce87d7e65bb8c3c251ada56e-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/dr-fr-r-kreutzwald-memorial-museum/",
+    "location": "F. R. Kreutzwaldi 31, Võru"
+  },
+  {
+    "museumId": 9063,
+    "name": "Museum of Viljandi",
+    "city": "Viljandi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/7909/46da4556db19c81629f177e5d712b675-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-of-viljandi/",
+    "location": "J. Laidoneri plats 10, Viljandi"
+  },
+  {
+    "museumId": 9069,
+    "name": "Estonian Applied Art and Design Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21714/ETDM_Juta-Lember-tool-1975-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-applied-art-and-design-museum/",
+    "location": "Lai 17, Tallinn"
+  },
+  {
+    "museumId": 9075,
+    "name": "The Värska Farm Museum",
+    "city": "Värska",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20614/Varska-Farm-Museum2-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/varska-farm-museum/",
+    "location": "Pikk 56/2, Värska"
+  },
+  {
+    "museumId": 9081,
+    "name": "The Juhan Liiv Museum",
+    "city": "Rupsi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/443/1d5e757f8fb1a71981046011cde6c713-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/juhan-liiv-museum/",
+    "location": "Rupsi, Peipsiääre vald, Tartumaa"
+  },
+  {
+    "museumId": 9101,
+    "name": "Estonian Sports and Olympic Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/483/e042d070a18a867fe9ddf78ac839a601-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-sports-and-olympic-museum/",
+    "location": "Rüütli 15, Tartu"
+  },
+  {
+    "museumId": 9104,
+    "name": "Mart Saar Museum",
+    "city": "Karjasoo",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/490/d8407a2d4b9ec63aea9d9f6986142298-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mart-saar-museum/",
+    "location": "Hüpassaare, Põhja-Sakala vald, Viljandimaa"
+  },
+  {
+    "museumId": 9110,
+    "name": "The Estonian Museum of Natural History",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19380/visualista.ee_Loodusmuuseum_02_0034_3500-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-museum-of-natural-history/",
+    "location": "Lai 29a, Tallinn"
+  },
+  {
+    "museumId": 9116,
+    "name": "Estonian War Museum",
+    "city": "Viimsi",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19423/IMG-20220228-WA0001-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-war-museum/",
+    "location": "Mõisa tee 1, Viimsi, Harjumaa"
+  },
+  {
+    "museumId": 9118,
+    "name": "Tartu City Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/30693/24_04_24_Naituse-Peedist-pesumasin-avamine_Tartu-Linnamuuseum_Piltnik-Kart_veb-024-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tartu-city-museum/",
+    "location": "Narva mnt 23, Tartu"
+  },
+  {
+    "museumId": 9120,
+    "name": "Palamuse O. Luts’s Parish School Museum",
+    "city": "Palamuse",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20973/672d6b630ac153171614014a82c8b59d-1320x743-SUUR-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/palamuse-school-museum/",
+    "location": "Köstri allee 3, Palamuse, Jõgevamaa"
+  },
+  {
+    "museumId": 9122,
+    "name": "The Mõniste Rural Life Museum",
+    "city": "Kuutsi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/23435/Moniste-atraktsioonid-varskes-ohus-erakogu-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-moniste-rural-life-museum/",
+    "location": "Kuutsi, Rõuge vald, Võrumaa"
+  },
+  {
+    "museumId": 9124,
+    "name": "The Museum and Visitor Centre of Fat Margaret",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/530/94bd30de265bc4a56ba4ba2872d65937-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-and-visitor-centre-of-fat-margaret-estonian-maritime-museum/",
+    "location": "Pikk 70, Tallinn"
+  },
+  {
+    "museumId": 9128,
+    "name": "A. H. Tammsaare Museum in Vargamäe",
+    "city": "Vetepere",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/4995/27a164dbe79f4c2d7f999c7793e6658e-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/a-h-tammsaare-museum-in-vargamae/",
+    "location": "Tammsaare-Põhja talu, Vetepere, Järvamaa"
+  },
+  {
+    "museumId": 9132,
+    "name": "Tartu Toy Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/546/c6c74c66d6bc11ff66c9198b2f6bcfcc-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tartu-toy-museum/",
+    "location": "Lutsu 8, Tartu"
+  },
+  {
+    "museumId": 9134,
+    "name": "KGB Cells Museum in Tartu",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/550/5887c4fe2ee1a4edbe3589ce982d88e9-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kgb-cells-museum/",
+    "location": "Riia 15b, Tartu"
+  },
+  {
+    "museumId": 9136,
+    "name": "Kihnu Museum",
+    "city": "Linaküla",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/5095/730c9d9dcb46c01037c3a02d02db694d-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kihnu-museum/",
+    "location": "Linaküla, Kihnu vald, Pärnumaa"
+  },
+  {
+    "museumId": 9146,
+    "name": "Saatse Museum",
+    "city": "Samarina",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/17391/Saatse-Museum_Soir-Day2-290x150-c.png",
+    "url": "https://muuseumikaart.ee/en/museums/saatse-museum/",
+    "location": "Samarina, Setomaa vald, Võrumaa"
+  },
+  {
+    "museumId": 9152,
+    "name": "The Song Celebration Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/5285/da5dcffea5bfaf3975a10afb41077b20-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/song-festival-museum/",
+    "location": "Jaama 14, Tartu"
+  },
+  {
+    "museumId": 9154,
+    "name": "Museum of the Coastal Swedes",
+    "city": "Haapsalu",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/5307/a8dba65a0310f3e1e7df7395cca953b8-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-of-the-coastal-swedes/",
+    "location": "Sadama 31/32, Haapsalu, Läänemaa"
+  },
+  {
+    "museumId": 9158,
+    "name": "Estonian Open Air Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/17700/05D4882-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-open-air-museum/",
+    "location": "Vabaõhumuuseumi tee 12, Tallinn"
+  },
+  {
+    "museumId": 9160,
+    "name": "A. Le Coq Beer Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/18597/Olle-tootmine-samm-sammult_-Jaak-Janes-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/a-le-coq-beer-museum/",
+    "location": "Laulupeo pst 15, Tartu"
+  },
+  {
+    "museumId": 9173,
+    "name": "Rakvere Town Citizen’s Home Museum",
+    "city": "Rakvere",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/629/744e584a4c102839a221a830453bbc62-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/rakvere-town-citizens-home-museum/",
+    "location": "Pikk 50, Rakvere, Lääne-Virumaa"
+  },
+  {
+    "museumId": 9175,
+    "name": "Estonian Museum of Architecture",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/17600/Uuri-ruumi-4-F-Liisi-Anvelt-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-museum-of-architecture/",
+    "location": "Ahtri 2, Tallinn"
+  },
+  {
+    "museumId": 9181,
+    "name": "The Viimsi Open Air Museum",
+    "city": "Pringi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/144/d64d7d3b90caa587756581dd89d06d7d-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/viimsi-open-air-museum/",
+    "location": "Rohuneeme tee 53a, Pringi, Viimsi vald, Harjumaa"
+  },
+  {
+    "museumId": 9189,
+    "name": "The Kassari Museum House",
+    "city": "Kassari village",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21586/4624b784840daa3aad70a972a248e871-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kassari-exhibition-house/",
+    "location": "Kassari küla, Hiiumaa"
+  },
+  {
+    "museumId": 9203,
+    "name": "Estonian Agricultural Museum",
+    "city": "Ülenurme",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/3232/6dc330be494c9d7f90ca0f209b430940-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-agricultural-museum/",
+    "location": "Pargi 4, Ülenurme, Tartumaa"
+  },
+  {
+    "museumId": 9213,
+    "name": "Natural History Museum of the University of Tartu",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/689/7c4393373efb493133de1f8ff5c6cf21-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/university-of-tartu-natural-history-museum/",
+    "location": "Vanemuise 46, Tartu"
+  },
+  {
+    "museumId": 9217,
+    "name": "Museum of New Art in Pärnu",
+    "city": "Pärnu",
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20256/UueKunstiMuuseum_sisevaade_foto_Marie_Virta-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-of-new-art/",
+    "location": "Rüütli 40a, Pärnu"
+  },
+  {
+    "museumId": 9221,
+    "name": "The Carl Robert Jakobson Farm Museum",
+    "city": "Kurgja",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/712/047059e4e2b9e3bb4652b0aff5e111db-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/jakobson-farm-museum/",
+    "location": "Kurgja küla, Põhja-Pärnumaa vald, Pärnumaa"
+  },
+  {
+    "museumId": 9223,
+    "name": "The Koidula Museum",
+    "city": "Pärnu",
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16507/Kroonlinna-tuba_koidula_muuseum_Marie-Rosalie-Hanni-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-koidula-museum/",
+    "location": "J. V. Jannseni 37, Pärnu"
+  },
+  {
+    "museumId": 9225,
+    "name": "The University of Tartu Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/726/0b5acec0509f89baee83456110bfd8fc-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-university-of-tartu-museum/",
+    "location": "Lossi 25, Tartu"
+  },
+  {
+    "museumId": 9229,
+    "name": "Tallinn City Life Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/3570/f9e1fe694e10a911370acd91ebf45c89-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tallinn-city-life-museum/",
+    "location": "Vene 17, Tallinn"
+  },
+  {
+    "museumId": 9231,
+    "name": "The Rudolf Tobias House Museum",
+    "city": "Selja",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/18037/H2A9158-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/rudolf-tobias-house-museum/",
+    "location": "Selja, Hiiumaa"
+  },
+  {
+    "museumId": 9233,
+    "name": "The Valga Museum",
+    "city": "Valga",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20414/Foto-Marju-Rebane-1-2-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-valga-museum/",
+    "location": "Vabaduse 8, Valga"
+  },
+  {
+    "museumId": 9239,
+    "name": "Karilatsi Open Air Museum",
+    "city": "Karilatsi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/758/39bb2f34e94b99352602ac5ceaff5be3-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/karilatsi-open-air-museum/",
+    "location": "Karilatsi, Kanepi vald, Põlvamaa"
+  },
+  {
+    "museumId": 9241,
+    "name": "The Mihkli Farm Museum in Hiiumaa",
+    "city": "Malvaste",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/762/c277b680163ea95d4ee8508acc2f29ac-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mihkli-farm-museum/",
+    "location": "Malvaste, Hiiumaa"
+  },
+  {
+    "museumId": 9244,
+    "name": "Obinitsa  Museum",
+    "city": "Obinitsa",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21356/SUUR-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/obinitsa-museum/",
+    "location": "Muuseumi 10, Obinitsa, Setomaa vald, Võrumaa"
+  },
+  {
+    "museumId": 9246,
+    "name": "Museum of Puppetry Arts",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/17235/Nukuteatrimuuseum-Foto_Mattias_Malk-2-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-of-puppetry-arts/",
+    "location": "Nunne 4, Tallinn"
+  },
+  {
+    "museumId": 9254,
+    "name": "The Oskar Luts House Museum",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/789/f99ef6242b6a9ce89a6b4422e0562d2d-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/oskar-luts-house-museum/",
+    "location": "Riia 38, Tartu"
+  },
+  {
+    "museumId": 9260,
+    "name": "Harju County Museum",
+    "city": "Keila",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/3927/9b046e31e6e4c600969550d7427fe15a-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/harju-county-museum/",
+    "location": "Linnuse 9, Keila, Harjumaa"
+  },
+  {
+    "museumId": 9262,
+    "name": "Seaplane Harbour – The Estonian Maritime Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20229/Lembit-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/seaplane-harbour-estonian-maritime-museum/",
+    "location": "Vesilennuki 6, Tallinn"
+  },
+  {
+    "museumId": 12727,
+    "name": "The Heavy Artillery Hall of the Estonian War Museum",
+    "city": "Viimsi",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15854/PXL_20220909_092151327-sandra-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-heavy-artillery-hall-of-the-estonian-war-museum/",
+    "location": "Vehema tee 1a, Viimsi"
+  },
+  {
+    "museumId": 12735,
+    "name": "The Under and Tuglas Literature Centre of the Estonian Academy of Sciences",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16896/Talivee_Elle-Mari-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/eesti-teaduste-akadeemia-underi-ja-tuglase-kirjanduskeskus/",
+    "location": "Väikese Illimari 12, Tallinn"
+  },
+  {
+    "museumId": 12768,
+    "name": "The Ice Age Centre",
+    "city": "Äksi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16605/JK_mammut_KBeljaev-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-ice-age-centre/",
+    "location": "Saadjärve 20, Äksi, Tartumaa"
+  },
+  {
+    "museumId": 12771,
+    "name": "The Kai Art Center",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15860/Kai-kunstikeskus_Foto_Evert-Palmets-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kai-art-center/",
+    "location": "Peetri 12, Tallinn"
+  },
+  {
+    "museumId": 12790,
+    "name": "The Kehra Museum",
+    "city": "Kehra",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15811/Kehra-ajaloo-ekspositsioon_1.-Anne-Tanne-foto-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kehra-museum/",
+    "location": "Raudtee 7, Kehra, Harjumaa"
+  },
+  {
+    "museumId": 12796,
+    "name": "KGB Prison Cells in Tallinn",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/34768/Aron-Urb-3-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kgb-prison-cells-in-tallinn/",
+    "location": "Pagari 1, Tallinn"
+  },
+  {
+    "museumId": 12821,
+    "name": "Värska visitor centre (General Reek&#8217;s House)",
+    "city": "Värska",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20638/General-Reeks-House_Reigo-Teervalt-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kindral-reegi-maja/",
+    "location": "Pikk 29, Värska, Võrumaa"
+  },
+  {
+    "museumId": 12839,
+    "name": "The Kondas Centre",
+    "city": "Viljandi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16318/Maasikasoojad_Foto-Herki_Helves-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-kondas-centre/",
+    "location": "Pikk 8, Viljandi"
+  },
+  {
+    "museumId": 12874,
+    "name": "The Vabamu Museum of Occupations and Freedom",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15887/Aimar-Anderson2-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-vabamu-museum-of-occupations-and-freedom/",
+    "location": "Toompea 8b, Tallinn"
+  },
+  {
+    "museumId": 12921,
+    "name": "The PROTO Invention Factory",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15991/22JJ1031_044-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/proto-invention-factory/",
+    "location": "Peetri 10, Tallinn"
+  },
+  {
+    "museumId": 12926,
+    "name": "The Museum of Coastal Folk",
+    "city": "Pringi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21592/RannarahvaSUUR-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/museum-of-coastal-folk/",
+    "location": "Nurme tee 3, Pringi, Viimsi vald, Harjumaa"
+  },
+  {
+    "museumId": 13038,
+    "name": "The Old Observatory",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16392/Tahetorn_2_Angelina-Pjatkovskaja-1-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-tartu-observatory/",
+    "location": "Uppsala 8, Tartu"
+  },
+  {
+    "museumId": 14252,
+    "name": "The Tallinn Art Hall Lasnamäe Pavilion",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16940/Tallinna-Kunstihoone_valisfassaa_Foto-Tonu-Tunnel-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kunstihoone-lasnamae-paviljon/",
+    "location": "Jaan Koorti 24, Tallinn"
+  },
+  {
+    "museumId": 14285,
+    "name": "Peter the Great’s House",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21839/KYT1021-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/peeter-i-maja/",
+    "location": "Mäekalda 2, Tallinn"
+  },
+  {
+    "museumId": 14327,
+    "name": "TYPA Printing and Paper Arts Centre",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21633/Artist-working-on-Hohner-Photo-Mana-Kaasik-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/typa-truki-ja-paberikunstikeskus/",
+    "location": "Kastani 48f, Tartu"
+  },
+  {
+    "museumId": 14433,
+    "name": "Botanical Garden of the University of Tartu",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16201/BA_KarinPai-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tartu-ulikooli-botaanikaaed/",
+    "location": "Lai 38, Tartu"
+  },
+  {
+    "museumId": 14456,
+    "name": "Maarjamäe Palace",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/14447/MM-loss_2017-vahur-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/maarjamae-palace/",
+    "location": "Pirita tee 56, Tallinn"
+  },
+  {
+    "museumId": 14475,
+    "name": "Film Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/6686/9ad1e819426e7af647afe47b09bcb2d1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/film-museum/",
+    "location": "Pirita tee 56, Tallinn"
+  },
+  {
+    "museumId": 14524,
+    "name": "Estonian Theatre and Music Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/30595/TMM-Poorased-lood_1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-theatre-and-music-museum/",
+    "location": "Müürivahe 12, Tallinn"
+  },
+  {
+    "museumId": 14536,
+    "name": "The Great Guild Hall",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/16337/Eriliste-asjade-ekspo_huge-290x150-c.png",
+    "url": "https://muuseumikaart.ee/en/museums/the-great-guild-hall/",
+    "location": "Pikk 17, Tallinn"
+  },
+  {
+    "museumId": 15044,
+    "name": "Juhan Kuus Documentary Photo Centre",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15428/Juhan-Kuusi-dokfoto-keskus-Sisevaade_1_autor_Peeter_Langovits-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/juhan-kuusi-dokfoto-keskus/",
+    "location": "Telliskivi 60a-5, Tallinn"
+  },
+  {
+    "museumId": 15570,
+    "name": "Palmse Manor",
+    "city": "Palmse",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/15653/Kaspar_Pokk_Palmse_2-1-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/palmse-manor-2/",
+    "location": "Palmse, Lääne-Viru County"
+  },
+  {
+    "museumId": 19116,
+    "name": "Ants Laikmaa Museum",
+    "city": "Kadarpiku",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19195/Ants-Laikmaa-muuseum_Hele-Lepik-scaled-290x150-c.jpeg",
+    "url": "https://muuseumikaart.ee/en/museums/ants-laikmaa-museum/",
+    "location": "Kadarpiku, Lääne-Nigula vald, Läänemaa"
+  },
+  {
+    "museumId": 19325,
+    "name": "Haapsalu Town Hall",
+    "city": "Haapsalu",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19227/Raekoda_Britta-Sool-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/haapsalu-town-hall-2/",
+    "location": "Kooli 2, Haapsalu"
+  },
+  {
+    "museumId": 19341,
+    "name": "Kiek in de Kök Fortification Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/19252/KOK-vaade-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kiek-in-de-kok-museum-and-bastion-tunnels-2/",
+    "location": "Komandandi tee 2, Tallinn"
+  },
+  {
+    "museumId": 19479,
+    "name": "Mati Unt Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/34689/Unt-ekspo-38-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mati-unt-museum/",
+    "location": "Koidula 17, Tallinn"
+  },
+  {
+    "museumId": 19483,
+    "name": "Tammsaare’s Apartment-Museum in Tallinn",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21867/20190418_094202-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tammsaares-apartment-museum-in-tallinn/",
+    "location": "Koidula 12a, Tallinn"
+  },
+  {
+    "museumId": 19487,
+    "name": "Eduard Vilde Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21612/Autor_-Gabriela-Liivamagi-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/eduard-vilde-museum/",
+    "location": "Roheline aas 3, Tallinn"
+  },
+  {
+    "museumId": 19491,
+    "name": "MOMU Motorsports Museum(temporarily closed)",
+    "city": "Turba",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21109/MOMU_5_autor_Karli_Saul-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/momu-motorsports-museum/",
+    "location": "Tööstuse 3, Turba"
+  },
+  {
+    "museumId": 19495,
+    "name": "The Wittenstein Time Center",
+    "city": "Paide",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/18543/190585837_174366631299220_3942364359672659400_n-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-wittenstein-time-center/",
+    "location": "Veski 11, Paide"
+  },
+  {
+    "museumId": 19499,
+    "name": "The Wittenstein Activity Center",
+    "city": "Paide",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/18519/Tegevusmuuseum-apteek-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-wittenstein-activity-center/",
+    "location": "Tallinna mnt 9/11, Paide"
+  },
+  {
+    "museumId": 19625,
+    "name": "Adamson-Eric Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/22461/Adamson-Eric-Museum-2021-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/adamson-eric-museum/",
+    "location": "Lühike jalg 3, Tallinn"
+  },
+  {
+    "museumId": 19641,
+    "name": "Kadriorg Art Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/22479/Endel-Apsalon-DSC_8486-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kadriorg-art-museum/",
+    "location": "Weizenbergi 37, Tallinn"
+  },
+  {
+    "museumId": 19644,
+    "name": "Kumu Art Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20844/Kumu1_HelenMelesk_-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kumu-art-museum/",
+    "location": "Weizenbergi 34 / Valge 1, Tallinn"
+  },
+  {
+    "museumId": 19680,
+    "name": "Mikkel Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20899/Mikkeli1_Stanislav_stepasko_v_-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mikkel-museum/",
+    "location": "Weizenbergi 28, Tallinn"
+  },
+  {
+    "museumId": 19704,
+    "name": "Gallery Seek",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31867/PAISESSEseek_Meeli_Kuttim-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/gallery-seek/",
+    "location": "Väike-Pääsukese 5, Tallinn"
+  },
+  {
+    "museumId": 20323,
+    "name": "Children&#8217;s Museum Miiamilla",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/20296/keskkonnaharidus_janek_toomikas-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/children-museum-miiamilla-closed-until-jan-2024/",
+    "location": "L. Koidula 21c, Tallinn"
+  },
+  {
+    "museumId": 21129,
+    "name": "Museum of Photography",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/24764/20230605_0372-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/photo-museum-2/",
+    "location": "Raekoja 6, Tallinn"
+  },
+  {
+    "museumId": 21178,
+    "name": "Iisaku Parish Museum",
+    "city": "Iisaku",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21156/Iisakumuseum_pruutkleitidenaitus_Ida-Viru_Hetkeline1_-1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/iisaku-museum/",
+    "location": "Tartu mnt 58/49, Iisaku alevik, Ida-Virumaa"
+  },
+  {
+    "museumId": 21459,
+    "name": "Haapsalu Castle",
+    "city": "Haapsalu",
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21436/Castle-Haapsalu-visit-estonia_-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/haapsalu-castle/",
+    "location": "Lossiplats 3, Haapsalu"
+  },
+  {
+    "museumId": 21656,
+    "name": "Mihkli Farm Museum in Saaremaa",
+    "city": "Viki",
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/21398/Mihkli_TM_hoov_pildistas_Kristi_Hints-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mihkli-farm-museum-in-saaremaa/",
+    "location": "Viki, Saaremaa"
+  },
+  {
+    "museumId": 24647,
+    "name": "Heimtali Museum",
+    "city": "Heimtali",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/24548/Anu-Raud.-Foto-Anu-Ansu-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/heimtali-museum/",
+    "location": "Heimtali, Viljandimaa"
+  },
+  {
+    "museumId": 25373,
+    "name": "Estonian Bicycle Museum",
+    "city": "Väätsa",
+    "clusterId": 4,
+    "clusterName": "Transport history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/25339/miele-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/estonian-bicycle-museum/",
+    "location": "Pikk 9, Väätsa, Järvamaa"
+  },
+  {
+    "museumId": 26826,
+    "name": "Mulgi Experience Center(Closed in October)",
+    "city": "Helme",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/26808/Kaabu_paike-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mulgi-elamuskeskus/",
+    "location": "Sooglemäe, Valgamaa"
+  },
+  {
+    "museumId": 27315,
+    "name": "Pernova Nature House",
+    "city": "Pärnu",
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/27303/kerakino-planetaarium-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/pernova-nature-house/",
+    "location": "A. H. Tammsaare pst 57, Pärnu"
+  },
+  {
+    "museumId": 29971,
+    "name": "The Banned Books Museum",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/29924/GPF09334-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-banned-books-museum/",
+    "location": "Munga 2, Tallinn"
+  },
+  {
+    "museumId": 30097,
+    "name": "Kolkja Museum of Old Believers",
+    "city": "Kolkja",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/30085/Kolkja-vanausuliste-muuseum-10-Ahto-Sooaru_Sibulatee-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/kolkja-museum-of-old-believers/",
+    "location": "Ranna 12, Kolkja"
+  },
+  {
+    "museumId": 30268,
+    "name": "Ruhnu Museum",
+    "city": "Ruhnu",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/30242/4.-Korsi-taluou-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/ruhnu-museum/",
+    "location": "Ruhnu island"
+  },
+  {
+    "museumId": 30897,
+    "name": "Pokuland",
+    "city": "Urvaste",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/30891/Pokumaa1-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/pokuland/",
+    "location": "Padasoomäe, Urvaste, Võrumaa"
+  },
+  {
+    "museumId": 31247,
+    "name": "Audru Museum",
+    "city": "Audru",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31226/IMG-4054-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/audru-museum/",
+    "location": "Pärna allee 14, Audru, Pärnumaa"
+  },
+  {
+    "museumId": 31271,
+    "name": "Sagadi Forest Museum",
+    "city": "Sagadi",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31263/Tarmo-Haud-DJI_0696_1-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/sagadi-forest-museum/",
+    "location": "Sagadi, Lääne-Viru County"
+  },
+  {
+    "museumId": 31335,
+    "name": "The Art Gallery of the Narva Museum",
+    "city": "Narva",
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31326/DSC07525-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-art-gallery-of-the-narva-museum/",
+    "location": "Vestervalli 21, Narva"
+  },
+  {
+    "museumId": 31475,
+    "name": "Mahtra Peasantry Museum",
+    "city": "Juuru",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31459/Pusinaitus4-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/mahtra-peasantry-museum/",
+    "location": "Muuseumi 1, Juuru, Raplamaa"
+  },
+  {
+    "museumId": 31485,
+    "name": "Rehbinder House(temporarily closed, reopening on 20 January 2026)",
+    "city": "Sõmeru",
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31499/detail-ampiirajastu-maketist-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/rehbinder-house/",
+    "location": "Tallinna 5, Rakvere"
+  },
+  {
+    "museumId": 31644,
+    "name": "Virtual Time Travel Experience &#8220;VR Tallinn 1939/44&#8243;(Closed in January 2026)",
+    "city": "Tallinn",
+    "clusterId": 8,
+    "clusterName": "Virtual time travel experiences",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31635/time-portal-VR-Tallinn-1939_44-attraction-history-visit-estonia-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/virtual-time-travel-experience-vr-tallinn-1939-44/",
+    "location": "In the tunnel, Vabaduse väljak 9, 10142 Tallinn"
+  },
+  {
+    "museumId": 31648,
+    "name": "Virtual Time Travel Experience &#8220;VR Toila 1938&#8221;",
+    "city": "Pühajõe",
+    "clusterId": 8,
+    "clusterName": "Virtual time travel experiences",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31597/Best-new-adventure-2021_Blueray-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/virtual-time-travel-experience-vr-toila-1938/",
+    "location": "Oru park, Lossiplatsi 3, Pühajõe, 41716 Ida-Viru maakond"
+  },
+  {
+    "museumId": 31888,
+    "name": "The House Museum of Johannes and Joosep Aavik",
+    "city": "Kuressaare",
+    "clusterId": 7,
+    "clusterName": "Saaremaa museum",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/31892/PXL_20240409_154416998-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/the-house-museum-of-johannes-and-joosep-aavik/",
+    "location": "Vallimaa 7, Kuressaare"
+  },
+  {
+    "museumId": 33288,
+    "name": "Energy Discovery Center",
+    "city": "Tallinn",
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/33398/5-juuksed-pusti-3-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/energy-discovery-center-and-planetarium/",
+    "location": "Põhja pst 29, Tallinn"
+  },
+  {
+    "museumId": 33316,
+    "name": "Nõmme Museum",
+    "city": "Tallinn",
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/33311/Nomme-muuseum-esikaanele-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/nomme-museum/",
+    "location": "Jaama 18, Tallinn"
+  },
+  {
+    "museumId": 34174,
+    "name": "Padise Monastery Visitor Centre",
+    "city": "Padise",
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/34118/@Ilme-Parik10-scaled-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/padise-monastery-visitor-centre/",
+    "location": "Padise, Harjumaa"
+  },
+  {
+    "museumId": 34195,
+    "name": "Tartu Art House",
+    "city": "Tartu",
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "imageUrl": "https://muuseumikaart.ee/wp-content/uploads/fly-images/34182/489433524_1231491702312142_48452872219319471_n-290x150-c.jpg",
+    "url": "https://muuseumikaart.ee/en/museums/tartu-art-house/",
+    "location": "Vanemuise 26, Tartu"
+  }
+]

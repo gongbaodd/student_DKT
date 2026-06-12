@@ -1,0 +1,19 @@
+{
+  "numSkills": 11,
+  "inputDim": 22,
+  "hiddenDim": 50,
+  "skills": [
+    "P\u00e4rnu art and nature",
+    "Coastal and regional museums",
+    "Tallinn cultural institutions",
+    "Tallinn city history museums",
+    "Transport history museums",
+    "Haapsalu history museums",
+    "Rural life and farming museums",
+    "Saaremaa museum",
+    "Virtual time travel experiences",
+    "Tartu cultural and academic sites",
+    "Rural and Local History Museums"
+  ],
+  "opset": 17
+}

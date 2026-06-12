@@ -1,0 +1,57 @@
+[
+  {
+    "clusterId": 0,
+    "clusterName": "Pärnu art and nature",
+    "museumCount": 5
+  },
+  {
+    "clusterId": 1,
+    "clusterName": "Coastal and regional museums",
+    "museumCount": 10
+  },
+  {
+    "clusterId": 2,
+    "clusterName": "Tallinn cultural institutions",
+    "museumCount": 25
+  },
+  {
+    "clusterId": 3,
+    "clusterName": "Tallinn city history museums",
+    "museumCount": 15
+  },
+  {
+    "clusterId": 4,
+    "clusterName": "Transport history museums",
+    "museumCount": 2
+  },
+  {
+    "clusterId": 5,
+    "clusterName": "Haapsalu history museums",
+    "museumCount": 7
+  },
+  {
+    "clusterId": 6,
+    "clusterName": "Rural life and farming museums",
+    "museumCount": 8
+  },
+  {
+    "clusterId": 7,
+    "clusterName": "Saaremaa museum",
+    "museumCount": 1
+  },
+  {
+    "clusterId": 8,
+    "clusterName": "Virtual time travel experiences",
+    "museumCount": 2
+  },
+  {
+    "clusterId": 9,
+    "clusterName": "Tartu cultural and academic sites",
+    "museumCount": 16
+  },
+  {
+    "clusterId": 10,
+    "clusterName": "Rural and Local History Museums",
+    "museumCount": 30
+  }
+]
