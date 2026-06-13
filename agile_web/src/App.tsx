@@ -19,9 +19,9 @@ import {
 } from "./components/BacklogList";
 import { useClusterNames } from "./hooks/useClusterNames";
 import { useDoneIssues, useTodoIssues } from "./hooks/useIssues";
-import { useIrtModel } from "./hooks/useIrtModel";
+import { useIrtModels } from "./hooks/useIrtModel";
 import type { DoneHistoryEntry } from "./irt/types";
-import { clusterNameFor, type DoneIssue, type TodoIssue } from "./types";
+import { clusterNameFor, keywordNameFor, type DoneIssue, type TodoIssue } from "./types";
 
 function filterDone(
   issues: DoneIssue[],
@@ -34,7 +34,8 @@ function filterDone(
     (issue) =>
       issue.issueKey.toLowerCase().includes(q) ||
       issue.title.toLowerCase().includes(q) ||
-      clusterNameFor(issue.component, clusterNames).toLowerCase().includes(q),
+      keywordNameFor(issue.component).toLowerCase().includes(q) ||
+      clusterNameFor(issue.cluster, clusterNames).toLowerCase().includes(q),
   );
 }
 
@@ -49,7 +50,8 @@ function filterTodos(
     (issue) =>
       issue.issueKey.toLowerCase().includes(q) ||
       issue.title.toLowerCase().includes(q) ||
-      clusterNameFor(issue.component, clusterNames).toLowerCase().includes(q),
+      keywordNameFor(issue.component).toLowerCase().includes(q) ||
+      clusterNameFor(issue.cluster, clusterNames).toLowerCase().includes(q),
   );
 }
 
@@ -61,7 +63,12 @@ export default function App() {
     isLoading: clusterNamesLoading,
     error: clusterNamesError,
   } = useClusterNames();
-  const { model, isLoading: modelLoading, error: modelError } = useIrtModel();
+  const {
+    keywordModel,
+    clusterModel,
+    isLoading: modelLoading,
+    error: modelError,
+  } = useIrtModels();
 
   const [search, setSearch] = useState("");
   const [debouncedSearch] = useDebouncedValue(search, 200);
@@ -84,12 +91,22 @@ export default function App() {
     [filteredDone],
   );
 
-  const doneHistory: DoneHistoryEntry[] = useMemo(
+  const doneHistoryKeyword: DoneHistoryEntry[] = useMemo(
     () =>
       doneIssues.map((issue) => ({
         issueKey: issue.issueKey,
         storyPoints: issue.storyPoints,
         component: issue.component,
+      })),
+    [doneIssues],
+  );
+
+  const doneHistoryCluster: DoneHistoryEntry[] = useMemo(
+    () =>
+      doneIssues.map((issue) => ({
+        issueKey: issue.issueKey,
+        storyPoints: issue.storyPoints,
+        component: issue.cluster,
       })),
     [doneIssues],
   );
@@ -134,7 +151,7 @@ export default function App() {
             <Stack gap="md">
               <Group justify="space-between" align="flex-end">
                 <TextInput
-                  placeholder="Search by key, summary, or cluster…"
+                  placeholder="Search by key, summary, component, or cluster…"
                   leftSection={<IconSearch size={16} stroke={1.5} />}
                   value={search}
                   onChange={(e) => setSearch(e.currentTarget.value)}
@@ -184,9 +201,11 @@ export default function App() {
               <TodoDetailDrawer
                 issue={selectedTodo}
                 opened={selectedTodo !== null}
-                model={model}
+                keywordModel={keywordModel}
+                clusterModel={clusterModel}
                 modelLoading={modelLoading}
-                doneHistory={doneHistory}
+                doneHistoryKeyword={doneHistoryKeyword}
+                doneHistoryCluster={doneHistoryCluster}
                 clusterNames={clusterNames}
                 onClose={() => setSelectedTodo(null)}
               />

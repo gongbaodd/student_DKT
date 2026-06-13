@@ -1,21 +1,34 @@
 cluster,cluster_name,issue_count
-0,Responsive layout and UI fixes,71
-1,File management UI/UX fixes,38
-2,Event API Refactoring and Coverage,84
-3,Deprecation and Cleanup Tasks,42
-4,Event logging refactoring,45
-5,User data and profile management,52
-6,Competency and Learning Plans,86
-7,Logging and Reporting Improvements,35
-8,Course structure and UI issues,43
-9,Gradebook weighting and calculation,39
-10,Testing and Core Functionality Issues,69
-11,PDF Editing Functionality Improvements,39
-12,Atto editor improvements and fixes,72
-13,Core Feature Modernization,68
-14,Accessibility and UX improvements,67
-15,Atto and core functionality improvements,79
-16,Course restoration and display issues,70
-17,YUI and JavaScript refactoring,50
-18,Gradebook functionality improvements,86
-19,Third party library upgrades,31
+0,Atto and Editor Improvements,60
+1,Code deprecation cleanup,64
+2,Event logging refactoring,46
+3,Atto and Plugin Management,28
+4,Learning Plan Management,29
+5,Gradebook Natural Weighting,38
+6,Gradebook functionality improvements,38
+7,Events API Refactoring,58
+8,PDF and Media Editing Issues,9
+9,YUI and JavaScript Migration,26
+10,Frontend UI and JavaScript bugs,56
+11,Accessibility and UI improvements,32
+12,Event system refactoring and management,30
+13,Backup and Restore Functionality,38
+14,Upgrade requirement management,10
+15,User and Authentication Management,36
+16,File management UI/UX issues,36
+17,Mobile responsiveness and layout fixes,53
+18,Atto editor functionality issues,17
+19,Logging and Core Migration,61
+20,Grading and Assignment Functionality,40
+21,Competency Framework Management,54
+22,Library and Dependency Upgrades,21
+23,User profile and naming issues,16
+24,Accessibility and Usability Issues,24
+25,Renderer development guidelines,10
+26,Atto and TinyMCE Editor Improvements,52
+27,PHP and Frontend Errors,47
+28,File handling and upload issues,36
+29,Caching and performance improvements,13
+30,Database and Testing Fixes,43
+31,Edit PDF functionality improvements,30
+32,Grading and Competency Scales,15

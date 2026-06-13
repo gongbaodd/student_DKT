@@ -1,1167 +1,1167 @@
 issueKey,cluster,title
-MDL-23646,0,"TinyMCE can't be resized and doesn't scroll for wide content, especially on small screens"
-MDL-34209,0,Moving sections by drag and drop causes the sections to be reordered
-MDL-34496,0,issue(s) with custom block regions
-MDL-35423,0,Activity chooser links and toolbox links not correctly created if you don't have a wrapper div called #page-content
-MDL-37023,0,Dock JS incorrectly parses region ID
-MDL-38325,0,maximise/minimise button to hide the lateral blocks/dock
-MDL-38693,0,WYSIWYG Editor cuts off content in full screen mode
-MDL-38923,0,Cannot dock blocks with Bootstrapbase/clean theme
-MDL-39227,0,SCORM navigation panel is hidden when bootstrap theme is active
-MDL-39675,0,Text overlap in HTMLEditor in Bootstrap theme
-MDL-39715,0,Mobile-friendly way to display blocks on small screen
-MDL-39736,0,SCORM content section is too narrow on narrow screen devices
-MDL-39737,0,SCORM does not reflow on resize/orientation change
-MDL-39748,0,Make input boxes' size consistent and not overlapping with the next level in Assignment advanced grading.
-MDL-39776,0,Adding new block doesn't automatically add the block to the page.
-MDL-39779,0,Fix alignment for required field (red *) on creating new wiki page
-MDL-39792,0,Editor goes under right-hand blocks on smaller screens
-MDL-39812,0,Long Breadcrumbs get wrapped on narrow screens when using Clean Theme
-MDL-39813,0,Login page is overly verbose for a mobile device
-MDL-39817,0,Grading is not mobile friendly
-MDL-39884,0,Improvement: have the header on bootstrapbase remain onscreen when scrolling on mobile devices.
-MDL-40205,0,Long Block Titles Overflow in Clean
-MDL-40685,0,META: Add/rescale headings for activities and resources page
-MDL-40693,0,Make Bootstrapbase breadcrumb seperator respect $THEME->rarrow
-MDL-40722,0,Clean theme: Resizing 3 column page with all blocks on the left is not displayed correctly
-MDL-40786,0,"User's description fields should be aligned to the right and spaced out, when in RTL mode (theme/clean, bootstrapbase)"
-MDL-40833,0,One topic at a time should use a heading tag for the topic heading
-MDL-40932,0,Tabbing through links on course page (and others) does not work on Mac Firefox and Mac Safari (and maybe more)
-MDL-41214,0,Docked blocks zindex puts them on top of fullscreen dialogs
-MDL-41379,0,button alignment on course outcome screen is wonky in Clean
-MDL-41438,0,Change core renderer methods to produce plain headings by default.
-MDL-41481,0,Background scrolling is not locked when using activity chooser in a mobile device with clean theme
-MDL-41505,0,Clean theme: Section visibility icon disappears on narrow screens
-MDL-41551,0,Block drag/drop broken for clean theme on /my
-MDL-41569,0,Remove nowrap from .flexible th
+MDL-21469,0,Chat window uses browser language rather than preferred language set in profile
+MDL-38698,0,Convert URL into Links filter prevents backgrounds on tables when Apply to HTML Format is checked.
+MDL-39044,0,Replace strtolower in block/completionstatus with textlib::strtolower
+MDL-39815,0,Printer-friendly version link can be improved
+MDL-39850,0,Pre and post performance profiling
+MDL-40369,0,Remove deprecated icons
+MDL-40705,0,Clean theme / navigation menu / current course: a long shortname will be displayed over the main content
+MDL-40821,0,Language menu in Clean should show language used
+MDL-41237,0,Atto HTML Editor - Decide on the list of headings to include
+MDL-41387,0,"The string ""Deleted - course tags"" needs to be properly capitalised"
 MDL-41615,0,Fix heading level for Quiz
-MDL-41989,0,Fix atto's visual response/appearance for non touch devices
+MDL-41792,0,The calendar itself should display dates depending on the calendar type used
+MDL-41904,0,Import markdown 1.3
+MDL-42002,0,Redesign TinyMCE icons derived from icoMoon for consitent weight and size
 MDL-42026,0,Atto: Styles selector picks up styles from theme which makes it look crazy
-MDL-42111,0,Youtube Repository Video Preview is Cut Off
-MDL-42195,0,Bootstrap makes all images responsive with no way to disable this behaviour via CSS
-MDL-42317,0,TinyMCE editor can overlap with Blocks on New Event Page in Calendar in Clean Theme
-MDL-42339,0,Remove double formatting set_title/set_heading over codebase
-MDL-42575,0,Revert heading option display for page resource
-MDL-42682,0,Fix display alignment and content for forum discussion in Clean theme
-MDL-43028,0,Site admin navigation is not expanding on few pages
-MDL-43062,0,"Content of label is left-aligned, regardless of alignment chosen"
-MDL-43167,0,Frontpage should support the same JavaScript as course pages
-MDL-43281,0,blockregion.js doesn't recover properly after not finding region node
-MDL-43284,0,Question bank needs some CSS attention
-MDL-43723,0,Users drag&drop the blocks instead of scrolling up/down.
-MDL-43994,0,Hide drag/drop icon for docked blocks
-MDL-44000,0,Atto: Image sizes should keep proportions when resizing
-MDL-44042,0,Keyboard drag/drop does not correctly move items to the top of current parent
-MDL-44215,0,Atto: Toolbar should wrap on several lines
+MDL-42091,0,Fix the background color for atto buttons when clicked and hover
+MDL-42149,0,Design new icons for filemanager/filepicker in svg/png format
+MDL-42207,0,fix message text formatting
+MDL-42235,0,Create outline on font colour and highlight icons for editors
+MDL-42612,0,add Russian Ruble to list of paypal currencies
+MDL-43786,0,"""More"" - a new theme like Clean but with more customisation settings in the UI"
+MDL-43858,0,New Atto plugin Insert Character
+MDL-43859,0,New Atto plugin Insert Smiley
+MDL-43860,0,New Atto plugin switch language LTR/RTL
+MDL-43861,0,Plugins for font/background colours in Atto
+MDL-43867,0,Add a content accessibility checker plugin for Atto
+MDL-43990,0,Atto - add function to format the currently selected block.
+MDL-44092,0,"Add an active state to the buttons, when the text under the cursor has the style applied."
+MDL-44216,0,Atto: Invert indent/outdent buttons
 MDL-44217,0,The link colour in Bootstrapbase is not WCAG compliant
-MDL-44338,0,"Show move drag handle in header for ""Add a block"" block"
-MDL-44771,0,Atto tables with long captions wrap into the table
-MDL-45611,0,Question text overlaps other parts of the UI on the edit quiz page.
-MDL-45853,0,Document renderer best practices
-MDL-45897,0,Add more blocks to the default 'my home' page
-MDL-46206,0,Alt image in footer is incorrectly repeated
+MDL-44220,0,Atto: Being able to set the alignment (flow) of the images
+MDL-44226,0,Atto: Simplifying the 'accessibility checker' to display sensible content
+MDL-44240,0,Atto: Combine plugins indent/outdent into one.
+MDL-44243,0,Atto: Prettifying the HTML when switching to HTML view
+MDL-44597,0,Add support for source maps with less.php
+MDL-44752,0,Correct uses of color => colour in atto plugin language strings
+MDL-44757,0,Change TeX help link in equation editor to point to a moodle docs page
+MDL-44761,0,Display the list of keyboard short cuts somewhere (in the alt for the buttons?)
+MDL-44763,0,"Atto image plugin - remove the word ""Preview"" from the dialogue."
+MDL-44764,0,Change wording in Atto image plugin
+MDL-44775,0,Atto : show html view with a monospace font
+MDL-44778,0,"Atto equation editor, put a border around the preview"
+MDL-44780,0,Enable MathJax filter by default
+MDL-44781,0,Reformat/rewrite the help text for MathJax (needs some line breaks)
+MDL-44782,0,Fix lang string for Mathjax filter setting HTTP (Should be HTTPS)
+MDL-44826,0,Atto Too many image alignment options
+MDL-46269,0,Convert http embedded content to https on https sites where available
+MDL-46313,0,Create new icons for e-mail subscription status
+MDL-46316,0,Fix coding style problems in notes
 MDL-46346,0,coding style problems in blog
-MDL-46772,0,html_writer::table Ignore attributes for rows
-MDL-46777,0,"Improve behaviour of grader header, footer and sidebar on iOS 8 + IE"
-MDL-46920,0,Data-target does nothing
-MDL-46950,0,Re-organised CSS of the grader report
+MDL-46873,0,Publish prototype and publicise
+MDL-46951,0,Make the grader report work on theme_base and derivatives
+MDL-46962,0,Handle floating objects with RTL languages
 MDL-46988,0,Fix RTL styling of the new grader report
-MDL-47053,0,Add floating title for the footer
-MDL-47063,0,Classes .overridden and .ajaxoverridden are not changing the styles
-MDL-47242,0,Fix nested custom_menu responsive display
-MDL-47244,0,Dividers don't display well in responsive layouts
-MDL-26244,1,'Choose a link' for database URL field gives confusing message
-MDL-35930,1,Filepicker and file manager view files buttons do not announce change on the page
-MDL-35931,1,Filepicker selecting a repository does not announce a change in the modal
-MDL-35934,1,File manager selecting file does not announce that the file modal opened
-MDL-36836,1,Alfresco select box broken in Chrome.
-MDL-38903,1,File manager form elements size
-MDL-39608,1,Width thresholds for form labels in the Clean Theme need to be higher.
-MDL-39749,1,Popup as File picker/Activity chooser should be mobile friendly
-MDL-39769,1,taking photos via file picker results in a huge sideways photo
-MDL-39851,1,Full screen popup for mobile (filepicker/activitychooser)
-MDL-40363,1,Files with spaces that are url encoded to %20 don't download under IIS
-MDL-41033,1,Filepicker selecting file does not announce that the file modal opened
-MDL-41159,1,The folder management icon has a weird zindex and shows above modal dialogues
-MDL-41188,1,"Mobile: when closing file picker, the page should be re-centred on the file manager (if you were using the file manager)"
-MDL-41189,1,"File picker: when editing a file from file manager, on a mobile device, the height of the file picker Edit dialog is too small."
-MDL-41200,1,Change header for selecting file in filepicker
-MDL-41213,1,File picker modal layout issues when using clean theme.
-MDL-41215,1,filepicker infinite scroll scrolling issues
-MDL-41229,1,Filepicker is broken in IE9
-MDL-41232,1,Revert temporary fix in filepicker for IE8
-MDL-41337,1,Can't delete the last file from filearea (under some circumstances)
-MDL-41428,1,Missing space between coursefiles and course short name in filepicker
-MDL-41591,1,Z-index issues with filepicker.
-MDL-41702,1,Can't delete logo icon - Clean theme
-MDL-41960,1,META: File manager/File picker toolbars do not match the new toolbar style.
-MDL-42117,1,Drag and drop upload of resources breaks AJAX actions
-MDL-42129,1,Create mock up for the filemanager to match the new toolbar
-MDL-42130,1,Create mock up for the filepicker to match new toolbar
-MDL-42147,1,Filepicker:  aesthetic css issues on IE9
-MDL-42236,1,Style the filemanager to match the new toolbar
-MDL-42237,1,Style the filepicker to match the new toolbar
-MDL-42801,1,Drag and drop upload of resources doesn't add action icons correctly.
-MDL-43737,1,Remove the {!} place holders from the file-picker renderers
-MDL-43999,1,Atto: Double clicking on an image should open the image properties window
-MDL-44079,1,Pressing escape in nested modal dialogues should only close the top dialogue
-MDL-44881,1,The dialogue to pick a file in file picker is not nicely styled
-MDL-44949,1,Repository picking in Atto Image plugin broken
-MDL-45292,1,Bad RTL filepicker styles
-MDL-32746,2,User login - trigger event
-MDL-39844,2,Define and implement the event base class
-MDL-39845,2,Define the new observers API
-MDL-39846,2,Define new event dispatcher behaviour and implement it
-MDL-39848,2,Check coverage of unit tests for new events API
-MDL-39883,2,Duplicating activity on course page does not fire any event
-MDL-39953,2,Replace Legacy events - Blogs
-MDL-39954,2,Replace Legacy events - Assessable content
-MDL-39955,2,Replace Legacy events - Completion
-MDL-39956,2,Replace Legacy events - Cohort
-MDL-39957,2,Replace Legacy events - Course
-MDL-39958,2,Replace Legacy events - Groups
-MDL-39959,2,Replace Legacy events - module
-MDL-39960,2,Replace Legacy events - role
-MDL-39961,2,Replace Legacy events - User
-MDL-39962,2,Replace Legacy events - Mixed
-MDL-39963,2,Legacy events and addtolog()  Cleanup
-MDL-40805,2,user_logout event is not triggered when using CAS authentication with CAS logout option set to yes
-MDL-41031,2,Create a base class for page viewed event
-MDL-41039,2,Replace Legacy events - Quiz
-MDL-41185,2,Create page viewed event for course
-MDL-41285,2,Convert recent activity block to use new Events API
-MDL-41389,2,The auth/db authentication plugin should trigger the user_created/updated event
-MDL-41413,2,Replace enrol_meta event handlers with event observers
-MDL-41440,2,"new completion events have ""new get_string(...)"" - get_string is a method not a class."
-MDL-41456,2,Fix existing events to respect base access specifiers
-MDL-41559,2,Replace handlers by observers for groups in mod_quiz
-MDL-41962,2,Event handlers are not removed from the DB after upgrade
-MDL-42001,2,Use observers instead of handlers in mod_chat
-MDL-42003,2,Use observers instead of handlers in mod_forum
-MDL-42004,2,Use observers instead of handlers in enrol_cohort
-MDL-42269,2,Review all new events introduced in 2.6dev
-MDL-42541,2,Refactor portfolio queue system to prevent usage of events_trigger()
-MDL-42898,2,Develop a timeline page/block
-MDL-42962,2,create a course_module_viewed abstract class
-MDL-43171,2,Cleanup and fixup of the events/logging docs
-MDL-43238,2,Improve event php doc to include other information
-MDL-43289,2,Events for submission
-MDL-43291,2,Events for collaboration
-MDL-43292,2,Events for resources
-MDL-43293,2,Events for comments
-MDL-43294,2,Events for submission response
-MDL-43557,2,Cleanup of existing events
-MDL-43661,2,rename event property level to edulevel
-MDL-43849,2,The observers for the event 'user_enrolment_deleted' are not tested via unit tests
-MDL-44017,2,"Remove remaining uses of content_viewed, and deprecate it"
-MDL-44107,2,Deprecate $event->can_view() until its purpose has been clarified
-MDL-44500,2,validate course id is matching context in new events
-MDL-44523,2,Define and correct edulevel in events
-MDL-44637,2,Tool to list all events
-MDL-45381,2,Mod_forum subscriptioncreated and subscriptiondeleted events link to incorrect locations
-MDL-45721,2,"The \core\event\course_restored event is triggered on any restore, not just courses."
-MDL-45916,2,Event monitor: Finalise the basic file and database structure
-MDL-45918,2,Event monitor: Create a rule manager class with unit tests
-MDL-45919,2,Event monitor: Create a subscription manager class
-MDL-45938,2,Event monitor: Create a form to edit/add a new rule
-MDL-45939,2,Event monitor: Create rule class
-MDL-46109,2,Event monitor: Create a class to generate eventlist
-MDL-46110,2,Event monitor: Create renderables/renderers to display the rule managment page
-MDL-46111,2,Event monitor: Create renderables/renderers to display the subscription managment page
-MDL-46129,2,Event monitor: Handle creating/deleting subscriptions
-MDL-46130,2,Event monitor: Handle rule managment
-MDL-46131,2,Event monitor: Sort out navigation
-MDL-46132,2,Event monitor: Implement the event observer
-MDL-46133,2,Event monitor: Implement cron task to clean events table
-MDL-46134,2,Event monitor: Implement cron task to send notifications
-MDL-46241,2,Event monitor: Create a subscription instance class
-MDL-46409,2,Event monitor: Consolidate and increase unit tests for the tool
-MDL-46410,2,Event monitor: Implement a notification sent history report
-MDL-46510,2,Event monitor: Delete rules when course is deleted
-MDL-47148,2,Event monitor: Write behat tests for the tool
-MDL-47152,2,Event monitor: Add help icon on subscriptions manage page
-MDL-47153,2,Event monitor: Trigger various events
-MDL-52709,2,Create C(R)UD events for competency frameworks
-MDL-52710,2,Create event for framework viewed
-MDL-52711,2,Create C(R)UD events for templates
-MDL-52712,2,Create event for template viewed
-MDL-52959,2,Create C(R)UD events for competencies
-MDL-52960,2,Created event for competency viewed
-MDL-53160,2,Create C(R)UD events for evidence of prior learning
-MDL-53182,2,Create events for plan workflow
-MDL-53188,2,Add event for when an evidence is attached to a user competency
-MDL-53190,2,Create event for evidence of prior learning viewed
-MDL-53196,2,Add relevant record snapshot to existing events
-MDL-24343,3,Properly deprecate unzip_file/zip_file
-MDL-34434,3,META: Collect together deprecated code changes for Moodle 2.6
-MDL-34454,3,remove message_get_my_providers() from lib/messagelib.php
-MDL-34472,3,Add deprecate warning to get_context_instance() function
-MDL-35009,3,Deprecate get_context_instance_by_id()
-MDL-35024,3,META: Collect together deprecated code changes for Moodle 2.7
-MDL-37813,3,$CFG->stringfilters do not get updated during upgrade or when a filter is deleted
-MDL-38832,3,Remove unused FRONTPAGE* constants
-MDL-39873,3,check usage of class_exists to avoid usage of autoloading
-MDL-40020,3,Check usage of comment::init() and set component param
-MDL-40220,3,"Remove deprecated calls to get_plugin_types(), get_plugin_list() etc"
-MDL-41619,3,Event files should not be accessed directly (ie. through the URL).
-MDL-41690,3,Deprecate previously public methods in class cm_info
-MDL-41787,3,MATURITY_ALPHA and friends cannot be defined in lib/setuplib.php
-MDL-42040,3,Organize the registration of shutdown handlers
-MDL-42223,3,Deprecate $CFG->cachejs in favour of reusing $CFG->debug
-MDL-42243,3,filter settings regressions
-MDL-42381,3,remove unused OLE lib and pear excel leftovers
-MDL-42387,3,Revisit CFG->filelifetime implementation and uses
-MDL-42421,3,Remove incorrect statement in auth/upgrade.txt
-MDL-42467,3,Deleted Database and Glossary entries in RSS Block
-MDL-42493,3,"Upgrade to current 2.6beta, memory exhausted problem purging caches"
-MDL-42834,3,Deprecate loginhttps
-MDL-43402,3,Cleanup: delete all unnecessary conditional code detecting zlib enabled
-MDL-43481,3,Cleanup: delete all unnecessary legacy password hashing code
-MDL-43506,3,Remove various deprecated block functions
-MDL-43511,3,question bank should not store references to MUC cache
-MDL-43515,3,cleanup PHPunit docs page linked from admin settings
-MDL-43527,3,cleanup safe_mode references in 2.7
-MDL-43528,3,cleanup magic quotes stuff in 2.7
-MDL-43529,3,cleanup all references to register_globals in 2.7
-MDL-43537,3,cleanup old environment check stuff
-MDL-44475,3,Atto is using deprecated features and modules
-MDL-46568,3,Clean up the history report
-MDL-49599,3,Deprecate old boxnet v1 API
-MDL-50051,3,Make sure all functions in lib/deprecatedlib.php have debugging message
-MDL-50267,3,Remove strings deprecated in 2.9
-MDL-51942,3,Ensure that constant MOODLE_INTERNAL is used everywhere
-MDL-54984,3,Final deprecation / removal of MUC stuff deprecated in 2.6
-MDL-54988,3,Final deprecation of methods from lib/modinfolib.php
-MDL-55126,3,Deprecated get_records_csv() and put_records_csv()
-MDL-55173,3,Forum final deprecations to 2.8
-MDL-40040,4,Replace add_to_log with an event trigger - Blog
-MDL-40041,4,Replace add_to_log with an event trigger - Course
-MDL-40042,4,Replace add_to_log with an event trigger - completion
-MDL-40043,4,Replace add_to_log with an event trigger - course
-MDL-40044,4,Replace add_to_log with an event trigger - role
-MDL-40045,4,Replace add_to_log with an event trigger - User
-MDL-40046,4,Replace add_to_log with an event trigger - mod_page
-MDL-40047,4,Replace add_to_log with an event trigger - mod_feedback
-MDL-40048,4,Replace add_to_log with an event trigger - mod_chat
-MDL-40049,4,Replace add_to_log with an event trigger - mod_choice
-MDL-40050,4,Replace add_to_log with an event trigger - webservices
-MDL-40051,4,Replace add_to_log with an event trigger - misc
-MDL-40052,4,Replace add_to_log with an event trigger - course reports
-MDL-40053,4,Replace add_to_log with an event trigger - notes
-MDL-40054,4,Replace add_to_log with an event trigger - mod_lesson
-MDL-40055,4,Replace add_to_log with an event trigger - mod_assign
-MDL-40056,4,Replace add_to_log with an event trigger - mod_scorm
-MDL-40057,4,Replace add_to_log with an event trigger - mod_assignment
-MDL-40058,4,Replace add_to_log with an event trigger - mod_wiki
-MDL-40059,4,Replace add_to_log with an event trigger - mod_glossary
-MDL-40060,4,Replace add_to_log with an event trigger - mod_book
-MDL-40061,4,Replace add_to_log with an event trigger - mod_data
-MDL-40062,4,Replace add_to_log with an event trigger - mod_forum
-MDL-40063,4,Replace add_to_log with an event trigger - mod_quiz
-MDL-40907,4,Replace add_to_log with an event trigger - course module
-MDL-40908,4,Replace add_to_log with an event trigger - tag
-MDL-40909,4,Replace add_to_log with an event trigger - enrol
-MDL-40910,4,Replace add_to_log with an event trigger - grade
-MDL-40911,4,Replace add_to_log with an event trigger - login
-MDL-40912,4,Replace add_to_log with an event trigger - course category
-MDL-40913,4,Replace add_to_log with an event trigger - message
-MDL-40914,4,Replace add_to_log with an event trigger - authentication
-MDL-40915,4,Replace add_to_log with an event trigger - calendar
-MDL-40916,4,Replace add_to_log with an event trigger - mod_imscp
-MDL-40917,4,Replace add_to_log with an event trigger - mod_resource
-MDL-40918,4,Replace add_to_log with an event trigger - mod_lti
-MDL-40919,4,Replace add_to_log with an event trigger - mod_survey
-MDL-40920,4,Replace add_to_log with an event trigger - mod_url
-MDL-40921,4,Replace add_to_log with an event trigger - mod_workshop
-MDL-40922,4,Replace add_to_log with an event trigger - mod_folder
-MDL-41101,4,Replace existing add_to_log calls for mod_assign
-MDL-41123,4,Replace add_to_log call for page viewed in /report/completion/user.php
-MDL-43965,4,Deprecate add_to_log() function
-MDL-43966,4,Write transition guide for events and logging
-MDL-44340,4,Replace add_to_log in mod_workshop (part 2)
-MDL-16073,5,"Add ""test database setup"" to the ""External Database"" enrollment and authentication plugins"
-MDL-16982,5,Adding data mapping for custom user fields
-MDL-18633,5,User profile: add last ip field to user view
-MDL-27953,5,"Upload users option only allow the following authentication options: Manual account, or No login"
-MDL-31560,5,New message_send API is incapable of sending notfications from the $CFG->noreplyaddress.
-MDL-31625,5,Overfilling DB entries with a replace causes error
-MDL-31776,5,"Additional name fields, to allow Asian languages to flexibly display user names in Chinese characters, local phonetic system or Romanization"
-MDL-37243,5,Comments API doesn't store or validate component
-MDL-39746,5,"On discussion page, user name is overlapping with profile picture"
-MDL-40962,5,Alternate name warnings in Recent Activity block
-MDL-41170,5,user_updated event not triggered when user password modified in moodlelib.php functions
-MDL-41176,5,Debugging when changing a users email address and other bugs
-MDL-41226,5,User profile field submit buttons in awkward location when using clean theme.
-MDL-41307,5,Tags needs updating for changes to fullname function.
-MDL-41316,5,Spam cleaner  using ORACLE
-MDL-41415,5,Fix user_loggedin event to respect base access specifiers and wrong usage of object creation in get_name()
-MDL-41953,5,Relax component name rules slightly to allow more than one digit at the end
-MDL-41999,5,do not use $USER->password and $USER->description directly
-MDL-42082,5,Password field appears as text plain in the external database auth plugin form
-MDL-42097,5,can_change_password() set to false should not display the password form input during update
-MDL-42098,5,Debugging message only shown when alternate name fields are enabled.
-MDL-42173,5,Name fields notices on registration page.
-MDL-42208,5,use unmasking password field in auth plugin configs (master) and prevent saving of passwords
-MDL-42225,5,Badge recipients page warns about additional name fields missing
-MDL-42226,5,Viewing an issued badge warns about additional name fields missing
-MDL-42342,5,Alternate name warnings in quiz results block
-MDL-42390,5,User name (first/last) not properly scrubbed
-MDL-42440,5,Cannot enable most authentication plugins
-MDL-42465,5,Beeping user in chat causes strict standard warning
-MDL-42547,5,Bulk users upload: values are not trimmed in CSV file when bulk uploading users
-MDL-42884,5,Can not delete users with invalid emails
-MDL-42885,5,Updating existing users via bulk upload causes debugging messages
-MDL-42934,5,Self registration does not use site language setting
-MDL-42935,5,"user_create_user and user_update_user functions do not validate auth, lang or theme"
-MDL-42993,5,Username with spaces no longer valid for LDAP authenticated users
-MDL-43037,5,Quiz user overrides generates alternate names debugging message
-MDL-43058,5,report_security_check_riskxss reports additional name fields in the user object.
-MDL-43140,5,When submitting the form on the mnet access control page a warning is shown
-MDL-43142,5,No username variable passed to mnet access control string
-MDL-43196,5,After upgrading to 2.6 my email-based-self-registration serves up an error when I click on 'Create New User' on the front page
-MDL-43215,5,Adding web service token generates alternate names debugging message
-MDL-43451,5,"Cron task ""Creating passwords for new users"" missing additional name fields"
-MDL-43488,5,Self registration requires city and country fields
-MDL-43905,5,incorrect code for updates of login times
-MDL-44745,5,Typo in mod assign fullname() function
-MDL-45562,5,Editing external blog throws exception
-MDL-45772,5,"Some forms with passwords and usernames get populated by the browser, which is not desired"
-MDL-45936,5,The auth/db plugin should use the core functions user_create_user and user_update_user
-MDL-46016,5,Shibboleth contains misleading comment regarding user passwords
-MDL-46649,5,The user selector search does not respect the parameters passed
-MDL-47457,5,We need a log in icon for the user menu.
-MDL-5583,5,allow teachers to specify certain fields in database activity as required
-MDL-42015,6,Module-specific activity completion requirements do not show in course completion
-MDL-42330,6,Automate MDLQA-5257 - An admin can award a site badge
-MDL-42331,6,Automate MDLQA-5258 - A teacher can add and allocate a course badge
-MDL-42332,6,Automate MDLQA-5260 and MDLQA-5261 - A badge can be awarded based on activity and course completion.
-MDL-47490,6,Finish VERP work in current sprint
-MDL-49461,6,Mark competencies complete when the course is completed
-MDL-49463,6,A user can upload evidence or prior learning
-MDL-49464,6,Course competency links should be included in course backup/restore
-MDL-50253,6,Competencies can be related to other competencies
-MDL-50328,6,Allow competencies to be assigned to a user learning plan
-MDL-50439,6,Create a universal block to display CBE related information
-MDL-50482,6,Add ability to duplicate a learning plan template
-MDL-51024,6,Create a new page that can migrate a set of courses from one competency framework to another
-MDL-51026,6,A competency framework can customise the terms for up to 4 competency levels
-MDL-51029,6,"Add ""completion rules"" for all competencies in a framework that are branches"
-MDL-51033,6,Create User Learning Plans from a Learning Plan Template
-MDL-51034,6,Add page to list competencies in a user learning plan
-MDL-51035,6,"Create workflow for requesting approval, and approving draft learning plans."
-MDL-51036,6,"Create a workflow for requesting a competency be reviewed, and reviewing outstanding requests"
-MDL-51039,6,Add completion rules to course - competency links
-MDL-51042,6,Create a statistics report for a learning plan template
-MDL-51045,6,"Create a way to import a competency framework from a set of Moodle ""Outcomes""."
-MDL-51130,6,Deleting frameworks should delete associated data
-MDL-51233,6,Remove unused ID number from learning plan templates
-MDL-51442,6,Framework scales configuration must be mandatory
-MDL-51504,6,Template due date must not be set in the past
-MDL-51507,6,External functions to create/update competency frameworks lack scale information
-MDL-51513,6,Properly delete a competency
-MDL-51598,6,Wrong number of competencies displayed in the list of competency frameworks
-MDL-51602,6,Add ability to duplicate a competency framework
-MDL-51638,6,Use taxonomy terms in competency names everywhere
-MDL-51644,6,Create persistent model for user_competency
-MDL-51645,6,Rename the plan capabilities
-MDL-51646,6,Implement plan status
-MDL-51647,6,Create a schedule task to close the plans that reached their due date
-MDL-51805,6,Freeze a learning plan when it is marked as completed
-MDL-51862,6,Create a persistent model user_competency_plan
-MDL-51866,6,Framework's scale cannot be changed once used
-MDL-51869,6,Users can link evidence of prior learning to their competencies
-MDL-51953,6,Missing four services definitions
-MDL-51963,6,Support custom scales per competency
-MDL-51967,6,Create a dialogue to view all the information about a competency
-MDL-51968,6,Remove the ability to change the userid of a plan
-MDL-52104,6,Improve UI for the change of states in plan
-MDL-52106,6,Remove competency rules on parent when children are being moved or deleted
-MDL-52122,6,Create an API to register evidence to competencies
-MDL-52229,6,Handle hidden templates/frameworks when linking competencies
-MDL-52233,6,Show the idnumber of the competency in the user learning plan (and template)
-MDL-52242,6,Competencies listed in a completed plan must never change
-MDL-52272,6,"Rename ""Status"" and ""State"" on plan page"
-MDL-52282,6,Create a scheduled task to sync plans from template cohorts
-MDL-52408,6,api::list_related_competencies should not require manage capability
-MDL-52418,6,Invalid responses in learning plan templates and course competencies pages
-MDL-52423,6,Create a plan summary screen
-MDL-52424,6,Plans page should show the template the plan is based on
-MDL-52426,6,Template competencies page should not require manage permissions
-MDL-52432,6,Add ability to unlink a plan from its template
-MDL-52463,6,Learning plan templates: Cannot sync cohorts at category level
-MDL-52485,6,Validate the duedate of a plan
-MDL-52561,6,Plan created from cohort and deleted are recreated by sync task
-MDL-52675,6,When deleting a template delete or unlink derived plans
-MDL-52676,6,When deleting a template delete associated template_cohorts
-MDL-52690,6,Do not automatically create plans for big cohort
-MDL-52696,6,Better handling of template due date when creating plans
-MDL-52713,6,Add behat tests for CRUD operations on frameworks
-MDL-52714,6,Behat tests for templates CRUD operations
-MDL-52741,6,Show the taxonomy level for a competency in the competency summary template
-MDL-52743,6,Add a statistics report to the course (competencies)
-MDL-52744,6,grade_competency_in_course missing security check
-MDL-52745,6,Only show evidence for a completency in a completed plan up to the timestamp the plan was completed.
-MDL-52747,6,Show the courses a competency is linked to from the competency summary in plan page.
-MDL-52755,6,Competencies sort order is not preserved when plan is completed
-MDL-52775,6,api::get_course_competency is identical to api::list_course_competencies
-MDL-52803,6,Provide a way to hide/disable comments on competencies and plans
-MDL-52847,6,Error when duplicating framework whitout competencies
-MDL-52860,6,Add confirmation dialogue when removing a competency from a course
-MDL-52979,6,Only show course ratings / proficiency when viewing a competency in a course
-MDL-53084,6,Unclear what we are viewing when in a user competency in a plan
-MDL-53162,6,Behat tests for plans CRUD operations
-MDL-53163,6,Behat tests for plans workflow
-MDL-53186,6,Sending competencies for review from the evidence of prior learning interface
-MDL-53187,6,Create events for user competency workflow
-MDL-53189,6,Create event for user competency viewed
-MDL-53193,6,Add behat tests for CRUD of evidence of prior learning
-MDL-53194,6,Add behat tests for linking evidence of prior learning with competencies
-MDL-53211,6,Create a user_competency_course model and populate it on suggest
-MDL-34055,7,Database function for fast bulk inserts
-MDL-34248,7,Restoring a course fails at mdl_log insert
-MDL-36088,7,Adding/modifying questions to/in the question bank is not logged
-MDL-37181,7,Backups report show all courses with status Skipped.
-MDL-39888,7,Replace usages of the log table in auth/mnet/auth.php
-MDL-39933,7,Implement external database log storage plugin
-MDL-39950,7,Reproduce log reports to use the new logging system (log and loglive)
-MDL-41266,7,Define logging interfaces in core
-MDL-41268,7,Implement tool_log plugin
-MDL-41269,7,Implement logstore_standard plugin
-MDL-41270,7,Implement new log storage management admin UI
-MDL-41271,7,Implement log store settings and related filtering code
-MDL-41272,7,Implement logstore_legacy emulation reader plugin
-MDL-41284,7,Convert Statistics report to new logging API
-MDL-41286,7,Convert outline report to use new logging API
-MDL-41287,7,Buffering in standard log storage
-MDL-42889,7,Remove access to old log table in admin/handlevirus.php and other clam related code
-MDL-42890,7,Reimplement access to log table in backup/util/helper/backup_cron_helper.class.php
-MDL-42891,7,Reimplement access to log table in functions notify_login_failures() and count_login_failures()
-MDL-42892,7,Reimplement access to log table in function can_delete_course()
-MDL-42894,7,Investigating performance of the new logging API in practice
-MDL-43274,7,Prevent course logs from being deleted when course is reset
-MDL-43761,7,improve database install performance (especially MySQL)
-MDL-43903,7,prevent error log output from addodb during phpunit execution
-MDL-43931,7,Write unit tests for logging stores and managers
-MDL-43967,7,Write transition guide for reports that rely on logs
-MDL-44106,7,use 'restore' and 'ws' origin in logged events
-MDL-44370,7,Incorrect urls for calendar logs in log and loglive reports
+MDL-47027,0,Styling for the grader report when editing is turned on
+MDL-47046,0,Update code from UCLA to meet coding style guidelines
+MDL-47127,0,"Update ""date till"" string in the grade history report"
+MDL-47353,0,Test the Grader report on a number of third-party themes
+MDL-53152,0,lessc Less compilation computes variable mathematics at a different time
+MDL-53185,0,Big button to turn CBE on/off.
+MDL-24343,1,Properly deprecate unzip_file/zip_file
+MDL-28631,1,forbid use of cookies especially from javascript
+MDL-34434,1,META: Collect together deprecated code changes for Moodle 2.6
+MDL-34454,1,remove message_get_my_providers() from lib/messagelib.php
+MDL-34472,1,Add deprecate warning to get_context_instance() function
+MDL-35009,1,Deprecate get_context_instance_by_id()
+MDL-35024,1,META: Collect together deprecated code changes for Moodle 2.7
+MDL-37813,1,$CFG->stringfilters do not get updated during upgrade or when a filter is deleted
+MDL-38832,1,Remove unused FRONTPAGE* constants
+MDL-39854,1,Automatic class loading
+MDL-39873,1,check usage of class_exists to avoid usage of autoloading
+MDL-40020,1,Check usage of comment::init() and set component param
+MDL-40220,1,"Remove deprecated calls to get_plugin_types(), get_plugin_list() etc"
+MDL-40874,1,Retire MyMobile as a standard theme
+MDL-41289,1,create ajax method to get user pref
+MDL-41690,1,Deprecate previously public methods in class cm_info
+MDL-41787,1,MATURITY_ALPHA and friends cannot be defined in lib/setuplib.php
+MDL-41833,1,SetType warnings in feedback when trying to delete a response
+MDL-41843,1,Incorrect uses of namespace in mod/lti/OAuthBody.php
+MDL-41885,1,Modules should declare their use of the question bank
+MDL-41903,1,Import Typo3 4.7.15
+MDL-42223,1,Deprecate $CFG->cachejs in favour of reusing $CFG->debug
+MDL-42224,1,clean up messaging and email redirection in unit tests
+MDL-42381,1,remove unused OLE lib and pear excel leftovers
+MDL-42387,1,Revisit CFG->filelifetime implementation and uses
+MDL-42421,1,Remove incorrect statement in auth/upgrade.txt
+MDL-42428,1,Update M.util.show_confirm_dialog() to use moodle-core-notification
+MDL-42442,1,eliminate standardwhite references in lib/setup.hp
+MDL-42465,1,Beeping user in chat causes strict standard warning
+MDL-42467,1,Deleted Database and Glossary entries in RSS Block
+MDL-42496,1,backport MDL-41245 add-on installer redirection fix from master
+MDL-42597,1,New maintenance mode countdown counts down to 0 instead of 1
+MDL-42834,1,Deprecate loginhttps
+MDL-43188,1,Backport missing beep to 2.5 and 2.4
+MDL-43213,1,behat config settings and init code can be simplified
+MDL-43262,1,Move dialogue default overrides to attributes
+MDL-43323,1,Lazily load moodle-core-tooltip dependencies
+MDL-43402,1,Cleanup: delete all unnecessary conditional code detecting zlib enabled
+MDL-43481,1,Cleanup: delete all unnecessary legacy password hashing code
+MDL-43506,1,Remove various deprecated block functions
+MDL-43515,1,cleanup PHPunit docs page linked from admin settings
+MDL-43527,1,cleanup safe_mode references in 2.7
+MDL-43528,1,cleanup magic quotes stuff in 2.7
+MDL-43529,1,cleanup all references to register_globals in 2.7
+MDL-43784,1,Clean up all the themes shipping in 2.7 by removing some from core
+MDL-43839,1,Make Clean as the default theme in 2.7.
+MDL-43886,1,moodle-core-dialogue leaves itself in the DOM after destroying itself
+MDL-44475,1,Atto is using deprecated features and modules
+MDL-46568,1,Clean up the history report
+MDL-46663,1,Remove old functionality
+MDL-46695,1,"Get prototype onto prototype.moodle.net, promote and request feedback"
+MDL-46907,1,Refactor user_button class to remove js methods
+MDL-47146,1,Implement the prototyped changes
+MDL-47171,1,Event monitor: Remove dependency on MDL-46155
+MDL-49599,1,Deprecate old boxnet v1 API
+MDL-50051,1,Make sure all functions in lib/deprecatedlib.php have debugging message
+MDL-50267,1,Remove strings deprecated in 2.9
+MDL-51870,1,"Use new ""ajax"" definition of external functions"
+MDL-51942,1,Ensure that constant MOODLE_INTERNAL is used everywhere
+MDL-53192,1,Rebase CBE to latest Moodle core
+MDL-54984,1,Final deprecation / removal of MUC stuff deprecated in 2.6
+MDL-54988,1,Final deprecation of methods from lib/modinfolib.php
+MDL-55126,1,Deprecated get_records_csv() and put_records_csv()
+MDL-55173,1,Forum final deprecations to 2.8
+MDL-36088,2,Adding/modifying questions to/in the question bank is not logged
+MDL-40040,2,Replace add_to_log with an event trigger - Blog
+MDL-40041,2,Replace add_to_log with an event trigger - Course
+MDL-40042,2,Replace add_to_log with an event trigger - completion
+MDL-40043,2,Replace add_to_log with an event trigger - course
+MDL-40044,2,Replace add_to_log with an event trigger - role
+MDL-40045,2,Replace add_to_log with an event trigger - User
+MDL-40046,2,Replace add_to_log with an event trigger - mod_page
+MDL-40047,2,Replace add_to_log with an event trigger - mod_feedback
+MDL-40048,2,Replace add_to_log with an event trigger - mod_chat
+MDL-40049,2,Replace add_to_log with an event trigger - mod_choice
+MDL-40050,2,Replace add_to_log with an event trigger - webservices
+MDL-40051,2,Replace add_to_log with an event trigger - misc
+MDL-40052,2,Replace add_to_log with an event trigger - course reports
+MDL-40053,2,Replace add_to_log with an event trigger - notes
+MDL-40054,2,Replace add_to_log with an event trigger - mod_lesson
+MDL-40055,2,Replace add_to_log with an event trigger - mod_assign
+MDL-40056,2,Replace add_to_log with an event trigger - mod_scorm
+MDL-40057,2,Replace add_to_log with an event trigger - mod_assignment
+MDL-40058,2,Replace add_to_log with an event trigger - mod_wiki
+MDL-40059,2,Replace add_to_log with an event trigger - mod_glossary
+MDL-40060,2,Replace add_to_log with an event trigger - mod_book
+MDL-40061,2,Replace add_to_log with an event trigger - mod_data
+MDL-40062,2,Replace add_to_log with an event trigger - mod_forum
+MDL-40063,2,Replace add_to_log with an event trigger - mod_quiz
+MDL-40907,2,Replace add_to_log with an event trigger - course module
+MDL-40908,2,Replace add_to_log with an event trigger - tag
+MDL-40909,2,Replace add_to_log with an event trigger - enrol
+MDL-40910,2,Replace add_to_log with an event trigger - grade
+MDL-40911,2,Replace add_to_log with an event trigger - login
+MDL-40912,2,Replace add_to_log with an event trigger - course category
+MDL-40913,2,Replace add_to_log with an event trigger - message
+MDL-40914,2,Replace add_to_log with an event trigger - authentication
+MDL-40915,2,Replace add_to_log with an event trigger - calendar
+MDL-40916,2,Replace add_to_log with an event trigger - mod_imscp
+MDL-40917,2,Replace add_to_log with an event trigger - mod_resource
+MDL-40918,2,Replace add_to_log with an event trigger - mod_lti
+MDL-40919,2,Replace add_to_log with an event trigger - mod_survey
+MDL-40920,2,Replace add_to_log with an event trigger - mod_url
+MDL-40921,2,Replace add_to_log with an event trigger - mod_workshop
+MDL-40922,2,Replace add_to_log with an event trigger - mod_folder
+MDL-41101,2,Replace existing add_to_log calls for mod_assign
+MDL-41123,2,Replace add_to_log call for page viewed in /report/completion/user.php
+MDL-43965,2,Deprecate add_to_log() function
+MDL-43966,2,Write transition guide for events and logging
+MDL-44340,2,Replace add_to_log in mod_workshop (part 2)
+MDL-40248,3,Activity Chooser should better support subtypes
+MDL-41082,3,Portfolio instances are loaded when loading the user settings
+MDL-41100,3,Caching get_plugin_list_with_file
+MDL-41220,3,core_component_testcase assumes you don't have add-ons isntalled
+MDL-41231,3,Export to portfolio button at bottom of database activity view doesn't work if Delete selected button is displayed.
+MDL-41267,3,Add support for admin tool subplugins
+MDL-41437,3,missing plugins are not displayed on plugins overview page
+MDL-41811,3,Load admin menus using AJAX when not on admin pages
+MDL-42078,3,Uninstalling multiple plugins usability and bugfixes
+MDL-42497,3,orphaned subplugins are missing on the plugins overview page
+MDL-42512,3,Missing filters are displayed in the filters administration
+MDL-42525,3,improve perf of core_plugin_manager::get_plugin_info()
+MDL-42553,3,It is not possible to uninstall calendar types
+MDL-42924,3,use normalize_component to extract plugin name and type
+MDL-43008,3,Calendar plugins can not display setting pages.
+MDL-43842,3,Import code from Atto back to core.
+MDL-43853,3,Make Atto toolbar buttons display all at once - instead of one by one.
+MDL-43854,3,Import collapse plugin from prototype.moodle.net
+MDL-43862,3,Add mediamanager plugin for Atto
+MDL-44127,3,Atto Improve API when a plugin wants multiple buttons.
+MDL-44241,3,Atto: Combine plugins link/unlink into one
+MDL-44749,3,Collapse plugin should handle suboptimal toolbar configuration
+MDL-44754,3,Explain the meaning of the group names in the toolbar configuration
+MDL-44755,3,Atto plugins are using different icons for the plugin / toolbar
+MDL-44756,3,Atto collapse plugin setting help update
+MDL-44762,3,Atto title plugin bugs. It is possible to choose a title from the menu and nothing happens
+MDL-44784,3,Atto plugins with settings do not show settings links on manage plugins page.
+MDL-44824,3,Strings missing for some subplugins
+MDL-47490,4,Finish VERP work in current sprint
+MDL-50482,4,Add ability to duplicate a learning plan template
+MDL-51033,4,Create User Learning Plans from a Learning Plan Template
+MDL-51035,4,"Create workflow for requesting approval, and approving draft learning plans."
+MDL-51233,4,Remove unused ID number from learning plan templates
+MDL-51504,4,Template due date must not be set in the past
+MDL-51645,4,Rename the plan capabilities
+MDL-51646,4,Implement plan status
+MDL-51647,4,Create a schedule task to close the plans that reached their due date
+MDL-51862,4,Create a persistent model user_competency_plan
+MDL-51968,4,Remove the ability to change the userid of a plan
+MDL-52104,4,Improve UI for the change of states in plan
+MDL-52272,4,"Rename ""Status"" and ""State"" on plan page"
+MDL-52282,4,Create a scheduled task to sync plans from template cohorts
+MDL-52423,4,Create a plan summary screen
+MDL-52424,4,Plans page should show the template the plan is based on
+MDL-52432,4,Add ability to unlink a plan from its template
+MDL-52463,4,Learning plan templates: Cannot sync cohorts at category level
+MDL-52485,4,Validate the duedate of a plan
+MDL-52561,4,Plan created from cohort and deleted are recreated by sync task
+MDL-52675,4,When deleting a template delete or unlink derived plans
+MDL-52676,4,When deleting a template delete associated template_cohorts
+MDL-52690,4,Do not automatically create plans for big cohort
+MDL-52696,4,Better handling of template due date when creating plans
+MDL-52714,4,Behat tests for templates CRUD operations
+MDL-52745,4,Only show evidence for a completency in a completed plan up to the timestamp the plan was completed.
+MDL-53162,4,Behat tests for plans CRUD operations
+MDL-53163,4,Behat tests for plans workflow
+MDL-53182,4,Create events for plan workflow
+MDL-21180,5,Category children default to extra credit when category agg is switched from Weighted to Simple
+MDL-31597,5,"In User Report, Weights should not be displayed as a percentage"
+MDL-35984,5,Gradebook Sum of grades shows wrong total if items are hidden
+MDL-36063,5,Extra credit boxes checked when switching aggregation methods
+MDL-38827,5,"If ""Aggregate only non-empty grades"" is NOT selected for grade category then total is displayed as dashes instead of zeros."
+MDL-43378,5,"Implement new ""Natural weighting"" interface"
+MDL-45029,5,Weight Defaults to Zero in Weighted Mean of Grades Aggregation Method
+MDL-46139,5,"Add extra credit, drop-low/ keep-high, accurate weights and contribution column to User report"
+MDL-46577,5,"Restructure Unit tests for gradebook aggregation, include natural weight"
+MDL-46578,5,Make Natural aggregation the (single) default aggregation method
+MDL-46595,5,Add behat tests
+MDL-46797,5,"Rename ""Sum of grades"" aggregation to ""Natural"""
+MDL-46801,5,Nest weightings within categories
+MDL-46819,5,Negative adjusted weights in the natural aggregation should not be allowed.
+MDL-46822,5,Allow editing of weights within single category
+MDL-46824,5,Only allow drop lowest/keep highest when items in category are equally weighted
+MDL-46827,5,Allow weightings within a category to be reset
+MDL-46864,5,Integrate Natural weighting code
+MDL-46966,5,change the default value of grade_aggregations_visible
+MDL-46997,5,Sum of Grades still not calculating correctly with hidden items
+MDL-47006,5,Add weights to sum of grades / natural
+MDL-47009,5,Update reports so that they display natural weights properly
+MDL-47011,5,Apply natural weights to all grade items when setting up the gradebook.
+MDL-47055,5,reimplement extra credit handling with natural weights.
+MDL-47059,5,Investigate/fix handling of hidden and excluded grades within natural weights
+MDL-47062,5,Create an update script for natural grading
+MDL-47098,5,If you adjust the weight of a category itself you cannot un-override it
+MDL-47110,5,"Automatically normalise weights, and notify users"
+MDL-47243,5,Outcome items weight cannot be edited
+MDL-47253,5,"Change default aggregation method to ""Natural"""
+MDL-47255,5,Record aggregationcoef2 and weightoverride in grade history
+MDL-47260,5,Undefined offset when using another aggregation method than Natural
+MDL-47345,5,Category max grade is not properly updated when using extra credit
+MDL-47346,5,Record aggregationstatus and aggregationweight in the history tables
+MDL-47373,5,Fix bug where categories do not show Adjusted when they are
+MDL-47377,5,Do not include items with a weight of 0 in the max grade.
+MDL-47417,5,grademax should be reset to 100 when switching from natural agg method to different one
+MDL-47430,5,Natural aggregation normalizes values to the range mingrade -> maxgrade - it should use 0 -> maxgrade
+MDL-18229,6,Add grade item and student grades quick edit feature to the grader report
+MDL-18770,6,Non-graded Assignment and Quizzes appear in the gradebook  and have Max Grade assigned
+MDL-20250,6,"Add admin settings for disabling particular gradebook calculations, category overriding and grade minimum on the grader report"
+MDL-31379,6,Introduce new grading fields - dategraded and datesubmitted
+MDL-38732,6,Graded course activity while editing gradebook causes unintentional overrides
+MDL-39001,6,Unenroling and re-enrolling student causes inconsistent grade data
+MDL-39782,6,"Clean - Categories and Items, move grade item screen is squished."
+MDL-40697,6,Add events for when a grade has been created/updated
+MDL-41062,6,Can not sort gradebook items.
+MDL-41819,6,Grades lost when editing in the grader report due to max_input_vars
+MDL-42896,6,Grade update event
+MDL-43740,6,"Setting the ""Grade type"" of a manual grade item to ""None"" removes it from the Gradebook UI"
+MDL-44447,6,Grade - Add an option to export the total in letters
+MDL-44923,6,"The gradebook export xml format does not handle the settings ""Export new or updated grades only"""
+MDL-46059,6,Editing LTI page invalid grade view
+MDL-46175,6,Gradebook terminology improvements
+MDL-46181,6,Usability improvements for grade export and import
+MDL-46546,6,CSV import of grades silently fails when malformed row(s) present
+MDL-46547,6,Copy and paste import from excel into the gradebook.
+MDL-46548,6,Improved interface for export of grades
+MDL-46549,6,Robust previewing + update dry running for importing grade CSVs
+MDL-46569,6,Migrate the history report to use table_sql
+MDL-46597,6,Locked grade items don't update on grade import
+MDL-46598,6,Robust handling of bad grade import data
+MDL-46599,6,Importing null grade data clears existing grades
+MDL-46600,6,Import fails if grade import data contains nonexistent user
+MDL-46608,6,"Add an admin setting to make the use of a particular scale the ""default"" for all grading things (gradebook columns, activities etc)."
+MDL-46658,6,Prepare and integrate grader code from UCLA
+MDL-46696,6,Implement backup and restore of the grades history
+MDL-46732,6,Review and move AJAX grading code to YUI module
+MDL-46736,6,Handle grades associated with deleted grade items in the history report
+MDL-46818,6,Add form change checking to Gradebook setup page
+MDL-46846,6,Grade export does not support grade display type anymore
+MDL-46967,6,Remove grade/lib.php update_field()
+MDL-46980,6,Move install code into core
+MDL-47022,6,"Implement ""Export since"" filter on grade export"
+MDL-47358,6,Ensure changes to categories and effects on grade items are recorded in Grade history
+MDL-55066,6,Create a script to compare all grades for a 57% letter boundary problem.
+MDL-32746,7,User login - trigger event
+MDL-39393,7,Changing activity title on course front page with AJAX does not fire mod_updated event
+MDL-39844,7,Define and implement the event base class
+MDL-39845,7,Define the new observers API
+MDL-39846,7,Define new event dispatcher behaviour and implement it
+MDL-39848,7,Check coverage of unit tests for new events API
+MDL-39883,7,Duplicating activity on course page does not fire any event
+MDL-39953,7,Replace Legacy events - Blogs
+MDL-39954,7,Replace Legacy events - Assessable content
+MDL-39955,7,Replace Legacy events - Completion
+MDL-39956,7,Replace Legacy events - Cohort
+MDL-39957,7,Replace Legacy events - Course
+MDL-39958,7,Replace Legacy events - Groups
+MDL-39959,7,Replace Legacy events - module
+MDL-39960,7,Replace Legacy events - role
+MDL-39961,7,Replace Legacy events - User
+MDL-39962,7,Replace Legacy events - Mixed
+MDL-39963,7,Legacy events and addtolog()  Cleanup
+MDL-41031,7,Create a base class for page viewed event
+MDL-41039,7,Replace Legacy events - Quiz
+MDL-41185,7,Create page viewed event for course
+MDL-41285,7,Convert recent activity block to use new Events API
+MDL-41389,7,The auth/db authentication plugin should trigger the user_created/updated event
+MDL-41413,7,Replace enrol_meta event handlers with event observers
+MDL-41440,7,"new completion events have ""new get_string(...)"" - get_string is a method not a class."
+MDL-41456,7,Fix existing events to respect base access specifiers
+MDL-41619,7,Event files should not be accessed directly (ie. through the URL).
+MDL-41962,7,Event handlers are not removed from the DB after upgrade
+MDL-42079,7,Repeating events in external calendar do not appear in Moodle Calendar
+MDL-42269,7,Review all new events introduced in 2.6dev
+MDL-42962,7,create a course_module_viewed abstract class
+MDL-43171,7,Cleanup and fixup of the events/logging docs
+MDL-43238,7,Improve event php doc to include other information
+MDL-43289,7,Events for submission
+MDL-43291,7,Events for collaboration
+MDL-43292,7,Events for resources
+MDL-43293,7,Events for comments
+MDL-43294,7,Events for submission response
+MDL-43557,7,Cleanup of existing events
+MDL-44017,7,"Remove remaining uses of content_viewed, and deprecate it"
 MDL-44496,7,buffer raw data instead of full events in log stores
+MDL-44500,7,validate course id is matching context in new events
+MDL-44523,7,Define and correct edulevel in events
+MDL-44627,7,"Show/hide, edit title, group mode module buttons don't trigger course_module_updated event"
+MDL-44637,7,Tool to list all events
+MDL-44717,7,Incorrect urls and strings in many events
 MDL-44746,7,Remove incorrect use of snapshots in events
-MDL-45754,7,Backup and restore of logs in 2.7 and above
-MDL-46118,7,"Problems in downloading course log files, only 30 lines are downloaded"
-MDL-46455,7,Re-introduce backup/restore functionality with new logging system
-MDL-46571,7,Write Unit Tests for the history report
-MDL-46573,7,Improve the SQL queries of the history report
-MDL-10115,8,A use profile's course list is arbitarily limited with no way of seeing complete list
-MDL-21415,8,Course Participation Report doesn't abide by separate groups
-MDL-24120,8,Allow admin to remain logged in after login as procedure
-MDL-27339,8,"The link Create ""File system"" instance do not work"
-MDL-31089,8,New posts listing on 'My Moodle' ignores groups.
-MDL-32275,8,enrol/users.php shows last access to the platform but not last access to the course
-MDL-33618,8,A way to hide messages that were configured to never be sent
-MDL-33741,8,Teacher can't access course files in hidden categories using the Filepicker with the server files repository
-MDL-36460,8,Forced/Auto forums list all potential subscribers and ignore completion/availability info
-MDL-37679,8,"When viewing a single section, the page title does not update"
-MDL-37717,8,add warning when teacher tries to disable enrolment method (same as when deleting it)
-MDL-38780,8,Unread Posts listing on 'My Moodle' should take care of groups
-MDL-39299,8,CSS issues on a course page using Bootstrap (Clean theme)
-MDL-39393,8,Changing activity title on course front page with AJAX does not fire mod_updated event
-MDL-39603,8,Search filter on enrolled users page is confusing in clean theme
-MDL-39794,8,"When editing is on for the front page, then always show the ""Add course"" button under the current courses."
-MDL-40248,8,Activity Chooser should better support subtypes
-MDL-40975,8,Review new course editing interface
-MDL-41227,8,D&D moving module to hidden section does not change visibility
-MDL-41231,8,Export to portfolio button at bottom of database activity view doesn't work if Delete selected button is displayed.
-MDL-41589,8,Cannot delete a user's role in a course
-MDL-41605,8,Search filter on enrolled users page update filter while deleting user role in non-js mode.
-MDL-42085,8,Default Enrollment duration is not applied when manually enrolling a user if enrollment option is not expanded.
-MDL-42100,8,Bad links in Capability overview report
-MDL-42212,8,Lesson module is not browseable using the Server Files repository
-MDL-42217,8,Course actionmenu is not toggled by coursebase setup_for_*
-MDL-42392,8,Block content doesn't show when the content was hidden and javascript is turned off
-MDL-42512,8,Missing filters are displayed in the filters administration
-MDL-42588,8,Add option to Scorm setting to display or hide activity name
-MDL-43684,8,"Activity drag and drop makes an activity appear ""visible"" even when it's not."
-MDL-43688,8,Clean: Notice about drag & drop being available is hidden under the navbar
-MDL-43941,8,Activity show/hide toggle doesn't work in hidden or orphaned sections
-MDL-44368,8,filter_activitynames can be improved after dropping of global text cache
-MDL-44627,8,"Show/hide, edit title, group mode module buttons don't trigger course_module_updated event"
-MDL-45893,8,Developing a User Menu
-MDL-46035,8,Survey activity shows wrong error message to admins
-MDL-46401,8,Use cohorts to restrict display of course categories and set themes
-MDL-46523,8,Add body class when logged in as other role
-MDL-47252,8,Discussion subscriptions visible (and broken) to guests
-MDL-51557,8,Add learning plans to the administration block in categories
-MDL-52062,8,User's learning plan pages do not have a breadcrumb
-MDL-52235,8,"Button ""Add new learning plan"" should not be displayed when permissions are missing"
-MDL-52757,8,Course competencies: Problem when selecting users in the manual marking page
-MDL-21180,9,Category children default to extra credit when category agg is switched from Weighted to Simple
-MDL-31597,9,"In User Report, Weights should not be displayed as a percentage"
-MDL-35984,9,Gradebook Sum of grades shows wrong total if items are hidden
-MDL-36063,9,Extra credit boxes checked when switching aggregation methods
-MDL-38827,9,"If ""Aggregate only non-empty grades"" is NOT selected for grade category then total is displayed as dashes instead of zeros."
-MDL-43378,9,"Implement new ""Natural weighting"" interface"
-MDL-45029,9,Weight Defaults to Zero in Weighted Mean of Grades Aggregation Method
-MDL-46139,9,"Add extra credit, drop-low/ keep-high, accurate weights and contribution column to User report"
-MDL-46576,9,Implement Natural aggregation
-MDL-46577,9,"Restructure Unit tests for gradebook aggregation, include natural weight"
-MDL-46578,9,Make Natural aggregation the (single) default aggregation method
-MDL-46606,9,Review use of scales in workshop.
-MDL-46797,9,"Rename ""Sum of grades"" aggregation to ""Natural"""
-MDL-46801,9,Nest weightings within categories
-MDL-46819,9,Negative adjusted weights in the natural aggregation should not be allowed.
-MDL-46822,9,Allow editing of weights within single category
-MDL-46824,9,Only allow drop lowest/keep highest when items in category are equally weighted
-MDL-46827,9,Allow weightings within a category to be reset
-MDL-46966,9,change the default value of grade_aggregations_visible
-MDL-46997,9,Sum of Grades still not calculating correctly with hidden items
-MDL-47006,9,Add weights to sum of grades / natural
-MDL-47009,9,Update reports so that they display natural weights properly
-MDL-47011,9,Apply natural weights to all grade items when setting up the gradebook.
-MDL-47055,9,reimplement extra credit handling with natural weights.
-MDL-47059,9,Investigate/fix handling of hidden and excluded grades within natural weights
-MDL-47062,9,Create an update script for natural grading
-MDL-47098,9,If you adjust the weight of a category itself you cannot un-override it
-MDL-47110,9,"Automatically normalise weights, and notify users"
-MDL-47243,9,Outcome items weight cannot be edited
-MDL-47253,9,"Change default aggregation method to ""Natural"""
-MDL-47254,9,Backup / restore aggregationcoef2 and weightoverride
-MDL-47255,9,Record aggregationcoef2 and weightoverride in grade history
-MDL-47260,9,Undefined offset when using another aggregation method than Natural
-MDL-47345,9,Category max grade is not properly updated when using extra credit
-MDL-47346,9,Record aggregationstatus and aggregationweight in the history tables
-MDL-47373,9,Fix bug where categories do not show Adjusted when they are
-MDL-47377,9,Do not include items with a weight of 0 in the max grade.
-MDL-47417,9,grademax should be reset to 100 when switching from natural agg method to different one
-MDL-47430,9,Natural aggregation normalizes values to the range mingrade -> maxgrade - it should use 0 -> maxgrade
-MDL-26408,10,IMS Enterprise admin notifications fail on message_send()
-MDL-27158,10,Default timezone is incorrect when not set in PHP configuration
-MDL-31410,10,PayPal IPN Script exposed to message_send() failure
-MDL-32592,10,Category Undefined in IMS Enterprise
-MDL-34182,10,Invalid JSON output on filepicker when repository plugins output invalid content
-MDL-34587,10,Filenames w/ Spaces Generating incorrect SHA1
-MDL-34744,10,MSSQL backup fails under some circumstances
-MDL-36126,10,Error restoring a Moodle 1.9.x course to Moodle 2.x due to long filenames
-MDL-37877,10,"Over-large backups fail transparently, then do not get deleted next time, so space fills up"
-MDL-40039,10,Add alternative to contextid for core_files_external::upload
-MDL-40228,10,Incorrect backup setting names in automated backups
-MDL-40250,10,Add unit tests for core_files_external::upload
-MDL-41197,10,core_text::convert produces notices when experiencing invalid utf8 params or char not in target encoding
-MDL-41220,10,core_component_testcase assumes you don't have add-ons isntalled
-MDL-41347,10,tool_uploadcourse: Invalid restore files are not well handled
-MDL-41419,10,core_files_externallib_testcase::test_get_files sporadically fails
-MDL-41565,10,Observers do not include file from the right location
-MDL-41608,10,Add mustache-powered renderable for notifications
-MDL-41707,10,Allow phpunit tests to use local external files or skip external tests completely
-MDL-41726,10,"Serious performance regression in course reset of groups, including race condition that may send erroneous emails to students"
-MDL-41833,10,SetType warnings in feedback when trying to delete a response
-MDL-41843,10,Incorrect uses of namespace in mod/lti/OAuthBody.php
-MDL-41935,10,Prevent false-positive failures due to time differences
-MDL-41938,10,Course backup contains empty 'contenthash' value in files.xml
-MDL-42014,10,Session cache stops working after upgrade to 2.5.2
-MDL-42021,10,Event base class should force an objectid if objecttable is defined
-MDL-42044,10,Install add on fails validation when zip does not contain folder entries
-MDL-42054,10,phpmailer unit test redirection is using incorrect test
-MDL-42199,10,Random failures with test_increment_revision_number
-MDL-42201,10,Creating a course and running the cron causes 'Error' to be displayed in backup report.
-MDL-42224,10,clean up messaging and email redirection in unit tests
-MDL-42292,10,block.version regression in custom lang tool
-MDL-42293,10,"Behat upload step, should be able to determine proper location if ""admin/"" is present in the url."
-MDL-42377,10,Incorrect debugging message in backup.
-MDL-42386,10,Etag verification for stored files never matching
-MDL-42414,10,One more time() random failure: test_increment_revision_number
-MDL-42882,10,Performance improvement to missing root directory upgrade step
-MDL-42956,10,mnet broken for mssql and oracle
-MDL-43005,10,tag param in blog index page should be strictly checked
-MDL-43063,10,Function download_file_content() inline documentation of return value incorrect
-MDL-43137,10,class loader breaks open_basedir
-MDL-43175,10,Base event JSON encoding decoding check will fail with whole float values.
-MDL-43188,10,Backport missing beep to 2.5 and 2.4
-MDL-43266,10,Testing sites are cleaning all test dataroot contents
-MDL-43295,10,Debugging warning on saving an online text submission with an uploaded image.
-MDL-43330,10,Behat framework: add skip support
-MDL-43367,10,get_child_contexts() returns invalid contexts when context path missing
-MDL-43395,10,get_records*_sql silently converts invalid limit param to integer
-MDL-43437,10,mod_wiki\event\page_version_deleted event unit test should compare objectid with versionid
-MDL-43510,10,phpunit 404 tests may fail when using custom exttests location
-MDL-43746,10,require_course_login: incorrect variable assignment
-MDL-43884,10,$DB->get_tables() returns empty array for external databases.
-MDL-43948,10,Possible reflected XSS in editor and imagefile form fields
-MDL-44124,10,Ical import ignores some recurrence rules
-MDL-44704,10,The \core\event\message_sent class should be passed the system context (for now).
-MDL-44717,10,Incorrect urls and strings in many events
-MDL-44794,10,"get_groups(), get_groups_all() and groups_get_user_groups are not covered by unit tests"
-MDL-44874,10,Per-request temp directories
-MDL-45594,10,Fix use of ORDER BY id in the messaging system
-MDL-45935,10,Slow behat tests for backup
-MDL-46218,10,Disabled functionality checks occur later than necessary
+MDL-45916,7,Event monitor: Finalise the basic file and database structure
+MDL-46109,7,Event monitor: Create a class to generate eventlist
+MDL-46409,7,Event monitor: Consolidate and increase unit tests for the tool
+MDL-47153,7,Event monitor: Trigger various events
+MDL-52709,7,Create C(R)UD events for competency frameworks
+MDL-52710,7,Create event for framework viewed
+MDL-52711,7,Create C(R)UD events for templates
+MDL-52712,7,Create event for template viewed
+MDL-53160,7,Create C(R)UD events for evidence of prior learning
+MDL-53190,7,Create event for evidence of prior learning viewed
+MDL-53196,7,Add relevant record snapshot to existing events
+MDL-39796,8,Multiple select options displays as empty box
+MDL-41541,8,Edit PDF: test_gs_path is broken
+MDL-41664,8,Add the ability to format the years in the new calendar plugin.
+MDL-42029,8,Editpdf: Page selector should indicate what page you are on
+MDL-42030,8,EditPDF: when selecting stamp image the stamp tool is not selected
+MDL-42131,8,Edit PDF missing require_login on some pages.
+MDL-42150,8,Edit PDF Ajax error saving pages.
+MDL-44222,8,Atto: Image plugin not reliable editing an existing image
+MDL-46649,8,The user selector search does not respect the parameters passed
+MDL-24287,9,Convert group members selector to Shifted YUI3 module.
+MDL-32917,9,Upgrade dateselector to use YUI3 calendar module
+MDL-33057,9,Rewrite DND Upload to YUI module (performance)
+MDL-36334,9,Add support for selected gallery modules
+MDL-38561,9,Convert filepickers and filemanagers to YUI modules
+MDL-38771,9,$CFG->yuicomboloading prevents use of yui_combo.php
+MDL-41161,9,upgrade mod_chat from yui 2 to yui 3
+MDL-41208,9,Update YUI to version 3.12.0
+MDL-41993,9,Atto produces ugly html
+MDL-42152,9,import YUI 3.13.0
+MDL-42438,9,new emulated simpleyui rollup does not load CSS for extra modules
+MDL-43422,9,Move javascript-static.js to rollup
+MDL-43525,9,Allow add-ons to include YUI gallery modules
+MDL-43556,9,Rewrite comment JavaScript
+MDL-43664,9,JavaScript breaks on IE <= 8
+MDL-43869,9,Atto does not display on qtype essay page
+MDL-43893,9,Remove YUI2 in group/*.js
+MDL-44161,9,Modal Dialogues cause a jump in page position
+MDL-44361,9,Update to YUI 3.15.0
+MDL-44478,9,Remove duplicates in YUI rollup
+MDL-44929,9,Update to YUI 3.17.2
+MDL-46058,9,Include YUI -proxy modules in rollup
+MDL-46496,9,jquery ui css issue
+MDL-46570,9,Convert gradebook javascript to a YUI module
+MDL-46774,9,Migrate row/column highlight code to YUI module
+MDL-47280,9,Include YUI gallery modules properly
+MDL-20045,10,Add unofficial support for custom context levels
+MDL-34209,10,Moving sections by drag and drop causes the sections to be reordered
+MDL-34496,10,issue(s) with custom block regions
+MDL-35423,10,Activity chooser links and toolbox links not correctly created if you don't have a wrapper div called #page-content
+MDL-37023,10,Dock JS incorrectly parses region ID
+MDL-37679,10,"When viewing a single section, the page title does not update"
+MDL-38923,10,Cannot dock blocks with Bootstrapbase/clean theme
+MDL-39227,10,SCORM navigation panel is hidden when bootstrap theme is active
+MDL-40685,10,META: Add/rescale headings for activities and resources page
+MDL-40693,10,Make Bootstrapbase breadcrumb seperator respect $THEME->rarrow
+MDL-40750,10,Front Page Dropdown Arrow not Functioning (backport MDL-38661)
+MDL-40833,10,One topic at a time should use a heading tag for the topic heading
+MDL-41214,10,Docked blocks zindex puts them on top of fullscreen dialogs
+MDL-41227,10,D&D moving module to hidden section does not change visibility
+MDL-41438,10,Change core renderer methods to produce plain headings by default.
+MDL-41504,10,Tidying up the new mod edit buttons
+MDL-41551,10,Block drag/drop broken for clean theme on /my
+MDL-41604,10,Fallback to theme_config::DEFAULT_THEME if a theme (or parent) does not exist.
+MDL-42217,10,Course actionmenu is not toggled by coursebase setup_for_*
+MDL-42227,10,Funkiness with drag/drop
+MDL-42239,10,Calendar tooltips have bad aria-controls values
+MDL-42339,10,Remove double formatting set_title/set_heading over codebase
+MDL-42392,10,Block content doesn't show when the content was hidden and javascript is turned off
+MDL-42393,10,Calendar events blinks
+MDL-42575,10,Revert heading option display for page resource
+MDL-42909,10,Move (non-JS): title attribute is on wrong tag
+MDL-43010,10,Create expand/collapse in the X steps for behat
+MDL-43028,10,Site admin navigation is not expanding on few pages
+MDL-43167,10,Frontpage should support the same JavaScript as course pages
+MDL-43325,10,"Some dialogues (exceptions, ajaxexception, confirm, etc) are no longer shown when instantiated"
+MDL-43598,10,Mod chooser causes a jump in scroll position when first used.
+MDL-43684,10,"Activity drag and drop makes an activity appear ""visible"" even when it's not."
+MDL-43688,10,Clean: Notice about drag & drop being available is hidden under the navbar
+MDL-43941,10,Activity show/hide toggle doesn't work in hidden or orphaned sections
+MDL-43994,10,Hide drag/drop icon for docked blocks
+MDL-43997,10,"Dialogues no longer show automatically, or modally"
+MDL-44042,10,Keyboard drag/drop does not correctly move items to the top of current parent
+MDL-44101,10,Create generic way for Widgets to focus on something when they close
+MDL-44128,10,Atto: Toolbar menus should work with keyboard navigation
+MDL-44338,10,"Show move drag handle in header for ""Add a block"" block"
+MDL-44512,10,Custom menu submenu arrows appear on the right on RTL languages
+MDL-44751,10,Update showgroups string in atto_collapse
+MDL-44760,10,Atto menu styles are inconsistent
+MDL-44844,10,Custom menu broken in all non-bootstrap themes.
+MDL-45893,10,Developing a User Menu
+MDL-45897,10,Add more blocks to the default 'my home' page
+MDL-46022,10,Add ability to create dividers in custom_menu
+MDL-46131,10,Event monitor: Sort out navigation
 MDL-46248,10,Backport of MDL-42869: HTML validation check fails on calendar add event screen
-MDL-46253,10,"Add-on validation message always shows ""foundlangfile"" (Debug)"
-MDL-47418,10,Missing table header in behat step causes debugging.
-MDL-47420,10,Fix unit tests broken in the dev branch.
-MDL-51460,10,List frameworks' API function does not support order
-MDL-51506,10,Implement validation mechanisms in persistent derived classes
-MDL-51682,10,"Fix all persistent sortorder handling to prevent ""holes"""
-MDL-51791,10,Some improvements to persistent validation
-MDL-39815,11,Printer-friendly version link can be improved
-MDL-40769,11,Create Icons from TinyMCE vector
-MDL-41128,11,Import latest branch of upload pdf code
-MDL-41133,11,Update icons in feedback_pdf plugin to match core style.
-MDL-41137,11,Verify no UI RTL issues with feedback_pdf plugin.
-MDL-41138,11,Add unit tests for editpdf after refactoring
-MDL-41273,11,Edit PDF: Finish work on comments tool
-MDL-41274,11,Edit PDF: Enable colour and tool chooser menus.
-MDL-41275,11,Edit PDF: Add list of generated pdf(s) to grading form
-MDL-41276,11,Edit PDF: Add line tool (including rectangle + oval tools)
-MDL-41277,11,Edit PDF: Add rectangle tools
-MDL-41278,11,Edit PDF: Add support for the oval tool
-MDL-41279,11,Edit PDF: Add support for the pen tool
-MDL-41280,11,Edit PDF: Add support for the stamp tool
-MDL-41281,11,Edit PDF: Add support for the select tool
-MDL-41538,11,Edit PDF: the pdf dialog opens then closes almost straight away
-MDL-41541,11,Edit PDF: test_gs_path is broken
-MDL-41633,11,Edit PDF: create layout mockup
-MDL-41699,11,Editpdf - Let students view pdf online (not just downloadable version)
-MDL-41796,11,Edit PDF: Add support for the highlighter tool
-MDL-41800,11,EditPDF: Add comments quicklist
-MDL-41805,11,EditPDF: Create keyboard shortcuts for tools.
-MDL-41824,11,Edit PDF: Split up javascript into smaller modules
-MDL-41856,11,Edit PDF: Update more icons
-MDL-42023,11,Edit PDF: Integrate editpdf plugin for mod_assign
-MDL-42025,11,Edit PDF: Add behat tests
-MDL-42028,11,EditPDF: replace the loading icon by a progress bar as a user could think it's broken for large pdf
-MDL-42029,11,Editpdf: Page selector should indicate what page you are on
-MDL-42030,11,EditPDF: when selecting stamp image the stamp tool is not selected
-MDL-42081,11,EditPDF: Add default stamp images
-MDL-42131,11,Edit PDF missing require_login on some pages.
-MDL-42150,11,Edit PDF Ajax error saving pages.
-MDL-42356,11,Edit PDF: When no stamps uploaded toolbar looks strange
-MDL-42360,11,Edit PDF: On-screen layout does not match PDF layout
-MDL-42405,11,EditPDF: when the PDF has a wrong format then a TCPPDF error is displayed in a blank page.
-MDL-42433,11,No longer able to annotate pdfs in 2.6 beta
-MDL-43911,11,Behat - add an option to take page dumps
-MDL-44222,11,Atto: Image plugin not reliable editing an existing image
-MDL-45580,11,PDF Annotations Remain After PDF is Replaced
-MDL-18014,12,Automatically and periodically save WYSIWYG editor content as a draft/concept
-MDL-24775,12,a pagedown key press in any tinymce editor destroys entire page layout
-MDL-36803,12,TinyMCE editor doesn't accept keyboard input on iOS6 after touch event
-MDL-37565,12,Better looking tinymce editor: toggle toolbars between 1 and 3 lines
-MDL-38698,12,Convert URL into Links filter prevents backgrounds on tables when Apply to HTML Format is checked.
-MDL-40493,12,Allow an editor plugin to be chosen per profile
-MDL-40668,12,"Revert the ""collapsible editor"" to use the standard editor again (revert MDL-38614)"
-MDL-40768,12,Extract icons from TinyMCE 4.0
-MDL-40770,12,Implement Icons for TinyMCE 3.*
-MDL-41098,12,Add Atto HTML editor to core (the editor formally known as contenteditable)
-MDL-41235,12,Atto HTML Editor - The text box width changes if you toggle back and forth between wysiwyg and html mode
-MDL-41236,12,Atto - In html mode the other buttons are disabled but the visual difference is too subtle
-MDL-41237,12,Atto HTML Editor - Decide on the list of headings to include
-MDL-41238,12,Atto HTML Editor - Close the styles menu when clicked outside
-MDL-41385,12,Create icons for non-default buttons
-MDL-41713,12,Copy the relevant icons from new TinyMCE theme to atto
-MDL-41716,12,Atto: Resizing the editor is inconsistent
-MDL-41904,12,Import markdown 1.3
-MDL-41993,12,Atto produces ugly html
-MDL-42002,12,Redesign TinyMCE icons derived from icoMoon for consitent weight and size
-MDL-42102,12,Style TinyMCE toolbars consistently with Moodle style
-MDL-42207,12,fix message text formatting
-MDL-42235,12,Create outline on font colour and highlight icons for editors
-MDL-43855,12,Implement a new equation editor for Atto
-MDL-43857,12,Auto cleanup Atto HTML
-MDL-43861,12,Plugins for font/background colours in Atto
-MDL-43863,12,Add Undo/Redo plugins to Atto
-MDL-43864,12,Add atto plugin to prevent automatic linking.
-MDL-43867,12,Add a content accessibility checker plugin for Atto
-MDL-43869,12,Atto does not display on qtype essay page
-MDL-43870,12,Blockquote in Atto behaves differently in different browsers
-MDL-43955,12,Atto: input text should not have for parent the contenteditable tag
-MDL-43990,12,Atto - add function to format the currently selected block.
-MDL-44040,12,Atto: Implement basic keyboard shortcuts people are used to
-MDL-44063,12,Atto should start new content in a paragraph tag by default.
-MDL-44067,12,Improve Atto Table controls
-MDL-44092,12,"Add an active state to the buttons, when the text under the cursor has the style applied."
-MDL-44131,12,Make the Atto equation editor example library into an aria toolbar.
-MDL-44216,12,Atto: Invert indent/outdent buttons
-MDL-44218,12,Atto: Limit the height of the editor to prevent the toolbar to go off screen
-MDL-44219,12,Atto: A large selection causes the editor to freeze for some seconds
-MDL-44221,12,Atto: Table plugin not adding a table on IE
-MDL-44223,12,Atto: Missing images are not displayed at all in the editor
-MDL-44224,12,Atto: Indent/outdent plugins should not use <blockquote>
-MDL-44225,12,Atto: Focus lost in the Equation editor after inserting a symbol
-MDL-44228,12,Atto: Being able to see the list of plugins available in the settings UI
-MDL-44240,12,Atto: Combine plugins indent/outdent into one.
-MDL-44243,12,Atto: Prettifying the HTML when switching to HTML view
-MDL-44298,12,Add  'HTML templating' features to Atto text editor
-MDL-44430,12,Atto triggers required when still in focus
-MDL-44748,12,Make atto the default editor during upgrade
-MDL-44757,12,Change TeX help link in equation editor to point to a moodle docs page
-MDL-44759,12,Atto Undo starts highlighted on an empty field
-MDL-44768,12,Atto: Save cursor position with undo/redo stack and restore it
-MDL-44769,12,"Atto Table plugin caption field should be a text input, not a textarea"
-MDL-44770,12,"Change table context menu, to open from the table button, not the table cell"
-MDL-44772,12,Atto does not respect height of original text area field any more (it used to)
-MDL-44775,12,Atto : show html view with a monospace font
-MDL-44776,12,Make Atto equation editor dialogue wider
-MDL-44777,12,Atto Equation Editor example toolbar should have consistently sized buttons
-MDL-44778,12,"Atto equation editor, put a border around the preview"
-MDL-44779,12,MathJax menus show behind dialogues
-MDL-44780,12,Enable MathJax filter by default
-MDL-44781,12,Reformat/rewrite the help text for MathJax (needs some line breaks)
-MDL-44810,12,The bold/italics buttons don't maintain their selection when pressed
-MDL-44831,12,Atto: Save to undo stack on text deletion
-MDL-44846,12,Atto font colors are broken in IE
-MDL-45040,12,Atto: Selection reverts to previous selection on toolbar button press in WebKit browsers
-MDL-45780,12,"Neither formchangechecker, nor quiz autosave detects changes in Atto editors"
-MDL-46316,12,Fix coding style problems in notes
-MDL-47027,12,Styling for the grader report when editing is turned on
-MDL-47124,12,Update table row/column sizes when AJAX quick editing
+MDL-46523,10,Add body class when logged in as other role
+MDL-46661,10,Add dynamic loading of content
+MDL-46920,10,Data-target does nothing
+MDL-47063,10,Classes .overridden and .ajaxoverridden are not changing the styles
+MDL-47242,10,Fix nested custom_menu responsive display
+MDL-47244,10,Dividers don't display well in responsive layouts
+MDL-52062,10,User's learning plan pages do not have a breadcrumb
+MDL-25544,11,Improve Grader report user interface
+MDL-30668,11,Prevent the grader report from storing serialized data in the user_preferences table
+MDL-30852,11,user report grade view has inaccessible table
+MDL-30895,11,provide easier chat reading for screen reader users in accessible chat activity
+MDL-31830,11,Replacement for the course and category management pages
+MDL-36002,11,Move action for activities and course sections are not keyboard accessible with javascript enabled
+MDL-36009,11,Gradebook table uses complex tables that are not accessible
+MDL-36011,11,flexible table hide column does not announce change to screen reader
+MDL-36175,11,Moving blocks on the course page is impossible with a keyboard
+MDL-36404,11,Make the rubrics advanced grading criteria accessible to screen readers
+MDL-37812,11,"admin can set site-wide default settings for user profile fields: Email display, format, digest, Forum subscription & tracking, use HTML editor, Screen reader"
+MDL-39299,11,CSS issues on a course page using Bootstrap (Clean theme)
+MDL-40230,11,Integrate Outcomes stage 2 into core
+MDL-40849,11,Assignment marking guide screen is laid out poorly in Clean
+MDL-40975,11,Review new course editing interface
+MDL-41152,11,Clean / Bootstrap theme: Categories & Items page may be too wide to be usable
+MDL-41251,11,Forum discussion page needs aria and role attributes to make navigation easier
+MDL-41252,11,Simple changes to main course page to improve accessibility
+MDL-41773,11,Forum: code an accessible layout
+MDL-42588,11,Add option to Scorm setting to display or hide activity name
+MDL-44002,11,Decide upon intended screen reader support
+MDL-44832,11,mod_assign grading table menus do not show
+MDL-44927,11,Atto: UX improvements for table editing.
+MDL-46646,11,Optimise grader report
+MDL-46662,11,Accessibility improvements for gradereport course header and aggregation controls.
+MDL-46777,11,"Improve behaviour of grader header, footer and sidebar on iOS 8 + IE"
+MDL-46821,11,Category colours not matching in Gradebook User report
+MDL-46825,11,Allow categories to be collapsed in the Gradebook setup page
+MDL-46862,11,"Create a mockup/prototype of the simplified, combined Gradebook Setup page"
+MDL-46950,11,Re-organised CSS of the grader report
+MDL-47520,11,Styling changes for gradebook design improvements
+MDL-8501,11,Forum: proceed to next thread link
+MDL-1626,12,Forum: Per-discussion subscription
+MDL-33618,12,A way to hide messages that were configured to never be sent
+MDL-36460,12,Forced/Auto forums list all potential subscribers and ignore completion/availability info
+MDL-3714,12,Forum: Reply by e-mail
+MDL-41559,12,Replace handlers by observers for groups in mod_quiz
+MDL-41565,12,Observers do not include file from the right location
+MDL-41608,12,Add mustache-powered renderable for notifications
+MDL-42001,12,Use observers instead of handlers in mod_chat
+MDL-42003,12,Use observers instead of handlers in mod_forum
+MDL-42004,12,Use observers instead of handlers in enrol_cohort
+MDL-42541,12,Refactor portfolio queue system to prevent usage of events_trigger()
+MDL-43849,12,The observers for the event 'user_enrolment_deleted' are not tested via unit tests
+MDL-43885,12,moodle-core-notification-confirm should treat [X] like 'Cancel'
+MDL-44107,12,Deprecate $event->can_view() until its purpose has been clarified
+MDL-44124,12,Ical import ignores some recurrence rules
+MDL-44704,12,The \core\event\message_sent class should be passed the system context (for now).
+MDL-45381,12,Mod_forum subscriptioncreated and subscriptiondeleted events link to incorrect locations
+MDL-45918,12,Event monitor: Create a rule manager class with unit tests
+MDL-45919,12,Event monitor: Create a subscription manager class
+MDL-45938,12,Event monitor: Create a form to edit/add a new rule
+MDL-45939,12,Event monitor: Create rule class
+MDL-46129,12,Event monitor: Handle creating/deleting subscriptions
+MDL-46130,12,Event monitor: Handle rule managment
+MDL-46132,12,Event monitor: Implement the event observer
+MDL-46133,12,Event monitor: Implement cron task to clean events table
+MDL-46134,12,Event monitor: Implement cron task to send notifications
+MDL-46241,12,Event monitor: Create a subscription instance class
+MDL-46410,12,Event monitor: Implement a notification sent history report
+MDL-46510,12,Event monitor: Delete rules when course is deleted
+MDL-47152,12,Event monitor: Add help icon on subscriptions manage page
 MDL-12403,13,backup or import of single quiz includes all questions in database
 MDL-13114,13,Include bulk course create and remove with Moodle through the use of CSV files
-MDL-1626,13,Forum: Per-discussion subscription
-MDL-16474,13,Allow single-item scales
-MDL-17081,13,"Implement import/export ""Permissions"" settings for ""Manage roles"" tab"
-MDL-18375,13,Displaying and selecting dates throughout Moodle should allow the use of multiple calendars
-MDL-20045,13,Add unofficial support for custom context levels
-MDL-22236,13,Design way to send files by web service (upload)
-MDL-28448,13,Teachers cannot delete user submissions - advanced uploading of files
-MDL-29070,13,Clean enrol_imsenterprise following coding guidelines
-MDL-31356,13,IMS Enterprise enrol plugin added features
-MDL-31830,13,Replacement for the course and category management pages
-MDL-31989,13,Global Search 2
-MDL-32450,13,DragMath GPL issue
+MDL-22669,13,Moodle bug with course restore section count
+MDL-28162,13,[ERROR] Automated backup status
+MDL-30812,13,Latest backup files generate error/setting_invalid_ui_label upon restore
+MDL-32570,13,"Deleting ""Miscellaneous"" category broke the ability to use IMS Enterprise to create courses"
+MDL-32862,13,Links to some 1.9 resource types break after upgrade to 2.2 followed by backup and restore
 MDL-34161,13,Fix LTI backup and restore to support course and site tools and submissions
-MDL-34397,13,Develop course structure caching
-MDL-34426,13,Port Google/Facebook Oauth2 plugin into core
-MDL-36034,13,pre-cache active filters for course categories to significantly reduce database queries
-MDL-3714,13,Forum: Reply by e-mail
-MDL-37812,13,"admin can set site-wide default settings for user profile fields: Email display, format, digest, Forum subscription & tracking, use HTML editor, Screen reader"
-MDL-39150,13,Finish detailed specification http://docs.moodle.org/dev/Logging_2
-MDL-39152,13,"core_role_assign_roles ws function contains contextid as parameter, which is not correct"
-MDL-39153,13,"core_roles_unassign_roles ws function contains contextid as parameters, which is not correct"
-MDL-39154,13,"core_files_get_files, core_files_upload_files ws functions contain context as parameter, which is not correct"
-MDL-39854,13,Automatic class loading
-MDL-40034,13,Epic: File API improvements to handle clustering environments
-MDL-40079,13,Hardcoded timeout parameter in the repository plugin
-MDL-40126,13,core_enrol_get_course_enrolment_methods() webservice
-MDL-40230,13,Integrate Outcomes stage 2 into core
-MDL-40338,13,"META: Evaluate Remote-Learner ELIS ""hacks"" for core"
-MDL-40874,13,Retire MyMobile as a standard theme
-MDL-41067,13,MUC cache definitions are NOT documented!!
-MDL-41187,13,Polish Moodle dialog for mobile
-MDL-41230,13,Increase time limit for the tool_uploadcourse
-MDL-41283,13,Convert Course participation report to new logging API
-MDL-41773,13,Forum: code an accessible layout
-MDL-41885,13,Modules should declare their use of the question bank
+MDL-34248,13,Restoring a course fails at mdl_log insert
+MDL-34744,13,MSSQL backup fails under some circumstances
+MDL-35032,13,book restore from moodle 1.9: Images are not imported
+MDL-35146,13,Restore of wiki fails with unique constraint violation
+MDL-36126,13,Error restoring a Moodle 1.9.x course to Moodle 2.x due to long filenames
+MDL-37181,13,Backups report show all courses with status Skipped.
+MDL-37312,13,restore always removes course idnumber
+MDL-37877,13,"Over-large backups fail transparently, then do not get deleted next time, so space fills up"
+MDL-38228,13,"Major Performance Problem with ""Moving Modules"" upgrade step"
+MDL-38758,13,Undefined variable: sillybyrefvar in mod/forum/backup/moodle2/restore_forum_stepslib.php
+MDL-40228,13,Incorrect backup setting names in automated backups
+MDL-41347,13,tool_uploadcourse: Invalid restore files are not well handled
+MDL-41726,13,"Serious performance regression in course reset of groups, including race condition that may send erroneous emails to students"
+MDL-41938,13,Course backup contains empty 'contenthash' value in files.xml
+MDL-42047,13,"Removing ""Custom instance name"" from Cohort enrollment when Cohorts no longer exist causes Coding error"
+MDL-42201,13,Creating a course and running the cron causes 'Error' to be displayed in backup report.
 MDL-42206,13,Don't trigger meta enrolment sync on course settings change
-MDL-42276,13,"Automate groups CRUD actions (MDLQA-2335, MDLQA-2238, MDLQA-2105, MDLQA-1813, MDLQA-1812)"
-MDL-42280,13,Automate MDLQA-1546 and MDLQA-1545 - blocks management
-MDL-42285,13,Automate MDLQA-93 - A teacher can delete questions from the question bank
-MDL-42289,13,Automate MDLQA-57 - Past chat sessions can be made available for everyone to view
-MDL-42428,13,Update M.util.show_confirm_dialog() to use moodle-core-notification
-MDL-42553,13,It is not possible to uninstall calendar types
-MDL-43044,13,The course_module_instances_list_viewed abstract class could be improved to do more.
-MDL-43270,13,Migrate moodle-course-dragdrop to use Shifter
-MDL-43271,13,Migrate moodle-course-formatchooser to use Shifter
-MDL-43273,13,Migrate moodle-course-coursebase to use Shifter
-MDL-43302,13,Migrate moodle-form-passwordunmask to use Shifter
-MDL-43307,13,Migrate moodle-mod_assign-history to use Shifter
-MDL-43784,13,Clean up all the themes shipping in 2.7 by removing some from core
-MDL-43854,13,Import collapse plugin from prototype.moodle.net
-MDL-44316,13,Change the tag API to include the contextid and component when tagging an item.
-MDL-45920,13,Define Report Builder API
-MDL-46567,13,Clone and integrate NetSpot's gradehistory report
-MDL-46602,13,Write specification for improvements to scales.
-MDL-46605,13,Remove custom scales logic from modules.
-MDL-46663,13,Remove old functionality
-MDL-46695,13,"Get prototype onto prototype.moodle.net, promote and request feedback"
-MDL-46864,13,Integrate Natural weighting code
-MDL-46980,13,Move install code into core
-MDL-47045,13,Bring in code from UCLA
-MDL-47046,13,Update code from UCLA to meet coding style guidelines
-MDL-47146,13,Implement the prototyped changes
-MDL-47171,13,Event monitor: Remove dependency on MDL-46155
-MDL-53192,13,Rebase CBE to latest Moodle core
+MDL-42377,13,Incorrect debugging message in backup.
+MDL-42767,13,Notes for deleted courses causes error
+MDL-42904,13,Self enrolment by group key does not work - until group settings are saved again
+MDL-42995,13,Restored course has broken links in assignment description when viewed from calendar event
+MDL-43274,13,Prevent course logs from being deleted when course is reset
+MDL-43306,13,Backup introduces duplicate gradeitem sortorders when restoring
+MDL-44106,13,use 'restore' and 'ws' origin in logged events
+MDL-45652,13,"When restoring a backup, if no category or course is selected the page reloads with no error message"
+MDL-45721,13,"The \core\event\course_restored event is triggered on any restore, not just courses."
+MDL-45935,13,Slow behat tests for backup
+MDL-46455,13,Re-introduce backup/restore functionality with new logging system
+MDL-47254,13,Backup / restore aggregationcoef2 and weightoverride
 MDL-54751,13,Recycle Bin - deleting large complex objects forces user to wait
-MDL-8501,13,Forum: proceed to next thread link
-MDL-24380,14,Chat: autoscroll help popup incorrect and doesn't display fully (it only concerns the alternative chat methods)
-MDL-29441,14,Chat window does not pop up for separate groups in IE7-9
-MDL-30839,14,form validation and error recovery
-MDL-30895,14,provide easier chat reading for screen reader users in accessible chat activity
-MDL-34356,14,Allow the chooser dialogue to submit values for the radio button
-MDL-35848,14,Login Page lacks visible focus path
-MDL-35919,14,Add activity and resource link doesn't announce when the modal appears
-MDL-35922,14,Create folder button in file manager does not announce modal opened
-MDL-35923,14,Create folder modal in file manager does not focus on the text input field
-MDL-35925,14,Add... button does not announce modal opened
-MDL-35926,14,Add.. modal allows tab focus to go outside the modal
-MDL-35927,14,Add... Modal Error Modal does not announce modal opened
-MDL-35928,14,File picker Error modal does not focus on text
-MDL-35933,14,File manager file size and number limits are not keyboard accessible
-MDL-35973,14,Moodle redirect to new page has no page title (specifically forums)
-MDL-35981,14,Comment delete confirmation yes/no pop-up not detected by JAWS or Voiceover
-MDL-36002,14,Move action for activities and course sections are not keyboard accessible with javascript enabled
-MDL-36005,14,Forms help icons are placed within labels
-MDL-36011,14,flexible table hide column does not announce change to screen reader
-MDL-36081,14,Video player can't be controlled by keyboard
-MDL-36082,14,User cannot add necessary accessibility attributes to make the default video player accessible.
-MDL-36175,14,Moving blocks on the course page is impossible with a keyboard
-MDL-36404,14,Make the rubrics advanced grading criteria accessible to screen readers
-MDL-39350,14,Collapsible editor tab can't be controlled via keyboard
-MDL-39750,14,Fullscreen activity chooser on tablet screens
-MDL-39770,14,The chat activity window is poorly suited to a phone
-MDL-39796,14,Multiple select options displays as empty box
-MDL-39814,14,Improve editing icons for usability on all types of screens
-MDL-40249,14,Enable activity chooser on mobile screens.
-MDL-41251,14,Forum discussion page needs aria and role attributes to make navigation easier
-MDL-41252,14,Simple changes to main course page to improve accessibility
-MDL-41504,14,Tidying up the new mod edit buttons
-MDL-41870,14,Atto HTML Editor: Implement Aria managed keyboard navigation for the toolbar
-MDL-42239,14,Calendar tooltips have bad aria-controls values
-MDL-42340,14,Long help texts overflow in help tooltips
-MDL-42393,14,Calendar events blinks
-MDL-42481,14,Clicking in text area fails to shift focus
-MDL-42748,14,Help dialogue no longer handles long help texts
-MDL-42752,14,Disabled icons on file picker still get focus resulting in them being read out by screen readers
-MDL-42909,14,Move (non-JS): title attribute is on wrong tag
-MDL-42928,14,Reimplement scroll locking for full-screen dialogues
-MDL-42980,14,Clean: Activity chooser's Add/cancel button on iPhone4S does not respond
-MDL-42983,14,Clean: Custom menu and login info does not appear on small screen
-MDL-43267,14,Course menu to 'Move item' needs betterment for screen readers
-MDL-43325,14,"Some dialogues (exceptions, ajaxexception, confirm, etc) are no longer shown when instantiated"
-MDL-43598,14,Mod chooser causes a jump in scroll position when first used.
-MDL-43641,14,Some moodle dialogs are positioned on not centred when they shoudl be
-MDL-43886,14,moodle-core-dialogue leaves itself in the DOM after destroying itself
-MDL-43969,14,Improve accessibility of shortform collapsing
-MDL-43997,14,"Dialogues no longer show automatically, or modally"
-MDL-44002,14,Decide upon intended screen reader support
-MDL-44038,14,Atto: Focus on the editor is lost after opening a dialogue/menu
-MDL-44083,14,Atto has wrong icons for screenreader helper and accessibility checker
-MDL-44101,14,Create generic way for Widgets to focus on something when they close
-MDL-44128,14,Atto: Toolbar menus should work with keyboard navigation
-MDL-44226,14,Atto: Simplifying the 'accessibility checker' to display sensible content
-MDL-44227,14,Atto: The screenreader helper/accessibility checker should always display something for missing images
-MDL-44758,14,Atto: Prevent new table creation when within an existing table
-MDL-44765,14,atto_image: Dialogue is not resized after the accessibility warning is displayed
-MDL-44773,14,Accessibility checker does not trigger selection updated when it selects the image nodes
-MDL-44806,14,Accessibility checker goes wide unnecessarily
-MDL-44808,14,"The table creation box is huge, giving too much room to the accessibility info"
-MDL-44927,14,Atto: UX improvements for table editing.
-MDL-46285,14,Option to hide user_picture from screen readers
-MDL-46936,14,Restore AJAX editing
-MDL-47026,14,The tooltip prevents the user from entering the feedback field
-MDL-47460,14,Event monitor: Fix missing alt on icons
-MDL-21469,15,Chat window uses browser language rather than preferred language set in profile
-MDL-38347,15,Left and right arrows for calendar not showing up on Android
-MDL-39044,15,Replace strtolower in block/completionstatus with textlib::strtolower
-MDL-39850,15,Pre and post performance profiling
-MDL-40037,15,POLICY: Decide if we should allow context to be exposed by WS or not
-MDL-40369,15,Remove deprecated icons
-MDL-40705,15,Clean theme / navigation menu / current course: a long shortname will be displayed over the main content
-MDL-40752,15,"Login panel should be placed on the right side, in RTL mode (theme/clean, bootstrap)"
-MDL-40821,15,Language menu in Clean should show language used
-MDL-41267,15,Add support for admin tool subplugins
-MDL-41387,15,"The string ""Deleted - course tags"" needs to be properly capitalised"
-MDL-41604,15,Fallback to theme_config::DEFAULT_THEME if a theme (or parent) does not exist.
-MDL-41664,15,Add the ability to format the years in the new calendar plugin.
-MDL-41792,15,The calendar itself should display dates depending on the calendar type used
-MDL-41903,15,Import Typo3 4.7.15
-MDL-42091,15,Fix the background color for atto buttons when clicked and hover
-MDL-42149,15,Design new icons for filemanager/filepicker in svg/png format
-MDL-42227,15,Funkiness with drag/drop
-MDL-42442,15,eliminate standardwhite references in lib/setup.hp
-MDL-42461,15,Creating a wiki in group mode triggers setType warning
-MDL-42497,15,orphaned subplugins are missing on the plugins overview page
-MDL-42612,15,add Russian Ruble to list of paypal currencies
-MDL-42924,15,use normalize_component to extract plugin name and type
-MDL-43008,15,Calendar plugins can not display setting pages.
-MDL-43010,15,Create expand/collapse in the X steps for behat
-MDL-43262,15,Move dialogue default overrides to attributes
-MDL-43786,15,"""More"" - a new theme like Clean but with more customisation settings in the UI"
-MDL-43839,15,Make Clean as the default theme in 2.7.
-MDL-43842,15,Import code from Atto back to core.
-MDL-43853,15,Make Atto toolbar buttons display all at once - instead of one by one.
-MDL-43858,15,New Atto plugin Insert Character
-MDL-43859,15,New Atto plugin Insert Smiley
-MDL-43860,15,New Atto plugin switch language LTR/RTL
-MDL-43862,15,Add mediamanager plugin for Atto
-MDL-43865,15,Add a toolbar editor to Atto
-MDL-43885,15,moodle-core-notification-confirm should treat [X] like 'Cancel'
-MDL-44127,15,Atto Improve API when a plugin wants multiple buttons.
-MDL-44220,15,Atto: Being able to set the alignment (flow) of the images
-MDL-44241,15,Atto: Combine plugins link/unlink into one
-MDL-44512,15,Custom menu submenu arrows appear on the right on RTL languages
-MDL-44596,15,Declare interfaces supported by reports and implemented by stores.
-MDL-44749,15,Collapse plugin should handle suboptimal toolbar configuration
-MDL-44751,15,Update showgroups string in atto_collapse
-MDL-44752,15,Correct uses of color => colour in atto plugin language strings
-MDL-44754,15,Explain the meaning of the group names in the toolbar configuration
-MDL-44755,15,Atto plugins are using different icons for the plugin / toolbar
-MDL-44756,15,Atto collapse plugin setting help update
-MDL-44760,15,Atto menu styles are inconsistent
-MDL-44761,15,Display the list of keyboard short cuts somewhere (in the alt for the buttons?)
-MDL-44762,15,Atto title plugin bugs. It is possible to choose a title from the menu and nothing happens
-MDL-44763,15,"Atto image plugin - remove the word ""Preview"" from the dialogue."
-MDL-44764,15,Change wording in Atto image plugin
-MDL-44782,15,Fix lang string for Mathjax filter setting HTTP (Should be HTTPS)
-MDL-44784,15,Atto plugins with settings do not show settings links on manage plugins page.
-MDL-44824,15,Strings missing for some subplugins
-MDL-44826,15,Atto Too many image alignment options
-MDL-44827,15,Atto: Insert image fails on iOS 7
-MDL-44830,15,Atto: Redo behaviour is a bit wonky
-MDL-45827,15,Specify the requirements for the element library
-MDL-45828,15,Create the element library admin tool
-MDL-45829,15,Define the initial list of renderables to be added to the element library
-MDL-45830,15,Define style guide for renderables
-MDL-45862,15,Convert existing displays to renderers
-MDL-46022,15,Add ability to create dividers in custom_menu
-MDL-46269,15,Convert http embedded content to https on https sites where available
-MDL-46313,15,Create new icons for e-mail subscription status
-MDL-46352,15,Deprecate print_group_picture
-MDL-46873,15,Publish prototype and publicise
-MDL-46921,15,Allow sorting on additional name fields.
-MDL-46923,15,Typo in behat function name
-MDL-46951,15,Make the grader report work on theme_base and derivatives
-MDL-46962,15,Handle floating objects with RTL languages
-MDL-47127,15,"Update ""date till"" string in the grade history report"
-MDL-47149,15,Event monitor: Write QA tests for the tool
-MDL-47353,15,Test the Grader report on a number of third-party themes
-MDL-52051,15,Migrate to Dropbox API v2
-MDL-52754,15,Dropdown list of scales is not displayed when there's single quotes in values
-MDL-53185,15,Big button to turn CBE on/off.
-MDL-54770,15,PayPal enrolment plugin to support required SSLVERSION TLS v1.2 if possible
-MDL-22669,16,Moodle bug with course restore section count
-MDL-25473,16,Embedded MP4 videos via linking to the course file loops when finished playing.
-MDL-26170,16,Deleted Forum & Blog Posts in RSS Block
-MDL-28162,16,[ERROR] Automated backup status
-MDL-30195,16,Export forum discussion without attachments to google docs portfolio
-MDL-30431,16,Attempting to edit wiki comments from another user causes an error
-MDL-30812,16,Latest backup files generate error/setting_invalid_ui_label upon restore
-MDL-32570,16,"Deleting ""Miscellaneous"" category broke the ability to use IMS Enterprise to create courses"
-MDL-32862,16,Links to some 1.9 resource types break after upgrade to 2.2 followed by backup and restore
-MDL-33343,16,Unable to create a new page in wiki
-MDL-34684,16,Adding a new health check to detect incorrect category path order and/or missing parent categories
-MDL-35032,16,book restore from moodle 1.9: Images are not imported
-MDL-35146,16,Restore of wiki fails with unique constraint violation
-MDL-37016,16,null event.uuid's discovered when upgrading to Moodle 2.4
-MDL-37312,16,restore always removes course idnumber
-MDL-37528,16,Ajax dragging not working (fails to 'pick up')
-MDL-37824,16,"Navigation block: clicking on ""My courses"" sends you to ""My moodle"""
-MDL-37972,16,"Assignment (2.2) ""Upload Single"" settings submission file link does not work"
-MDL-38228,16,"Major Performance Problem with ""Moving Modules"" upgrade step"
-MDL-38664,16,"Lesson essays ""disappear"" if new attempt after exiting"
-MDL-38758,16,Undefined variable: sillybyrefvar in mod/forum/backup/moodle2/restore_forum_stepslib.php
-MDL-38768,16,"Coding error ""The theme has already been set up for this page ready for output"" when adding blog entry to a page resource"
-MDL-38868,16,Web Services returns empty array when permissions are invalid for 'core_user_get_users_by_id' request
-MDL-39653,16,IMS Enterprise CRON job error
-MDL-39661,16,theme_clean: notice about undefined offset
-MDL-39771,16,Embedded URL resource doesnt seem to load on an iphone 3gs
-MDL-39949,16,Block without header causes JS error on page
-MDL-40436,16,Error in Courses block when the user is enrolled in courses from other servers by MNet
-MDL-40662,16,setting up the default for My Home page produces block/course_overview:addinstance notice
-MDL-40750,16,Front Page Dropdown Arrow not Functioning (backport MDL-38661)
-MDL-41075,16,"Selecting ""Choose..."" option from My Courses dropdown on Participants page generates error: Can not find data record in database table course"
-MDL-41352,16,Mymobile theme: javascript error on course pages
-MDL-41398,16,Clean theme needs the upgrade page to be dumb
-MDL-41447,16,Upgrading from 1.9 to 2.2 (en-route to 2.4.5) has errors with certain kinds of URL link
-MDL-41994,16,Notice: Undefined property on calendar export page
-MDL-41995,16,Calendar export page does not set page layout correctly
-MDL-42047,16,"Removing ""Custom instance name"" from Cohort enrollment when Cohorts no longer exist causes Coding error"
-MDL-42078,16,Uninstalling multiple plugins usability and bugfixes
-MDL-42079,16,Repeating events in external calendar do not appear in Moodle Calendar
-MDL-42110,16,Installing add-ons causes 500 internal server error.
-MDL-42214,16,Blocking user before reading message causes constant popups
-MDL-42241,16,The URL for the upload courses tool in site admin is wrong
-MDL-42429,16,PHP notice regarding undefined property displayed when editing a lesson
-MDL-42597,16,New maintenance mode countdown counts down to 0 instead of 1
-MDL-42767,16,Notes for deleted courses causes error
-MDL-42797,16,Guest access displays exception error right after upgrade process
-MDL-42904,16,Self enrolment by group key does not work - until group settings are saved again
-MDL-42973,16,Unknown component location
-MDL-42995,16,Restored course has broken links in assignment description when viewed from calendar event
-MDL-43106,16,Moodle 2.6 sends 2 Set-Cookie headers
-MDL-43178,16,"Incorrect confirmation message appears on ""per-forum digest option"" screen"
-MDL-43268,16,Undefined index: filter in /lib/outputrequirementslib.php
-MDL-43314,16,"Running cron.php from CLI gives ""Moodle upgrade pending, cron execution suspended."""
-MDL-43326,16,Cannot start a new attempt in Assignment (based on previous one)
-MDL-43410,16,Docking blocks breaks Edit popup menu
-MDL-43411,16,showfromothers / hidefromothers error shown strings are not present but uses_sections is false
-MDL-43521,16,Admin bookmarks block doesn't work
-MDL-43714,16,Notice:  Trying to get property of non-object in lib/ajax/blocks.php on line 93
-MDL-43725,16,Undefined variable $strlogs in Live logs
-MDL-45652,16,"When restoring a backup, if no category or course is selected the page reloads with no error message"
-MDL-45833,16,Debugging error when changing roles in category
-MDL-46036,16,Exception is thrown if you try to download responses from a survey activity with no responses
-MDL-46255,16,Purge all caches page did not call $PAGE->set_url(...) (Moodle 2.8)
-MDL-46496,16,jquery ui css issue
-MDL-46600,16,Import fails if grade import data contains nonexistent user
-MDL-46748,16,Mathjax default SSL CDN address is down causing atto to fail to load
-MDL-46902,16,When searching for a course that does not exist a non-sensical string is displayed.
-MDL-51735,16,Veiwing a lesson before questions / pages are added results in an exception
-MDL-53195,16,Undefined variable: coursecompetency warning in \tool_lp\api::get_user_competency_in_course()
-MDL-54847,16,HTML audio tag removed from forum post
-MDL-24287,17,Convert group members selector to Shifted YUI3 module.
-MDL-28631,17,forbid use of cookies especially from javascript
-MDL-31501,17,"New session infrastructure - file, database and memcached storage"
-MDL-32917,17,Upgrade dateselector to use YUI3 calendar module
-MDL-33057,17,Rewrite DND Upload to YUI module (performance)
-MDL-36334,17,Add support for selected gallery modules
-MDL-37145,17,Documentation for caching admin screens
-MDL-38561,17,Convert filepickers and filemanagers to YUI modules
-MDL-38771,17,$CFG->yuicomboloading prevents use of yui_combo.php
-MDL-41071,17,Class plugininfo_mod does not cache in the right cache definition
-MDL-41082,17,Portfolio instances are loaded when loading the user settings
-MDL-41100,17,Caching get_plugin_list_with_file
-MDL-41161,17,upgrade mod_chat from yui 2 to yui 3
-MDL-41208,17,Update YUI to version 3.12.0
-MDL-41289,17,create ajax method to get user pref
-MDL-41437,17,missing plugins are not displayed on plugins overview page
-MDL-41811,17,Load admin menus using AJAX when not on admin pages
-MDL-42144,17,Improve Dynamic Loading in Repository filepicker
-MDL-42152,17,import YUI 3.13.0
-MDL-42438,17,new emulated simpleyui rollup does not load CSS for extra modules
-MDL-42525,17,improve perf of core_plugin_manager::get_plugin_info()
-MDL-43213,17,behat config settings and init code can be simplified
-MDL-43323,17,Lazily load moodle-core-tooltip dependencies
-MDL-43422,17,Move javascript-static.js to rollup
-MDL-43524,17,Drop problematic global text caching
-MDL-43525,17,Allow add-ons to include YUI gallery modules
-MDL-43556,17,Rewrite comment JavaScript
-MDL-43664,17,JavaScript breaks on IE <= 8
-MDL-43856,17,Add a mathjax filter
-MDL-43893,17,Remove YUI2 in group/*.js
-MDL-44161,17,Modal Dialogues cause a jump in page position
-MDL-44164,17,Refactor Atto code
-MDL-44361,17,Update to YUI 3.15.0
-MDL-44366,17,filter_glossary has the potential to be slow on large sites
-MDL-44478,17,Remove duplicates in YUI rollup
-MDL-44597,17,Add support for source maps with less.php
-MDL-44844,17,Custom menu broken in all non-bootstrap themes.
-MDL-44929,17,Update to YUI 3.17.2
-MDL-45854,17,Define and document JavaScript output guide
-MDL-45885,17,Decide and document output components
-MDL-46058,17,Include YUI -proxy modules in rollup
-MDL-46570,17,Convert gradebook javascript to a YUI module
-MDL-46646,17,Optimise grader report
-MDL-46661,17,Add dynamic loading of content
-MDL-46774,17,Migrate row/column highlight code to YUI module
-MDL-46907,17,Refactor user_button class to remove js methods
-MDL-47280,17,Include YUI gallery modules properly
-MDL-51870,17,"Use new ""ajax"" definition of external functions"
-MDL-53152,17,lessc Less compilation computes variable mathematics at a different time
-MDL-54915,17,Rendering concurrent Mustache templates with strings loses javascript
-MDL-18229,18,Add grade item and student grades quick edit feature to the grader report
-MDL-18770,18,Non-graded Assignment and Quizzes appear in the gradebook  and have Max Grade assigned
-MDL-20250,18,"Add admin settings for disabling particular gradebook calculations, category overriding and grade minimum on the grader report"
-MDL-25544,18,Improve Grader report user interface
-MDL-30668,18,Prevent the grader report from storing serialized data in the user_preferences table
-MDL-30852,18,user report grade view has inaccessible table
-MDL-31379,18,Introduce new grading fields - dategraded and datesubmitted
-MDL-33600,18,There is no checkbox to control sending feedback when grading an assignment
-MDL-34321,18,Assignment only partially disappears when Teacher using role switch to Student submits assignment
-MDL-34432,18,Assignment -teachers can no longer comment inline on online text
-MDL-36003,18,Add event/logging when student views grades
-MDL-36009,18,Gradebook table uses complex tables that are not accessible
-MDL-36847,18,Prevent inaccurate feedback notifications where grade item hidden
-MDL-36984,18,Assignment module should redirect after form submissions
-MDL-37148,18,More webservices for Assignment
-MDL-38628,18,New Assignment Module - Gives learners the top grade in a scale
-MDL-38732,18,Graded course activity while editing gradebook causes unintentional overrides
-MDL-39001,18,Unenroling and re-enrolling student causes inconsistent grade data
-MDL-39569,18,Second student can't confirm assignment submission
-MDL-39782,18,"Clean - Categories and Items, move grade item screen is squished."
-MDL-40003,18,Assignment submission comments are not restored
-MDL-40697,18,Add events for when a grade has been created/updated
-MDL-40849,18,Assignment marking guide screen is laid out poorly in Clean
-MDL-41062,18,Can not sort gradebook items.
-MDL-41131,18,"Allow assignment plugins to ""just be on"""
-MDL-41152,18,Clean / Bootstrap theme: Categories & Items page may be too wide to be usable
-MDL-41534,18,Extra blank rows shown in Assignment Submissions screen and Participants screen
-MDL-41819,18,Grades lost when editing in the grader report due to max_input_vars
-MDL-42585,18,Refine capabilities that permit user to see assignments and the user feedbacks without ability to grade
-MDL-42896,18,Grade update event
-MDL-43197,18,Parent role only sees course total and no longer individual grades
-MDL-43250,18,get_graders() matches potential graders from all groups
-MDL-43306,18,Backup introduces duplicate gradeitem sortorders when restoring
-MDL-43318,18,Editing feedback for a previous submission edits the feedback for the wrong user
-MDL-43332,18,Automate MDLQA-317 Grades Automated functional tests
-MDL-43605,18,"User Report In Grading shows all assignments, not only that of particular group"
-MDL-43740,18,"Setting the ""Grade type"" of a manual grade item to ""None"" removes it from the Gradebook UI"
-MDL-44149,18,Assignment resubmissions do not automatically reopen if using quick grading
-MDL-44447,18,Grade - Add an option to export the total in letters
-MDL-44832,18,mod_assign grading table menus do not show
-MDL-44923,18,"The gradebook export xml format does not handle the settings ""Export new or updated grades only"""
-MDL-45894,18,For students: a single page with all their course grades on it
-MDL-46059,18,Editing LTI page invalid grade view
-MDL-46175,18,Gradebook terminology improvements
-MDL-46181,18,Usability improvements for grade export and import
-MDL-46191,18,Develop new Gradebook history report
-MDL-46546,18,CSV import of grades silently fails when malformed row(s) present
-MDL-46547,18,Copy and paste import from excel into the gradebook.
-MDL-46548,18,Improved interface for export of grades
-MDL-46549,18,Robust previewing + update dry running for importing grade CSVs
-MDL-46569,18,Migrate the history report to use table_sql
-MDL-46572,18,Write a simple behat test for the history report
-MDL-46574,18,Add the event grade_report_viewed for the history report
-MDL-46595,18,Add behat tests
-MDL-46597,18,Locked grade items don't update on grade import
-MDL-46598,18,Robust handling of bad grade import data
-MDL-46599,18,Importing null grade data clears existing grades
-MDL-46603,18,Improve grade_scale class to support mapping to/from points and menu generation.
-MDL-46604,18,Allow custom mappings of scale items -> points
-MDL-46607,18,Update advanced grading methods to support new scales mapping.
-MDL-46608,18,"Add an admin setting to make the use of a particular scale the ""default"" for all grading things (gradebook columns, activities etc)."
-MDL-46609,18,Create an easy way to configure grade letters matching an existing scale.
-MDL-46658,18,Prepare and integrate grader code from UCLA
-MDL-46662,18,Accessibility improvements for gradereport course header and aggregation controls.
-MDL-46678,18,Move sql in index.php to an api
-MDL-46696,18,Implement backup and restore of the grades history
-MDL-46732,18,Review and move AJAX grading code to YUI module
-MDL-46736,18,Handle grades associated with deleted grade items in the history report
-MDL-46818,18,Add form change checking to Gradebook setup page
-MDL-46821,18,Category colours not matching in Gradebook User report
-MDL-46825,18,Allow categories to be collapsed in the Gradebook setup page
-MDL-46846,18,Grade export does not support grade display type anymore
-MDL-46862,18,"Create a mockup/prototype of the simplified, combined Gradebook Setup page"
-MDL-46967,18,Remove grade/lib.php update_field()
-MDL-47022,18,"Implement ""Export since"" filter on grade export"
-MDL-47025,18,Fix highlighting behaviour in the new grader report
-MDL-47056,18,"Grader report displays ""error"" for single item in new course"
-MDL-47064,18,Add contribution column to the user report
-MDL-47358,18,Ensure changes to categories and effects on grade items are recorded in Grade history
-MDL-47492,18,Add behat tests for displaying scales in gradebook
-MDL-47520,18,Styling changes for gradebook design improvements
-MDL-51962,18,Validate that the grade set in user_competency is valid
-MDL-52861,18,The grading dialogue should show who is being graded
-MDL-53070,18,Non-editing teachers missing view user competency capability
-MDL-54796,18,Cannot switch between students in assignment grading interface
-MDL-55066,18,Create a script to compare all grades for a 57% letter boundary problem.
-MDL-37324,19,Import phpmailer 5.2.7
-MDL-40107,19,Upgrade TCPDF to tcpdf_6_0_031
-MDL-42496,19,backport MDL-41245 add-on installer redirection fix from master
-MDL-42931,19,Decide Moodle 2.7 requirements and push them to environment.xml
-MDL-43117,19,Add release column to Plugins Overview page
-MDL-43503,19,Switch to paged results for LDAP
-MDL-43604,19,add support for MariaDB 10.x
-MDL-45070,19,add support for MariaDB 10.x from Ubuntu
-MDL-45395,19,PHP-OLE is GPL-incompatible
-MDL-45504,19,Decide Moodle 2.8 requirements and push them to environment.xml
-MDL-47147,19,Review third party libraries for new versions
-MDL-47294,19,Upgrade S3 library in repository_s3 to 0.5.1-dev for Moodle 2.8 release
-MDL-47295,19,Upgrade AdoDB library to 5.19 for Moodle 2.8 release
-MDL-47297,19,Upgrade Google APIs Client Library to 1.0.5 for Moodle 2.8 release
-MDL-47298,19,Upgrade Compatible password hashing library for Moodle 2.8 release
-MDL-47299,19,Upgrade PHPMailer to 5.2.9 for Moodle 2.8 release
-MDL-47301,19,Upgrade Typo3 library to 4.7.19 for Moodle 2.8 release
-MDL-47307,19,Upgrade Markdown to 1.4.1 for Moodle 2.8 release
-MDL-48145,19,Decide Moodle 2.9 requirements and push them to environment.xml
-MDL-49516,19,Upgrade S3 library in repository_s3 to 0.5.1-dev for Moodle 2.9 release
-MDL-49517,19,Upgrade AdoDB library to 5.19 for Moodle 2.9 release
-MDL-49519,19,Upgrade Google APIs Client Library to 1.1.2 for Moodle 2.9 release
-MDL-49520,19,Upgrade Compatible password hashing library for Moodle 2.9 release
-MDL-49521,19,Upgrade PHPMailer to 5.2.9 for Moodle 2.9 release
-MDL-49523,19,Upgrade Typo3 library to ??? for Moodle 2.9 release
-MDL-49528,19,Upgrade Markdown to 1.5.0 for Moodle 2.9 release
-MDL-49533,19,Move alfresco repository to plugins DB
-MDL-50182,19,Decide Moodle 3.0 requirements and push them to environment.xml
-MDL-51580,19,Decide Moodle 3.1 requirements and push them to environment.xml (due date: 30/11/2015)
-MDL-51758,19,Remove password_compat library
-MDL-53019,19,Decide Moodle 3.2 requirements and push them to environment.xml (due date: 13/06/2016)
+MDL-29070,14,Clean enrol_imsenterprise following coding guidelines
+MDL-42931,14,Decide Moodle 2.7 requirements and push them to environment.xml
+MDL-43314,14,"Running cron.php from CLI gives ""Moodle upgrade pending, cron execution suspended."""
+MDL-43537,14,cleanup old environment check stuff
+MDL-45395,14,PHP-OLE is GPL-incompatible
+MDL-45504,14,Decide Moodle 2.8 requirements and push them to environment.xml
+MDL-48145,14,Decide Moodle 2.9 requirements and push them to environment.xml
+MDL-50182,14,Decide Moodle 3.0 requirements and push them to environment.xml
+MDL-51580,14,Decide Moodle 3.1 requirements and push them to environment.xml (due date: 30/11/2015)
+MDL-53019,14,Decide Moodle 3.2 requirements and push them to environment.xml (due date: 13/06/2016)
+MDL-16073,15,"Add ""test database setup"" to the ""External Database"" enrollment and authentication plugins"
+MDL-16982,15,Adding data mapping for custom user fields
+MDL-24120,15,Allow admin to remain logged in after login as procedure
+MDL-27953,15,"Upload users option only allow the following authentication options: Manual account, or No login"
+MDL-31560,15,New message_send API is incapable of sending notfications from the $CFG->noreplyaddress.
+MDL-37243,15,Comments API doesn't store or validate component
+MDL-38868,15,Web Services returns empty array when permissions are invalid for 'core_user_get_users_by_id' request
+MDL-39746,15,"On discussion page, user name is overlapping with profile picture"
+MDL-40805,15,user_logout event is not triggered when using CAS authentication with CAS logout option set to yes
+MDL-41170,15,user_updated event not triggered when user password modified in moodlelib.php functions
+MDL-41415,15,Fix user_loggedin event to respect base access specifiers and wrong usage of object creation in get_name()
+MDL-41589,15,Cannot delete a user's role in a course
+MDL-41605,15,Search filter on enrolled users page update filter while deleting user role in non-js mode.
+MDL-41999,15,do not use $USER->password and $USER->description directly
+MDL-42082,15,Password field appears as text plain in the external database auth plugin form
+MDL-42085,15,Default Enrollment duration is not applied when manually enrolling a user if enrollment option is not expanded.
+MDL-42097,15,can_change_password() set to false should not display the password form input during update
+MDL-42208,15,use unmasking password field in auth plugin configs (master) and prevent saving of passwords
+MDL-42390,15,User name (first/last) not properly scrubbed
+MDL-42440,15,Cannot enable most authentication plugins
+MDL-42547,15,Bulk users upload: values are not trimmed in CSV file when bulk uploading users
+MDL-42884,15,Can not delete users with invalid emails
+MDL-42934,15,Self registration does not use site language setting
+MDL-42935,15,"user_create_user and user_update_user functions do not validate auth, lang or theme"
+MDL-42993,15,Username with spaces no longer valid for LDAP authenticated users
+MDL-43142,15,No username variable passed to mnet access control string
+MDL-43196,15,After upgrading to 2.6 my email-based-self-registration serves up an error when I click on 'Create New User' on the front page
+MDL-43488,15,Self registration requires city and country fields
+MDL-45562,15,Editing external blog throws exception
+MDL-45772,15,"Some forms with passwords and usernames get populated by the browser, which is not desired"
+MDL-45936,15,The auth/db plugin should use the core functions user_create_user and user_update_user
+MDL-46016,15,Shibboleth contains misleading comment regarding user passwords
+MDL-47457,15,We need a log in icon for the user menu.
+MDL-51506,15,Implement validation mechanisms in persistent derived classes
+MDL-51791,15,Some improvements to persistent validation
+MDL-5583,15,allow teachers to specify certain fields in database activity as required
+MDL-26244,16,'Choose a link' for database URL field gives confusing message
+MDL-27339,16,"The link Create ""File system"" instance do not work"
+MDL-33741,16,Teacher can't access course files in hidden categories using the Filepicker with the server files repository
+MDL-36836,16,Alfresco select box broken in Chrome.
+MDL-38903,16,File manager form elements size
+MDL-39608,16,Width thresholds for form labels in the Clean Theme need to be higher.
+MDL-39749,16,Popup as File picker/Activity chooser should be mobile friendly
+MDL-39769,16,taking photos via file picker results in a huge sideways photo
+MDL-39851,16,Full screen popup for mobile (filepicker/activitychooser)
+MDL-41159,16,The folder management icon has a weird zindex and shows above modal dialogues
+MDL-41188,16,"Mobile: when closing file picker, the page should be re-centred on the file manager (if you were using the file manager)"
+MDL-41189,16,"File picker: when editing a file from file manager, on a mobile device, the height of the file picker Edit dialog is too small."
+MDL-41200,16,Change header for selecting file in filepicker
+MDL-41213,16,File picker modal layout issues when using clean theme.
+MDL-41215,16,filepicker infinite scroll scrolling issues
+MDL-41229,16,Filepicker is broken in IE9
+MDL-41232,16,Revert temporary fix in filepicker for IE8
+MDL-41337,16,Can't delete the last file from filearea (under some circumstances)
+MDL-41428,16,Missing space between coursefiles and course short name in filepicker
+MDL-41591,16,Z-index issues with filepicker.
+MDL-41702,16,Can't delete logo icon - Clean theme
+MDL-41960,16,META: File manager/File picker toolbars do not match the new toolbar style.
+MDL-42117,16,Drag and drop upload of resources breaks AJAX actions
+MDL-42129,16,Create mock up for the filemanager to match the new toolbar
+MDL-42130,16,Create mock up for the filepicker to match new toolbar
+MDL-42144,16,Improve Dynamic Loading in Repository filepicker
+MDL-42147,16,Filepicker:  aesthetic css issues on IE9
+MDL-42236,16,Style the filemanager to match the new toolbar
+MDL-42237,16,Style the filepicker to match the new toolbar
+MDL-42801,16,Drag and drop upload of resources doesn't add action icons correctly.
+MDL-43737,16,Remove the {!} place holders from the file-picker renderers
+MDL-43999,16,Atto: Double clicking on an image should open the image properties window
+MDL-44079,16,Pressing escape in nested modal dialogues should only close the top dialogue
+MDL-44881,16,The dialogue to pick a file in file picker is not nicely styled
+MDL-44949,16,Repository picking in Atto Image plugin broken
+MDL-45292,16,Bad RTL filepicker styles
+MDL-24380,17,Chat: autoscroll help popup incorrect and doesn't display fully (it only concerns the alternative chat methods)
+MDL-29441,17,Chat window does not pop up for separate groups in IE7-9
+MDL-38325,17,maximise/minimise button to hide the lateral blocks/dock
+MDL-38347,17,Left and right arrows for calendar not showing up on Android
+MDL-39715,17,Mobile-friendly way to display blocks on small screen
+MDL-39736,17,SCORM content section is too narrow on narrow screen devices
+MDL-39737,17,SCORM does not reflow on resize/orientation change
+MDL-39748,17,Make input boxes' size consistent and not overlapping with the next level in Assignment advanced grading.
+MDL-39750,17,Fullscreen activity chooser on tablet screens
+MDL-39770,17,The chat activity window is poorly suited to a phone
+MDL-39776,17,Adding new block doesn't automatically add the block to the page.
+MDL-39779,17,Fix alignment for required field (red *) on creating new wiki page
+MDL-39792,17,Editor goes under right-hand blocks on smaller screens
+MDL-39812,17,Long Breadcrumbs get wrapped on narrow screens when using Clean Theme
+MDL-39813,17,Login page is overly verbose for a mobile device
+MDL-39814,17,Improve editing icons for usability on all types of screens
+MDL-39817,17,Grading is not mobile friendly
+MDL-39884,17,Improvement: have the header on bootstrapbase remain onscreen when scrolling on mobile devices.
+MDL-40205,17,Long Block Titles Overflow in Clean
+MDL-40249,17,Enable activity chooser on mobile screens.
+MDL-40722,17,Clean theme: Resizing 3 column page with all blocks on the left is not displayed correctly
+MDL-40752,17,"Login panel should be placed on the right side, in RTL mode (theme/clean, bootstrap)"
+MDL-40786,17,"User's description fields should be aligned to the right and spaced out, when in RTL mode (theme/clean, bootstrapbase)"
+MDL-40932,17,Tabbing through links on course page (and others) does not work on Mac Firefox and Mac Safari (and maybe more)
+MDL-41187,17,Polish Moodle dialog for mobile
+MDL-41226,17,User profile field submit buttons in awkward location when using clean theme.
+MDL-41379,17,button alignment on course outcome screen is wonky in Clean
+MDL-41481,17,Background scrolling is not locked when using activity chooser in a mobile device with clean theme
+MDL-41505,17,Clean theme: Section visibility icon disappears on narrow screens
+MDL-41989,17,Fix atto's visual response/appearance for non touch devices
+MDL-42340,17,Long help texts overflow in help tooltips
+MDL-42682,17,Fix display alignment and content for forum discussion in Clean theme
+MDL-42748,17,Help dialogue no longer handles long help texts
+MDL-42928,17,Reimplement scroll locking for full-screen dialogues
+MDL-42980,17,Clean: Activity chooser's Add/cancel button on iPhone4S does not respond
+MDL-42983,17,Clean: Custom menu and login info does not appear on small screen
+MDL-43062,17,"Content of label is left-aligned, regardless of alignment chosen"
+MDL-43284,17,Question bank needs some CSS attention
+MDL-43641,17,Some moodle dialogs are positioned on not centred when they shoudl be
+MDL-43723,17,Users drag&drop the blocks instead of scrolling up/down.
+MDL-44083,17,Atto has wrong icons for screenreader helper and accessibility checker
+MDL-44215,17,Atto: Toolbar should wrap on several lines
+MDL-44227,17,Atto: The screenreader helper/accessibility checker should always display something for missing images
+MDL-44765,17,atto_image: Dialogue is not resized after the accessibility warning is displayed
+MDL-44773,17,Accessibility checker does not trigger selection updated when it selects the image nodes
+MDL-44806,17,Accessibility checker goes wide unnecessarily
+MDL-44808,17,"The table creation box is huge, giving too much room to the accessibility info"
+MDL-44827,17,Atto: Insert image fails on iOS 7
+MDL-45611,17,Question text overlaps other parts of the UI on the edit quiz page.
+MDL-46206,17,Alt image in footer is incorrectly repeated
+MDL-47026,17,The tooltip prevents the user from entering the feedback field
+MDL-47053,17,Add floating title for the footer
+MDL-47460,17,Event monitor: Fix missing alt on icons
+MDL-42481,18,Clicking in text area fails to shift focus
+MDL-43281,18,blockregion.js doesn't recover properly after not finding region node
+MDL-43857,18,Auto cleanup Atto HTML
+MDL-43863,18,Add Undo/Redo plugins to Atto
+MDL-43870,18,Blockquote in Atto behaves differently in different browsers
+MDL-43955,18,Atto: input text should not have for parent the contenteditable tag
+MDL-44038,18,Atto: Focus on the editor is lost after opening a dialogue/menu
+MDL-44063,18,Atto should start new content in a paragraph tag by default.
+MDL-44224,18,Atto: Indent/outdent plugins should not use <blockquote>
+MDL-44225,18,Atto: Focus lost in the Equation editor after inserting a symbol
+MDL-44430,18,Atto triggers required when still in focus
+MDL-44759,18,Atto Undo starts highlighted on an empty field
+MDL-44768,18,Atto: Save cursor position with undo/redo stack and restore it
+MDL-44810,18,The bold/italics buttons don't maintain their selection when pressed
+MDL-44830,18,Atto: Redo behaviour is a bit wonky
+MDL-44831,18,Atto: Save to undo stack on text deletion
+MDL-45040,18,Atto: Selection reverts to previous selection on toolbar button press in WebKit browsers
+MDL-17081,19,"Implement import/export ""Permissions"" settings for ""Manage roles"" tab"
+MDL-18014,19,Automatically and periodically save WYSIWYG editor content as a draft/concept
+MDL-18375,19,Displaying and selecting dates throughout Moodle should allow the use of multiple calendars
+MDL-18633,19,User profile: add last ip field to user view
+MDL-31356,19,IMS Enterprise enrol plugin added features
+MDL-31989,19,Global Search 2
+MDL-34426,19,Port Google/Facebook Oauth2 plugin into core
+MDL-39150,19,Finish detailed specification http://docs.moodle.org/dev/Logging_2
+MDL-39152,19,"core_role_assign_roles ws function contains contextid as parameter, which is not correct"
+MDL-39153,19,"core_roles_unassign_roles ws function contains contextid as parameters, which is not correct"
+MDL-39154,19,"core_files_get_files, core_files_upload_files ws functions contain context as parameter, which is not correct"
+MDL-39888,19,Replace usages of the log table in auth/mnet/auth.php
+MDL-39933,19,Implement external database log storage plugin
+MDL-39950,19,Reproduce log reports to use the new logging system (log and loglive)
+MDL-40037,19,POLICY: Decide if we should allow context to be exposed by WS or not
+MDL-40126,19,core_enrol_get_course_enrolment_methods() webservice
+MDL-40338,19,"META: Evaluate Remote-Learner ELIS ""hacks"" for core"
+MDL-41230,19,Increase time limit for the tool_uploadcourse
+MDL-41266,19,Define logging interfaces in core
+MDL-41268,19,Implement tool_log plugin
+MDL-41269,19,Implement logstore_standard plugin
+MDL-41270,19,Implement new log storage management admin UI
+MDL-41271,19,Implement log store settings and related filtering code
+MDL-41272,19,Implement logstore_legacy emulation reader plugin
+MDL-41283,19,Convert Course participation report to new logging API
+MDL-41284,19,Convert Statistics report to new logging API
+MDL-41286,19,Convert outline report to use new logging API
+MDL-41287,19,Buffering in standard log storage
+MDL-42276,19,"Automate groups CRUD actions (MDLQA-2335, MDLQA-2238, MDLQA-2105, MDLQA-1813, MDLQA-1812)"
+MDL-42280,19,Automate MDLQA-1546 and MDLQA-1545 - blocks management
+MDL-42285,19,Automate MDLQA-93 - A teacher can delete questions from the question bank
+MDL-42289,19,Automate MDLQA-57 - Past chat sessions can be made available for everyone to view
+MDL-42461,19,Creating a wiki in group mode triggers setType warning
+MDL-42889,19,Remove access to old log table in admin/handlevirus.php and other clam related code
+MDL-42890,19,Reimplement access to log table in backup/util/helper/backup_cron_helper.class.php
+MDL-42891,19,Reimplement access to log table in functions notify_login_failures() and count_login_failures()
+MDL-42892,19,Reimplement access to log table in function can_delete_course()
+MDL-42894,19,Investigating performance of the new logging API in practice
+MDL-42898,19,Develop a timeline page/block
+MDL-43044,19,The course_module_instances_list_viewed abstract class could be improved to do more.
+MDL-43270,19,Migrate moodle-course-dragdrop to use Shifter
+MDL-43271,19,Migrate moodle-course-formatchooser to use Shifter
+MDL-43273,19,Migrate moodle-course-coursebase to use Shifter
+MDL-43302,19,Migrate moodle-form-passwordunmask to use Shifter
+MDL-43307,19,Migrate moodle-mod_assign-history to use Shifter
+MDL-43911,19,Behat - add an option to take page dumps
+MDL-43931,19,Write unit tests for logging stores and managers
+MDL-43967,19,Write transition guide for reports that rely on logs
+MDL-44316,19,Change the tag API to include the contextid and component when tagging an item.
+MDL-44370,19,Incorrect urls for calendar logs in log and loglive reports
+MDL-44596,19,Declare interfaces supported by reports and implemented by stores.
+MDL-45754,19,Backup and restore of logs in 2.7 and above
+MDL-45920,19,Define Report Builder API
+MDL-46118,19,"Problems in downloading course log files, only 30 lines are downloaded"
+MDL-46352,19,Deprecate print_group_picture
+MDL-46571,19,Write Unit Tests for the history report
+MDL-47045,19,Bring in code from UCLA
+MDL-47148,19,Event monitor: Write behat tests for the tool
+MDL-47149,19,Event monitor: Write QA tests for the tool
+MDL-51042,19,Create a statistics report for a learning plan template
+MDL-52051,19,Migrate to Dropbox API v2
+MDL-21415,20,Course Participation Report doesn't abide by separate groups
+MDL-28448,20,Teachers cannot delete user submissions - advanced uploading of files
+MDL-33600,20,There is no checkbox to control sending feedback when grading an assignment
+MDL-34321,20,Assignment only partially disappears when Teacher using role switch to Student submits assignment
+MDL-34432,20,Assignment -teachers can no longer comment inline on online text
+MDL-36003,20,Add event/logging when student views grades
+MDL-36847,20,Prevent inaccurate feedback notifications where grade item hidden
+MDL-36984,20,Assignment module should redirect after form submissions
+MDL-37148,20,More webservices for Assignment
+MDL-37717,20,add warning when teacher tries to disable enrolment method (same as when deleting it)
+MDL-38628,20,New Assignment Module - Gives learners the top grade in a scale
+MDL-39569,20,Second student can't confirm assignment submission
+MDL-40003,20,Assignment submission comments are not restored
+MDL-41131,20,"Allow assignment plugins to ""just be on"""
+MDL-41534,20,Extra blank rows shown in Assignment Submissions screen and Participants screen
+MDL-42015,20,Module-specific activity completion requirements do not show in course completion
+MDL-42331,20,Automate MDLQA-5258 - A teacher can add and allocate a course badge
+MDL-42585,20,Refine capabilities that permit user to see assignments and the user feedbacks without ability to grade
+MDL-43197,20,Parent role only sees course total and no longer individual grades
+MDL-43250,20,get_graders() matches potential graders from all groups
+MDL-43318,20,Editing feedback for a previous submission edits the feedback for the wrong user
+MDL-43326,20,Cannot start a new attempt in Assignment (based on previous one)
+MDL-43332,20,Automate MDLQA-317 Grades Automated functional tests
+MDL-43605,20,"User Report In Grading shows all assignments, not only that of particular group"
+MDL-44149,20,Assignment resubmissions do not automatically reopen if using quick grading
+MDL-45580,20,PDF Annotations Remain After PDF is Replaced
+MDL-45894,20,For students: a single page with all their course grades on it
+MDL-46035,20,Survey activity shows wrong error message to admins
+MDL-46191,20,Develop new Gradebook history report
+MDL-46567,20,Clone and integrate NetSpot's gradehistory report
+MDL-46572,20,Write a simple behat test for the history report
+MDL-46574,20,Add the event grade_report_viewed for the history report
+MDL-47025,20,Fix highlighting behaviour in the new grader report
+MDL-47056,20,"Grader report displays ""error"" for single item in new course"
+MDL-47064,20,Add contribution column to the user report
+MDL-52744,20,grade_competency_in_course missing security check
+MDL-52757,20,Course competencies: Problem when selecting users in the manual marking page
+MDL-52861,20,The grading dialogue should show who is being graded
+MDL-53070,20,Non-editing teachers missing view user competency capability
+MDL-54796,20,Cannot switch between students in assignment grading interface
+MDL-42330,21,Automate MDLQA-5257 - An admin can award a site badge
+MDL-42332,21,Automate MDLQA-5260 and MDLQA-5261 - A badge can be awarded based on activity and course completion.
+MDL-49461,21,Mark competencies complete when the course is completed
+MDL-49463,21,A user can upload evidence or prior learning
+MDL-49464,21,Course competency links should be included in course backup/restore
+MDL-50253,21,Competencies can be related to other competencies
+MDL-50328,21,Allow competencies to be assigned to a user learning plan
+MDL-50439,21,Create a universal block to display CBE related information
+MDL-51024,21,Create a new page that can migrate a set of courses from one competency framework to another
+MDL-51026,21,A competency framework can customise the terms for up to 4 competency levels
+MDL-51029,21,"Add ""completion rules"" for all competencies in a framework that are branches"
+MDL-51034,21,Add page to list competencies in a user learning plan
+MDL-51036,21,"Create a workflow for requesting a competency be reviewed, and reviewing outstanding requests"
+MDL-51039,21,Add completion rules to course - competency links
+MDL-51045,21,"Create a way to import a competency framework from a set of Moodle ""Outcomes""."
+MDL-51130,21,Deleting frameworks should delete associated data
+MDL-51513,21,Properly delete a competency
+MDL-51557,21,Add learning plans to the administration block in categories
+MDL-51598,21,Wrong number of competencies displayed in the list of competency frameworks
+MDL-51602,21,Add ability to duplicate a competency framework
+MDL-51638,21,Use taxonomy terms in competency names everywhere
+MDL-51644,21,Create persistent model for user_competency
+MDL-51805,21,Freeze a learning plan when it is marked as completed
+MDL-51869,21,Users can link evidence of prior learning to their competencies
+MDL-51953,21,Missing four services definitions
+MDL-51967,21,Create a dialogue to view all the information about a competency
+MDL-52106,21,Remove competency rules on parent when children are being moved or deleted
+MDL-52122,21,Create an API to register evidence to competencies
+MDL-52229,21,Handle hidden templates/frameworks when linking competencies
+MDL-52233,21,Show the idnumber of the competency in the user learning plan (and template)
+MDL-52242,21,Competencies listed in a completed plan must never change
+MDL-52408,21,api::list_related_competencies should not require manage capability
+MDL-52418,21,Invalid responses in learning plan templates and course competencies pages
+MDL-52426,21,Template competencies page should not require manage permissions
+MDL-52713,21,Add behat tests for CRUD operations on frameworks
+MDL-52741,21,Show the taxonomy level for a competency in the competency summary template
+MDL-52743,21,Add a statistics report to the course (competencies)
+MDL-52747,21,Show the courses a competency is linked to from the competency summary in plan page.
+MDL-52755,21,Competencies sort order is not preserved when plan is completed
+MDL-52775,21,api::get_course_competency is identical to api::list_course_competencies
+MDL-52803,21,Provide a way to hide/disable comments on competencies and plans
+MDL-52847,21,Error when duplicating framework whitout competencies
+MDL-52860,21,Add confirmation dialogue when removing a competency from a course
+MDL-52959,21,Create C(R)UD events for competencies
+MDL-52960,21,Created event for competency viewed
+MDL-52979,21,Only show course ratings / proficiency when viewing a competency in a course
+MDL-53084,21,Unclear what we are viewing when in a user competency in a plan
+MDL-53186,21,Sending competencies for review from the evidence of prior learning interface
+MDL-53187,21,Create events for user competency workflow
+MDL-53188,21,Add event for when an evidence is attached to a user competency
+MDL-53189,21,Create event for user competency viewed
+MDL-53193,21,Add behat tests for CRUD of evidence of prior learning
+MDL-53194,21,Add behat tests for linking evidence of prior learning with competencies
+MDL-53211,21,Create a user_competency_course model and populate it on suggest
+MDL-37324,22,Import phpmailer 5.2.7
+MDL-40107,22,Upgrade TCPDF to tcpdf_6_0_031
+MDL-43117,22,Add release column to Plugins Overview page
+MDL-43503,22,Switch to paged results for LDAP
+MDL-47147,22,Review third party libraries for new versions
+MDL-47294,22,Upgrade S3 library in repository_s3 to 0.5.1-dev for Moodle 2.8 release
+MDL-47295,22,Upgrade AdoDB library to 5.19 for Moodle 2.8 release
+MDL-47297,22,Upgrade Google APIs Client Library to 1.0.5 for Moodle 2.8 release
+MDL-47298,22,Upgrade Compatible password hashing library for Moodle 2.8 release
+MDL-47299,22,Upgrade PHPMailer to 5.2.9 for Moodle 2.8 release
+MDL-47301,22,Upgrade Typo3 library to 4.7.19 for Moodle 2.8 release
+MDL-47307,22,Upgrade Markdown to 1.4.1 for Moodle 2.8 release
+MDL-49516,22,Upgrade S3 library in repository_s3 to 0.5.1-dev for Moodle 2.9 release
+MDL-49517,22,Upgrade AdoDB library to 5.19 for Moodle 2.9 release
+MDL-49519,22,Upgrade Google APIs Client Library to 1.1.2 for Moodle 2.9 release
+MDL-49520,22,Upgrade Compatible password hashing library for Moodle 2.9 release
+MDL-49521,22,Upgrade PHPMailer to 5.2.9 for Moodle 2.9 release
+MDL-49523,22,Upgrade Typo3 library to ??? for Moodle 2.9 release
+MDL-49528,22,Upgrade Markdown to 1.5.0 for Moodle 2.9 release
+MDL-51758,22,Remove password_compat library
+MDL-54770,22,PayPal enrolment plugin to support required SSLVERSION TLS v1.2 if possible
+MDL-31776,23,"Additional name fields, to allow Asian languages to flexibly display user names in Chinese characters, local phonetic system or Romanization"
+MDL-40962,23,Alternate name warnings in Recent Activity block
+MDL-41176,23,Debugging when changing a users email address and other bugs
+MDL-41307,23,Tags needs updating for changes to fullname function.
+MDL-42098,23,Debugging message only shown when alternate name fields are enabled.
+MDL-42173,23,Name fields notices on registration page.
+MDL-42225,23,Badge recipients page warns about additional name fields missing
+MDL-42226,23,Viewing an issued badge warns about additional name fields missing
+MDL-42342,23,Alternate name warnings in quiz results block
+MDL-42885,23,Updating existing users via bulk upload causes debugging messages
+MDL-43037,23,Quiz user overrides generates alternate names debugging message
+MDL-43058,23,report_security_check_riskxss reports additional name fields in the user object.
+MDL-43215,23,Adding web service token generates alternate names debugging message
+MDL-43451,23,"Cron task ""Creating passwords for new users"" missing additional name fields"
+MDL-44745,23,Typo in mod assign fullname() function
+MDL-46921,23,Allow sorting on additional name fields.
+MDL-30839,24,form validation and error recovery
+MDL-34356,24,Allow the chooser dialogue to submit values for the radio button
+MDL-35848,24,Login Page lacks visible focus path
+MDL-35919,24,Add activity and resource link doesn't announce when the modal appears
+MDL-35922,24,Create folder button in file manager does not announce modal opened
+MDL-35923,24,Create folder modal in file manager does not focus on the text input field
+MDL-35925,24,Add... button does not announce modal opened
+MDL-35926,24,Add.. modal allows tab focus to go outside the modal
+MDL-35927,24,Add... Modal Error Modal does not announce modal opened
+MDL-35928,24,File picker Error modal does not focus on text
+MDL-35930,24,Filepicker and file manager view files buttons do not announce change on the page
+MDL-35931,24,Filepicker selecting a repository does not announce a change in the modal
+MDL-35933,24,File manager file size and number limits are not keyboard accessible
+MDL-35934,24,File manager selecting file does not announce that the file modal opened
+MDL-35973,24,Moodle redirect to new page has no page title (specifically forums)
+MDL-35981,24,Comment delete confirmation yes/no pop-up not detected by JAWS or Voiceover
+MDL-36005,24,Forms help icons are placed within labels
+MDL-36081,24,Video player can't be controlled by keyboard
+MDL-36082,24,User cannot add necessary accessibility attributes to make the default video player accessible.
+MDL-41033,24,Filepicker selecting file does not announce that the file modal opened
+MDL-42752,24,Disabled icons on file picker still get focus resulting in them being read out by screen readers
+MDL-43267,24,Course menu to 'Move item' needs betterment for screen readers
+MDL-43969,24,Improve accessibility of shortform collapsing
+MDL-46285,24,Option to hide user_picture from screen readers
+MDL-45827,25,Specify the requirements for the element library
+MDL-45828,25,Create the element library admin tool
+MDL-45829,25,Define the initial list of renderables to be added to the element library
+MDL-45830,25,Define style guide for renderables
+MDL-45853,25,Document renderer best practices
+MDL-45854,25,Define and document JavaScript output guide
+MDL-45862,25,Convert existing displays to renderers
+MDL-45885,25,Decide and document output components
+MDL-46110,25,Event monitor: Create renderables/renderers to display the rule managment page
+MDL-46111,25,Event monitor: Create renderables/renderers to display the subscription managment page
+MDL-23646,26,"TinyMCE can't be resized and doesn't scroll for wide content, especially on small screens"
+MDL-24775,26,a pagedown key press in any tinymce editor destroys entire page layout
+MDL-36803,26,TinyMCE editor doesn't accept keyboard input on iOS6 after touch event
+MDL-37565,26,Better looking tinymce editor: toggle toolbars between 1 and 3 lines
+MDL-38693,26,WYSIWYG Editor cuts off content in full screen mode
+MDL-39350,26,Collapsible editor tab can't be controlled via keyboard
+MDL-39675,26,Text overlap in HTMLEditor in Bootstrap theme
+MDL-40493,26,Allow an editor plugin to be chosen per profile
+MDL-40668,26,"Revert the ""collapsible editor"" to use the standard editor again (revert MDL-38614)"
+MDL-40768,26,Extract icons from TinyMCE 4.0
+MDL-40770,26,Implement Icons for TinyMCE 3.*
+MDL-41098,26,Add Atto HTML editor to core (the editor formally known as contenteditable)
+MDL-41235,26,Atto HTML Editor - The text box width changes if you toggle back and forth between wysiwyg and html mode
+MDL-41236,26,Atto - In html mode the other buttons are disabled but the visual difference is too subtle
+MDL-41238,26,Atto HTML Editor - Close the styles menu when clicked outside
+MDL-41385,26,Create icons for non-default buttons
+MDL-41569,26,Remove nowrap from .flexible th
+MDL-41713,26,Copy the relevant icons from new TinyMCE theme to atto
+MDL-41716,26,Atto: Resizing the editor is inconsistent
+MDL-41870,26,Atto HTML Editor: Implement Aria managed keyboard navigation for the toolbar
+MDL-42102,26,Style TinyMCE toolbars consistently with Moodle style
+MDL-42111,26,Youtube Repository Video Preview is Cut Off
+MDL-42195,26,Bootstrap makes all images responsive with no way to disable this behaviour via CSS
+MDL-42317,26,TinyMCE editor can overlap with Blocks on New Event Page in Calendar in Clean Theme
+MDL-43855,26,Implement a new equation editor for Atto
+MDL-43864,26,Add atto plugin to prevent automatic linking.
+MDL-43865,26,Add a toolbar editor to Atto
+MDL-44000,26,Atto: Image sizes should keep proportions when resizing
+MDL-44040,26,Atto: Implement basic keyboard shortcuts people are used to
+MDL-44067,26,Improve Atto Table controls
+MDL-44131,26,Make the Atto equation editor example library into an aria toolbar.
+MDL-44164,26,Refactor Atto code
+MDL-44218,26,Atto: Limit the height of the editor to prevent the toolbar to go off screen
+MDL-44219,26,Atto: A large selection causes the editor to freeze for some seconds
+MDL-44221,26,Atto: Table plugin not adding a table on IE
+MDL-44223,26,Atto: Missing images are not displayed at all in the editor
+MDL-44228,26,Atto: Being able to see the list of plugins available in the settings UI
+MDL-44298,26,Add  'HTML templating' features to Atto text editor
+MDL-44748,26,Make atto the default editor during upgrade
+MDL-44758,26,Atto: Prevent new table creation when within an existing table
+MDL-44769,26,"Atto Table plugin caption field should be a text input, not a textarea"
+MDL-44770,26,"Change table context menu, to open from the table button, not the table cell"
+MDL-44771,26,Atto tables with long captions wrap into the table
+MDL-44772,26,Atto does not respect height of original text area field any more (it used to)
+MDL-44776,26,Make Atto equation editor dialogue wider
+MDL-44777,26,Atto Equation Editor example toolbar should have consistently sized buttons
+MDL-44779,26,MathJax menus show behind dialogues
+MDL-44846,26,Atto font colors are broken in IE
+MDL-45780,26,"Neither formchangechecker, nor quiz autosave detects changes in Atto editors"
+MDL-46772,26,html_writer::table Ignore attributes for rows
+MDL-46936,26,Restore AJAX editing
+MDL-47124,26,Update table row/column sizes when AJAX quick editing
+MDL-10115,27,A use profile's course list is arbitarily limited with no way of seeing complete list
+MDL-26170,27,Deleted Forum & Blog Posts in RSS Block
+MDL-26408,27,IMS Enterprise admin notifications fail on message_send()
+MDL-30431,27,Attempting to edit wiki comments from another user causes an error
+MDL-31089,27,New posts listing on 'My Moodle' ignores groups.
+MDL-32275,27,enrol/users.php shows last access to the platform but not last access to the course
+MDL-32592,27,Category Undefined in IMS Enterprise
+MDL-33343,27,Unable to create a new page in wiki
+MDL-34684,27,Adding a new health check to detect incorrect category path order and/or missing parent categories
+MDL-37824,27,"Navigation block: clicking on ""My courses"" sends you to ""My moodle"""
+MDL-38664,27,"Lesson essays ""disappear"" if new attempt after exiting"
+MDL-38768,27,"Coding error ""The theme has already been set up for this page ready for output"" when adding blog entry to a page resource"
+MDL-38780,27,Unread Posts listing on 'My Moodle' should take care of groups
+MDL-39603,27,Search filter on enrolled users page is confusing in clean theme
+MDL-39661,27,theme_clean: notice about undefined offset
+MDL-39794,27,"When editing is on for the front page, then always show the ""Add course"" button under the current courses."
+MDL-39949,27,Block without header causes JS error on page
+MDL-40436,27,Error in Courses block when the user is enrolled in courses from other servers by MNet
+MDL-40662,27,setting up the default for My Home page produces block/course_overview:addinstance notice
+MDL-41075,27,"Selecting ""Choose..."" option from My Courses dropdown on Participants page generates error: Can not find data record in database table course"
+MDL-41352,27,Mymobile theme: javascript error on course pages
+MDL-41398,27,Clean theme needs the upgrade page to be dumb
+MDL-41994,27,Notice: Undefined property on calendar export page
+MDL-41995,27,Calendar export page does not set page layout correctly
+MDL-42100,27,Bad links in Capability overview report
+MDL-42214,27,Blocking user before reading message causes constant popups
+MDL-42429,27,PHP notice regarding undefined property displayed when editing a lesson
+MDL-42797,27,Guest access displays exception error right after upgrade process
+MDL-42973,27,Unknown component location
+MDL-43140,27,When submitting the form on the mnet access control page a warning is shown
+MDL-43178,27,"Incorrect confirmation message appears on ""per-forum digest option"" screen"
+MDL-43268,27,Undefined index: filter in /lib/outputrequirementslib.php
+MDL-43410,27,Docking blocks breaks Edit popup menu
+MDL-43411,27,showfromothers / hidefromothers error shown strings are not present but uses_sections is false
+MDL-43521,27,Admin bookmarks block doesn't work
+MDL-43714,27,Notice:  Trying to get property of non-object in lib/ajax/blocks.php on line 93
+MDL-43725,27,Undefined variable $strlogs in Live logs
+MDL-45833,27,Debugging error when changing roles in category
+MDL-46218,27,Disabled functionality checks occur later than necessary
+MDL-46253,27,"Add-on validation message always shows ""foundlangfile"" (Debug)"
+MDL-46255,27,Purge all caches page did not call $PAGE->set_url(...) (Moodle 2.8)
+MDL-46401,27,Use cohorts to restrict display of course categories and set themes
+MDL-46902,27,When searching for a course that does not exist a non-sensical string is displayed.
+MDL-47252,27,Discussion subscriptions visible (and broken) to guests
+MDL-51735,27,Veiwing a lesson before questions / pages are added results in an exception
+MDL-52235,27,"Button ""Add new learning plan"" should not be displayed when permissions are missing"
+MDL-53195,27,Undefined variable: coursecompetency warning in \tool_lp\api::get_user_competency_in_course()
+MDL-22236,28,Design way to send files by web service (upload)
+MDL-25473,28,Embedded MP4 videos via linking to the course file loops when finished playing.
+MDL-30195,28,Export forum discussion without attachments to google docs portfolio
+MDL-31410,28,PayPal IPN Script exposed to message_send() failure
+MDL-32450,28,DragMath GPL issue
+MDL-34182,28,Invalid JSON output on filepicker when repository plugins output invalid content
+MDL-34587,28,Filenames w/ Spaces Generating incorrect SHA1
+MDL-37528,28,Ajax dragging not working (fails to 'pick up')
+MDL-37972,28,"Assignment (2.2) ""Upload Single"" settings submission file link does not work"
+MDL-39653,28,IMS Enterprise CRON job error
+MDL-39771,28,Embedded URL resource doesnt seem to load on an iphone 3gs
+MDL-40034,28,Epic: File API improvements to handle clustering environments
+MDL-40039,28,Add alternative to contextid for core_files_external::upload
+MDL-40079,28,Hardcoded timeout parameter in the repository plugin
+MDL-40250,28,Add unit tests for core_files_external::upload
+MDL-40363,28,Files with spaces that are url encoded to %20 don't download under IIS
+MDL-41447,28,Upgrading from 1.9 to 2.2 (en-route to 2.4.5) has errors with certain kinds of URL link
+MDL-41707,28,Allow phpunit tests to use local external files or skip external tests completely
+MDL-42044,28,Install add on fails validation when zip does not contain folder entries
+MDL-42110,28,Installing add-ons causes 500 internal server error.
+MDL-42212,28,Lesson module is not browseable using the Server Files repository
+MDL-42241,28,The URL for the upload courses tool in site admin is wrong
+MDL-42293,28,"Behat upload step, should be able to determine proper location if ""admin/"" is present in the url."
+MDL-43063,28,Function download_file_content() inline documentation of return value incorrect
+MDL-43106,28,Moodle 2.6 sends 2 Set-Cookie headers
+MDL-43137,28,class loader breaks open_basedir
+MDL-43266,28,Testing sites are cleaning all test dataroot contents
+MDL-43295,28,Debugging warning on saving an online text submission with an uploaded image.
+MDL-43367,28,get_child_contexts() returns invalid contexts when context path missing
+MDL-43856,28,Add a mathjax filter
+MDL-43948,28,Possible reflected XSS in editor and imagefile form fields
+MDL-44874,28,Per-request temp directories
+MDL-46036,28,Exception is thrown if you try to download responses from a survey activity with no responses
+MDL-46748,28,Mathjax default SSL CDN address is down causing atto to fail to load
+MDL-54847,28,HTML audio tag removed from forum post
+MDL-54915,28,Rendering concurrent Mustache templates with strings loses javascript
+MDL-31501,29,"New session infrastructure - file, database and memcached storage"
+MDL-34397,29,Develop course structure caching
+MDL-36034,29,pre-cache active filters for course categories to significantly reduce database queries
+MDL-37145,29,Documentation for caching admin screens
+MDL-41067,29,MUC cache definitions are NOT documented!!
+MDL-41071,29,Class plugininfo_mod does not cache in the right cache definition
+MDL-42014,29,Session cache stops working after upgrade to 2.5.2
+MDL-42243,29,filter settings regressions
+MDL-42493,29,"Upgrade to current 2.6beta, memory exhausted problem purging caches"
+MDL-43511,29,question bank should not store references to MUC cache
+MDL-43524,29,Drop problematic global text caching
+MDL-44366,29,filter_glossary has the potential to be slow on large sites
+MDL-44368,29,filter_activitynames can be improved after dropping of global text cache
+MDL-27158,30,Default timezone is incorrect when not set in PHP configuration
+MDL-31625,30,Overfilling DB entries with a replace causes error
+MDL-34055,30,Database function for fast bulk inserts
+MDL-37016,30,null event.uuid's discovered when upgrading to Moodle 2.4
+MDL-41197,30,core_text::convert produces notices when experiencing invalid utf8 params or char not in target encoding
+MDL-41316,30,Spam cleaner  using ORACLE
+MDL-41419,30,core_files_externallib_testcase::test_get_files sporadically fails
+MDL-41935,30,Prevent false-positive failures due to time differences
+MDL-41953,30,Relax component name rules slightly to allow more than one digit at the end
+MDL-42021,30,Event base class should force an objectid if objecttable is defined
+MDL-42040,30,Organize the registration of shutdown handlers
+MDL-42054,30,phpmailer unit test redirection is using incorrect test
+MDL-42199,30,Random failures with test_increment_revision_number
+MDL-42292,30,block.version regression in custom lang tool
+MDL-42386,30,Etag verification for stored files never matching
+MDL-42414,30,One more time() random failure: test_increment_revision_number
+MDL-42882,30,Performance improvement to missing root directory upgrade step
+MDL-42956,30,mnet broken for mssql and oracle
+MDL-43005,30,tag param in blog index page should be strictly checked
+MDL-43175,30,Base event JSON encoding decoding check will fail with whole float values.
+MDL-43330,30,Behat framework: add skip support
+MDL-43395,30,get_records*_sql silently converts invalid limit param to integer
+MDL-43437,30,mod_wiki\event\page_version_deleted event unit test should compare objectid with versionid
+MDL-43510,30,phpunit 404 tests may fail when using custom exttests location
+MDL-43604,30,add support for MariaDB 10.x
+MDL-43661,30,rename event property level to edulevel
+MDL-43746,30,require_course_login: incorrect variable assignment
+MDL-43761,30,improve database install performance (especially MySQL)
+MDL-43884,30,$DB->get_tables() returns empty array for external databases.
+MDL-43903,30,prevent error log output from addodb during phpunit execution
+MDL-43905,30,incorrect code for updates of login times
+MDL-44794,30,"get_groups(), get_groups_all() and groups_get_user_groups are not covered by unit tests"
+MDL-45070,30,add support for MariaDB 10.x from Ubuntu
+MDL-45594,30,Fix use of ORDER BY id in the messaging system
+MDL-46573,30,Improve the SQL queries of the history report
+MDL-46576,30,Implement Natural aggregation
+MDL-46678,30,Move sql in index.php to an api
+MDL-46923,30,Typo in behat function name
+MDL-47418,30,Missing table header in behat step causes debugging.
+MDL-47420,30,Fix unit tests broken in the dev branch.
+MDL-49533,30,Move alfresco repository to plugins DB
+MDL-51460,30,List frameworks' API function does not support order
+MDL-51682,30,"Fix all persistent sortorder handling to prevent ""holes"""
+MDL-40769,31,Create Icons from TinyMCE vector
+MDL-41128,31,Import latest branch of upload pdf code
+MDL-41133,31,Update icons in feedback_pdf plugin to match core style.
+MDL-41137,31,Verify no UI RTL issues with feedback_pdf plugin.
+MDL-41138,31,Add unit tests for editpdf after refactoring
+MDL-41273,31,Edit PDF: Finish work on comments tool
+MDL-41274,31,Edit PDF: Enable colour and tool chooser menus.
+MDL-41275,31,Edit PDF: Add list of generated pdf(s) to grading form
+MDL-41276,31,Edit PDF: Add line tool (including rectangle + oval tools)
+MDL-41277,31,Edit PDF: Add rectangle tools
+MDL-41278,31,Edit PDF: Add support for the oval tool
+MDL-41279,31,Edit PDF: Add support for the pen tool
+MDL-41280,31,Edit PDF: Add support for the stamp tool
+MDL-41281,31,Edit PDF: Add support for the select tool
+MDL-41538,31,Edit PDF: the pdf dialog opens then closes almost straight away
+MDL-41633,31,Edit PDF: create layout mockup
+MDL-41699,31,Editpdf - Let students view pdf online (not just downloadable version)
+MDL-41796,31,Edit PDF: Add support for the highlighter tool
+MDL-41800,31,EditPDF: Add comments quicklist
+MDL-41805,31,EditPDF: Create keyboard shortcuts for tools.
+MDL-41824,31,Edit PDF: Split up javascript into smaller modules
+MDL-41856,31,Edit PDF: Update more icons
+MDL-42023,31,Edit PDF: Integrate editpdf plugin for mod_assign
+MDL-42025,31,Edit PDF: Add behat tests
+MDL-42028,31,EditPDF: replace the loading icon by a progress bar as a user could think it's broken for large pdf
+MDL-42081,31,EditPDF: Add default stamp images
+MDL-42356,31,Edit PDF: When no stamps uploaded toolbar looks strange
+MDL-42360,31,Edit PDF: On-screen layout does not match PDF layout
+MDL-42405,31,EditPDF: when the PDF has a wrong format then a TCPPDF error is displayed in a blank page.
+MDL-42433,31,No longer able to annotate pdfs in 2.6 beta
+MDL-16474,32,Allow single-item scales
+MDL-46602,32,Write specification for improvements to scales.
+MDL-46603,32,Improve grade_scale class to support mapping to/from points and menu generation.
+MDL-46604,32,Allow custom mappings of scale items -> points
+MDL-46605,32,Remove custom scales logic from modules.
+MDL-46606,32,Review use of scales in workshop.
+MDL-46607,32,Update advanced grading methods to support new scales mapping.
+MDL-46609,32,Create an easy way to configure grade letters matching an existing scale.
+MDL-47492,32,Add behat tests for displaying scales in gradebook
+MDL-51442,32,Framework scales configuration must be mandatory
+MDL-51507,32,External functions to create/update competency frameworks lack scale information
+MDL-51866,32,Framework's scale cannot be changed once used
+MDL-51962,32,Validate that the grade set in user_competency is valid
+MDL-51963,32,Support custom scales per competency
+MDL-52754,32,Dropdown list of scales is not displayed when there's single quotes in values

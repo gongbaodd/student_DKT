@@ -43,7 +43,7 @@ def load_embeddings(embedding_dir: Path) -> tuple[list[str], np.ndarray]:
     return issue_keys, matrix
 
 
-DEFAULT_CLUSTERS = 20
+DEFAULT_CLUSTERS = 33
 
 
 def default_cluster_count(_sample_count: int) -> int:

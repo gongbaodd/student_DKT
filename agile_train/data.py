@@ -26,10 +26,15 @@ def load_issues(
     return done, todos
 
 
-def build_tickets(done: list[dict], todos: list[dict]) -> dict[str, Ticket]:
+def build_tickets(
+    done: list[dict],
+    todos: list[dict],
+    *,
+    component_field: str = "component",
+) -> dict[str, Ticket]:
     tickets: dict[str, Ticket] = {}
     for issue in done + todos:
-        tickets[issue["issueKey"]] = Ticket(component=issue["component"])
+        tickets[issue["issueKey"]] = Ticket(component=issue[component_field])
     return tickets
 
 

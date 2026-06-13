@@ -1,102 +1,167 @@
 [
   {
     "cluster": 0,
-    "clusterName": "Responsive layout and UI fixes",
-    "issueCount": 71
+    "clusterName": "Atto and Editor Improvements",
+    "issueCount": 60
   },
   {
     "cluster": 1,
-    "clusterName": "File management UI/UX fixes",
-    "issueCount": 38
+    "clusterName": "Code deprecation cleanup",
+    "issueCount": 64
   },
   {
     "cluster": 2,
-    "clusterName": "Event API Refactoring and Coverage",
-    "issueCount": 84
+    "clusterName": "Event logging refactoring",
+    "issueCount": 46
   },
   {
     "cluster": 3,
-    "clusterName": "Deprecation and Cleanup Tasks",
-    "issueCount": 42
+    "clusterName": "Atto and Plugin Management",
+    "issueCount": 28
   },
   {
     "cluster": 4,
-    "clusterName": "Event logging refactoring",
-    "issueCount": 45
+    "clusterName": "Learning Plan Management",
+    "issueCount": 29
   },
   {
     "cluster": 5,
-    "clusterName": "User data and profile management",
-    "issueCount": 52
+    "clusterName": "Gradebook Natural Weighting",
+    "issueCount": 38
   },
   {
     "cluster": 6,
-    "clusterName": "Competency and Learning Plans",
-    "issueCount": 86
+    "clusterName": "Gradebook functionality improvements",
+    "issueCount": 38
   },
   {
     "cluster": 7,
-    "clusterName": "Logging and Reporting Improvements",
-    "issueCount": 35
+    "clusterName": "Events API Refactoring",
+    "issueCount": 58
   },
   {
     "cluster": 8,
-    "clusterName": "Course structure and UI issues",
-    "issueCount": 43
+    "clusterName": "PDF and Media Editing Issues",
+    "issueCount": 9
   },
   {
     "cluster": 9,
-    "clusterName": "Gradebook weighting and calculation",
-    "issueCount": 39
+    "clusterName": "YUI and JavaScript Migration",
+    "issueCount": 26
   },
   {
     "cluster": 10,
-    "clusterName": "Testing and Core Functionality Issues",
-    "issueCount": 69
+    "clusterName": "Frontend UI and JavaScript bugs",
+    "issueCount": 56
   },
   {
     "cluster": 11,
-    "clusterName": "PDF Editing Functionality Improvements",
-    "issueCount": 39
+    "clusterName": "Accessibility and UI improvements",
+    "issueCount": 32
   },
   {
     "cluster": 12,
-    "clusterName": "Atto editor improvements and fixes",
-    "issueCount": 72
+    "clusterName": "Event system refactoring and management",
+    "issueCount": 30
   },
   {
     "cluster": 13,
-    "clusterName": "Core Feature Modernization",
-    "issueCount": 68
+    "clusterName": "Backup and Restore Functionality",
+    "issueCount": 38
   },
   {
     "cluster": 14,
-    "clusterName": "Accessibility and UX improvements",
-    "issueCount": 67
+    "clusterName": "Upgrade requirement management",
+    "issueCount": 10
   },
   {
     "cluster": 15,
-    "clusterName": "Atto and core functionality improvements",
-    "issueCount": 79
+    "clusterName": "User and Authentication Management",
+    "issueCount": 36
   },
   {
     "cluster": 16,
-    "clusterName": "Course restoration and display issues",
-    "issueCount": 70
+    "clusterName": "File management UI/UX issues",
+    "issueCount": 36
   },
   {
     "cluster": 17,
-    "clusterName": "YUI and JavaScript refactoring",
-    "issueCount": 50
+    "clusterName": "Mobile responsiveness and layout fixes",
+    "issueCount": 53
   },
   {
     "cluster": 18,
-    "clusterName": "Gradebook functionality improvements",
-    "issueCount": 86
+    "clusterName": "Atto editor functionality issues",
+    "issueCount": 17
   },
   {
     "cluster": 19,
-    "clusterName": "Third party library upgrades",
-    "issueCount": 31
+    "clusterName": "Logging and Core Migration",
+    "issueCount": 61
+  },
+  {
+    "cluster": 20,
+    "clusterName": "Grading and Assignment Functionality",
+    "issueCount": 40
+  },
+  {
+    "cluster": 21,
+    "clusterName": "Competency Framework Management",
+    "issueCount": 54
+  },
+  {
+    "cluster": 22,
+    "clusterName": "Library and Dependency Upgrades",
+    "issueCount": 21
+  },
+  {
+    "cluster": 23,
+    "clusterName": "User profile and naming issues",
+    "issueCount": 16
+  },
+  {
+    "cluster": 24,
+    "clusterName": "Accessibility and Usability Issues",
+    "issueCount": 24
+  },
+  {
+    "cluster": 25,
+    "clusterName": "Renderer development guidelines",
+    "issueCount": 10
+  },
+  {
+    "cluster": 26,
+    "clusterName": "Atto and TinyMCE Editor Improvements",
+    "issueCount": 52
+  },
+  {
+    "cluster": 27,
+    "clusterName": "PHP and Frontend Errors",
+    "issueCount": 47
+  },
+  {
+    "cluster": 28,
+    "clusterName": "File handling and upload issues",
+    "issueCount": 36
+  },
+  {
+    "cluster": 29,
+    "clusterName": "Caching and performance improvements",
+    "issueCount": 13
+  },
+  {
+    "cluster": 30,
+    "clusterName": "Database and Testing Fixes",
+    "issueCount": 43
+  },
+  {
+    "cluster": 31,
+    "clusterName": "Edit PDF functionality improvements",
+    "issueCount": 30
+  },
+  {
+    "cluster": 32,
+    "clusterName": "Grading and Competency Scales",
+    "issueCount": 15
   }
 ]

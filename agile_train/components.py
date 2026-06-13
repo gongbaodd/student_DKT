@@ -1,4 +1,4 @@
-"""Embedding-cluster component assignment for Moodle issues."""
+"""Embedding-cluster assignment for Moodle issues."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ CLUSTER_NAMES_FILE = DIR / "cluster_names.csv"
 CENTROIDS_FILE = DIR / "centroids.json"
 
 
-def _default_component_name(cluster_id: int) -> str:
+def _default_cluster_name(cluster_id: int) -> str:
     return f"cluster-{cluster_id}"
 
 
@@ -63,24 +63,24 @@ def _load_centroids() -> np.ndarray:
     return centroids
 
 
-def _component_names() -> list[str]:
+def _cluster_name_list() -> list[str]:
     cluster_names = _load_cluster_names()
     if not cluster_names:
         return []
 
     max_cluster = max(cluster_names)
     return [
-        cluster_names.get(cluster_id, _default_component_name(cluster_id))
+        cluster_names.get(cluster_id, _default_cluster_name(cluster_id))
         for cluster_id in range(max_cluster + 1)
     ]
 
 
-def _refresh_components() -> None:
+def _refresh_clusters() -> None:
     _load_cluster_names.cache_clear()
     _load_issue_clusters.cache_clear()
     _load_centroids.cache_clear()
-    COMPONENTS.clear()
-    COMPONENTS.extend(_component_names())
+    CLUSTER_NAMES.clear()
+    CLUSTER_NAMES.extend(_cluster_name_list())
 
 
 @lru_cache(maxsize=256)
@@ -101,17 +101,17 @@ def _nearest_cluster(embedding: np.ndarray) -> int:
     return int(distances.argmin())
 
 
-COMPONENTS: list[str] = []
+CLUSTER_NAMES: list[str] = []
 
 
-def component_name(component_id: int) -> str:
+def cluster_name(cluster_id: int) -> str:
     cluster_names = _load_cluster_names()
-    if component_id in cluster_names:
-        return cluster_names[component_id]
-    return _default_component_name(component_id)
+    if cluster_id in cluster_names:
+        return cluster_names[cluster_id]
+    return _default_cluster_name(cluster_id)
 
 
-def assign_component_for_issue(issue_key: str, title: str) -> int:
+def assign_cluster_for_issue(issue_key: str, title: str) -> int:
     """Return cluster id for an issue, using saved assignments when available."""
     issue_clusters = _load_issue_clusters()
     if issue_key in issue_clusters:
@@ -121,13 +121,13 @@ def assign_component_for_issue(issue_key: str, title: str) -> int:
     return _nearest_cluster(embedding)
 
 
-def assign_component(title: str) -> int:
+def assign_cluster(title: str) -> int:
     """Return cluster id for an issue title via nearest centroid."""
     embedding = np.asarray(_get_embedding(title), dtype=np.float64)
     return _nearest_cluster(embedding)
 
 
 try:
-    _refresh_components()
+    _refresh_clusters()
 except FileNotFoundError:
     pass

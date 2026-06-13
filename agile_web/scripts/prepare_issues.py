@@ -11,7 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from agile_train.components import assign_component_for_issue  # noqa: E402
+from agile_train.components import assign_cluster_for_issue  # noqa: E402
+from agile_train.keywords import assign_keyword_component  # noqa: E402
 
 SRC = ROOT / "agile_data" / "deep-se" / "moodle.csv"
 CLUSTER_NAMES_FILE = ROOT / "agile_train" / "cluster_names.csv"
@@ -63,7 +64,8 @@ def main() -> None:
                     "title": title,
                     "description": row["description"],
                     "storyPoints": story_points,
-                    "component": assign_component_for_issue(row["issuekey"], title),
+                    "component": assign_keyword_component(title),
+                    "cluster": assign_cluster_for_issue(row["issuekey"], title),
                 }
             )
 
@@ -79,6 +81,7 @@ def main() -> None:
             "description": issue["description"],
             "originalStoryPoints": issue["storyPoints"],
             "component": issue["component"],
+            "cluster": issue["cluster"],
         }
         for issue in todos_raw
     ]
@@ -91,6 +94,7 @@ def main() -> None:
             "description": issue["description"],
             "storyPoints": issue["storyPoints"],
             "component": issue["component"],
+            "cluster": issue["cluster"],
         }
         for issue in done_raw
     ]

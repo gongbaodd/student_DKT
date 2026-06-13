@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "prepare-data": "../.venv/bin/python3 scripts/prepare_issues.py",
-    "predev": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
+    "predev": "npm run prepare-data && test -f public/irt.onnx && test -f public/irt-cluster.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
     "dev": "vite",
-    "prebuild": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
+    "prebuild": "npm run prepare-data && test -f public/irt.onnx && test -f public/irt-cluster.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

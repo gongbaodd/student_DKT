@@ -19,6 +19,8 @@ import type { DoneHistoryEntry } from "../irt/types";
 import {
   clusterColorFor,
   clusterNameFor,
+  keywordColorFor,
+  keywordNameFor,
   type ClusterNameMap,
   type DoneIssue,
   type TodoIssue,
@@ -27,44 +29,59 @@ import { IssueDescription } from "./IssueDescription";
 
 const PAGE_SIZES = ["25", "50", "100"] as const;
 
-function ClusterBadge({
+function ComponentBadges({
   component,
+  cluster,
   clusterNames,
   truncate = false,
 }: {
   component: number;
+  cluster: number;
   clusterNames: ClusterNameMap | null;
   truncate?: boolean;
 }) {
-  const name = clusterNameFor(component, clusterNames);
+  const keywordName = keywordNameFor(component);
+  const clusterLabel = clusterNameFor(cluster, clusterNames);
+
+  const truncateStyles = truncate
+    ? {
+        root: {
+          maxWidth: 100,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          display: "block",
+        },
+      }
+    : undefined;
 
   return (
-    <Badge
-      variant="light"
-      color={clusterColorFor(component)}
-      radius="sm"
-      size="sm"
-      title={name}
-      styles={
-        truncate
-          ? {
-              root: {
-                maxWidth: 210,
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-                display: "block",
-              },
-            }
-          : undefined
-      }
-    >
-      {name}
-    </Badge>
+    <Group gap={4} wrap="nowrap">
+      <Badge
+        variant="light"
+        color={keywordColorFor(component)}
+        radius="sm"
+        size="sm"
+        title={keywordName}
+        styles={truncateStyles}
+      >
+        {keywordName}
+      </Badge>
+      <Badge
+        variant="outline"
+        color={clusterColorFor(cluster)}
+        radius="sm"
+        size="sm"
+        title={clusterLabel}
+        styles={truncateStyles}
+      >
+        {clusterLabel}
+      </Badge>
+    </Group>
   );
 }
 
-interface BacklogListProps<T extends { issueKey: string; title: string; component: number }> {
+interface BacklogListProps<T extends { issueKey: string; title: string; component: number; cluster: number }> {
   issues: T[];
   selectedKey: string | null;
   onSelect: (issue: T) => void;
@@ -74,7 +91,7 @@ interface BacklogListProps<T extends { issueKey: string; title: string; componen
 }
 
 export function BacklogList<
-  T extends { issueKey: string; title: string; component: number },
+  T extends { issueKey: string; title: string; component: number; cluster: number },
 >({
   issues,
   selectedKey,
@@ -127,8 +144,9 @@ export function BacklogList<
           </Text>
         </Table.Td>
         <Table.Td w={220}>
-          <ClusterBadge
+          <ComponentBadges
             component={issue.component}
+            cluster={issue.cluster}
             clusterNames={clusterNames}
             truncate
           />
@@ -235,9 +253,11 @@ export function BacklogList<
 interface TodoDetailDrawerProps {
   issue: TodoIssue | null;
   opened: boolean;
-  model: IrtModel | null;
+  keywordModel: IrtModel | null;
+  clusterModel: IrtModel | null;
   modelLoading: boolean;
-  doneHistory: DoneHistoryEntry[];
+  doneHistoryKeyword: DoneHistoryEntry[];
+  doneHistoryCluster: DoneHistoryEntry[];
   clusterNames: ClusterNameMap | null;
   onClose: () => void;
 }
@@ -245,35 +265,63 @@ interface TodoDetailDrawerProps {
 export function TodoDetailDrawer({
   issue,
   opened,
-  model,
+  keywordModel,
+  clusterModel,
   modelLoading,
-  doneHistory,
+  doneHistoryKeyword,
+  doneHistoryCluster,
   clusterNames,
   onClose,
 }: TodoDetailDrawerProps) {
-  const [predicted, setPredicted] = useState<number | null>(null);
-  const [estimating, setEstimating] = useState(false);
+  const [predictedKeyword, setPredictedKeyword] = useState<number | null>(null);
+  const [predictedCluster, setPredictedCluster] = useState<number | null>(null);
+  const [estimatingKeyword, setEstimatingKeyword] = useState(false);
+  const [estimatingCluster, setEstimatingCluster] = useState(false);
   const [estimateError, setEstimateError] = useState<string | null>(null);
 
   useEffect(() => {
-    setPredicted(null);
+    setPredictedKeyword(null);
+    setPredictedCluster(null);
     setEstimateError(null);
   }, [issue?.issueKey]);
 
-  async function handleEstimate() {
-    if (!issue || !model) return;
+  async function handleEstimateKeyword() {
+    if (!issue || !keywordModel) return;
 
-    setEstimating(true);
+    setEstimatingKeyword(true);
     setEstimateError(null);
     try {
-      const points = await model.predictStoryPoints(doneHistory, issue.issueKey);
-      setPredicted(points);
+      const points = await keywordModel.predictStoryPoints(
+        doneHistoryKeyword,
+        issue.issueKey,
+      );
+      setPredictedKeyword(points);
     } catch (err: unknown) {
       setEstimateError(
-        err instanceof Error ? err.message : "Failed to estimate story points",
+        err instanceof Error ? err.message : "Failed to estimate by keyword",
       );
     } finally {
-      setEstimating(false);
+      setEstimatingKeyword(false);
+    }
+  }
+
+  async function handleEstimateCluster() {
+    if (!issue || !clusterModel) return;
+
+    setEstimatingCluster(true);
+    setEstimateError(null);
+    try {
+      const points = await clusterModel.predictStoryPoints(
+        doneHistoryCluster,
+        issue.issueKey,
+      );
+      setPredictedCluster(points);
+    } catch (err: unknown) {
+      setEstimateError(
+        err instanceof Error ? err.message : "Failed to estimate by cluster",
+      );
+    } finally {
+      setEstimatingCluster(false);
     }
   }
 
@@ -287,15 +335,24 @@ export function TodoDetailDrawer({
             <Text ff="monospace" c="blue.7" fw={700} size="sm">
               {issue.issueKey}
             </Text>
-            {predicted !== null ? (
+            {predictedKeyword !== null ? (
               <Badge variant="light" color="blue">
-                {predicted} SP
+                {predictedKeyword} SP (keyword)
+              </Badge>
+            ) : null}
+            {predictedCluster !== null ? (
+              <Badge variant="light" color="grape">
+                {predictedCluster} SP (cluster)
               </Badge>
             ) : null}
             <Badge variant="outline" color="gray">
               Original: {issue.originalStoryPoints} SP
             </Badge>
-            <ClusterBadge component={issue.component} clusterNames={clusterNames} />
+            <ComponentBadges
+              component={issue.component}
+              cluster={issue.cluster}
+              clusterNames={clusterNames}
+            />
           </Group>
         ) : null
       }
@@ -310,18 +367,27 @@ export function TodoDetailDrawer({
           </Text>
           <Group>
             <Button
-              onClick={handleEstimate}
-              loading={estimating}
-              disabled={modelLoading || !model}
+              onClick={handleEstimateKeyword}
+              loading={estimatingKeyword}
+              disabled={modelLoading || !keywordModel || estimatingCluster}
               w="fit-content"
             >
-              Estimate story points
+              Estimate by keyword
+            </Button>
+            <Button
+              onClick={handleEstimateCluster}
+              loading={estimatingCluster}
+              disabled={modelLoading || !clusterModel || estimatingKeyword}
+              variant="light"
+              w="fit-content"
+            >
+              Estimate by cluster
             </Button>
             {modelLoading ? (
               <Group gap="xs">
                 <Loader size="xs" />
                 <Text size="sm" c="dimmed">
-                  Loading model…
+                  Loading models…
                 </Text>
               </Group>
             ) : null}
@@ -331,10 +397,16 @@ export function TodoDetailDrawer({
               {estimateError}
             </Text>
           ) : null}
-          {predicted !== null ? (
+          {predictedKeyword !== null ? (
             <Text size="sm" c="dimmed">
-              Predicted {predicted} SP vs original {issue.originalStoryPoints} SP
-              {predicted === issue.originalStoryPoints ? " — match" : ""}
+              Keyword: {predictedKeyword} SP vs original {issue.originalStoryPoints} SP
+              {predictedKeyword === issue.originalStoryPoints ? " — match" : ""}
+            </Text>
+          ) : null}
+          {predictedCluster !== null ? (
+            <Text size="sm" c="dimmed">
+              Cluster: {predictedCluster} SP vs original {issue.originalStoryPoints} SP
+              {predictedCluster === issue.originalStoryPoints ? " — match" : ""}
             </Text>
           ) : null}
           <IssueDescription content={issue.description} />
@@ -370,7 +442,11 @@ export function DoneDetailDrawer({
             <Badge variant="light" color="gray">
               {issue.storyPoints} SP
             </Badge>
-            <ClusterBadge component={issue.component} clusterNames={clusterNames} />
+            <ComponentBadges
+              component={issue.component}
+              cluster={issue.cluster}
+              clusterNames={clusterNames}
+            />
           </Group>
         ) : null
       }

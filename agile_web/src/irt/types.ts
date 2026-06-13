@@ -5,6 +5,7 @@ export interface TicketMeta {
 
 export interface ModelMetadata {
   modelType: string;
+  componentField?: string;
   maxPoints: number;
   embedDim: number;
   hiddenDim: number;

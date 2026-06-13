@@ -5,6 +5,7 @@ export interface DoneIssue {
   description: string;
   storyPoints: number;
   component: number;
+  cluster: number;
 }
 
 export interface TodoIssue {
@@ -14,6 +15,7 @@ export interface TodoIssue {
   description: string;
   originalStoryPoints: number;
   component: number;
+  cluster: number;
 }
 
 export interface ClusterNameEntry {
@@ -29,10 +31,33 @@ export function buildClusterNameMap(entries: ClusterNameEntry[]): ClusterNameMap
 }
 
 export function clusterNameFor(
-  component: number,
+  cluster: number,
   clusterNames: ClusterNameMap | null,
 ): string {
-  return clusterNames?.[component] ?? `cluster-${component}`;
+  return clusterNames?.[cluster] ?? `cluster-${cluster}`;
+}
+
+export const KEYWORD_COMPONENTS = [
+  "forum",
+  "quiz",
+  "grade",
+  "theme",
+  "general",
+] as const;
+
+export type KeywordComponent = (typeof KEYWORD_COMPONENTS)[number];
+
+export function keywordNameFor(component: number): string {
+  return KEYWORD_COMPONENTS[component] ?? `unknown-${component}`;
+}
+
+const KEYWORD_COLORS = ["blue", "grape", "orange", "violet", "indigo"] as const;
+
+export function keywordColorFor(component: number): ClusterColor {
+  const index =
+    ((component % KEYWORD_COLORS.length) + KEYWORD_COLORS.length) %
+    KEYWORD_COLORS.length;
+  return KEYWORD_COLORS[index];
 }
 
 const CLUSTER_COLORS = [
@@ -60,9 +85,9 @@ const CLUSTER_COLORS = [
 
 export type ClusterColor = (typeof CLUSTER_COLORS)[number];
 
-export function clusterColorFor(component: number): ClusterColor {
+export function clusterColorFor(cluster: number): ClusterColor {
   const index =
-    ((component % CLUSTER_COLORS.length) + CLUSTER_COLORS.length) %
+    ((cluster % CLUSTER_COLORS.length) + CLUSTER_COLORS.length) %
     CLUSTER_COLORS.length;
   return CLUSTER_COLORS[index];
 }

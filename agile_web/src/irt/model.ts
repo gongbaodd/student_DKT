@@ -1,8 +1,20 @@
 import { configureOrtWasm, ort } from "./ortSetup";
 import type { DoneHistoryEntry, ModelMetadata } from "./types";
 
-const MODEL_URL = "/irt.onnx";
-const METADATA_URL = "/model-metadata.json";
+export interface IrtModelConfig {
+  modelUrl: string;
+  metadataUrl: string;
+}
+
+export const KEYWORD_MODEL: IrtModelConfig = {
+  modelUrl: "/irt.onnx",
+  metadataUrl: "/model-metadata.json",
+};
+
+export const CLUSTER_MODEL: IrtModelConfig = {
+  modelUrl: "/irt-cluster.onnx",
+  metadataUrl: "/model-metadata-cluster.json",
+};
 
 export class IrtModel {
   private session: ort.InferenceSession | null = null;
@@ -13,12 +25,12 @@ export class IrtModel {
     this.session = session;
   }
 
-  static async load(): Promise<IrtModel> {
+  static async load(config: IrtModelConfig = KEYWORD_MODEL): Promise<IrtModel> {
     configureOrtWasm();
 
     const [metadataResponse, session] = await Promise.all([
-      fetch(METADATA_URL),
-      ort.InferenceSession.create(MODEL_URL, {
+      fetch(config.metadataUrl),
+      ort.InferenceSession.create(config.modelUrl, {
         executionProviders: ["wasm"],
       }),
     ]);
