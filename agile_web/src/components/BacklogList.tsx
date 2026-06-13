@@ -3,15 +3,21 @@ import {
   Box,
   Drawer,
   Group,
+  Pagination,
   ScrollArea,
+  Select,
   Stack,
   Table,
   Text,
   UnstyledButton,
 } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
+import { useEffect, useMemo, useState } from "react";
 
 import type { Issue } from "../types";
+import { IssueDescription } from "./IssueDescription";
+
+const PAGE_SIZES = ["25", "50", "100"] as const;
 
 interface BacklogListProps {
   issues: Issue[];
@@ -20,7 +26,28 @@ interface BacklogListProps {
 }
 
 export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps) {
-  const rows = issues.map((issue) => {
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState<number>(15);
+
+  useEffect(() => {
+    setPage(1);
+  }, [issues]);
+
+  const totalPages = Math.max(1, Math.ceil(issues.length / pageSize));
+
+  useEffect(() => {
+    if (page > totalPages) setPage(totalPages);
+  }, [page, totalPages]);
+
+  const pageIssues = useMemo(() => {
+    const start = (page - 1) * pageSize;
+    return issues.slice(start, start + pageSize);
+  }, [issues, page, pageSize]);
+
+  const rangeStart = issues.length === 0 ? 0 : (page - 1) * pageSize + 1;
+  const rangeEnd = Math.min(page * pageSize, issues.length);
+
+  const rows = pageIssues.map((issue) => {
     const isSelected = issue.issueKey === selectedKey;
 
     return (
@@ -97,13 +124,48 @@ export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps)
             <Table.Th w={32} />
           </Table.Tr>
         </Table.Thead>
+        <Table.Tbody>{rows}</Table.Tbody>
       </Table>
 
-      <ScrollArea.Autosize mah="calc(100vh - 180px)" type="auto">
-        <Table verticalSpacing="sm" horizontalSpacing="md">
-          <Table.Tbody>{rows}</Table.Tbody>
-        </Table>
-      </ScrollArea.Autosize>
+      <Group
+        justify="space-between"
+        p="sm"
+        wrap="wrap"
+        gap="sm"
+        style={{
+          borderTop: "1px solid var(--mantine-color-gray-3)",
+          background: "var(--mantine-color-gray-0)",
+        }}
+      >
+        <Text size="sm" c="dimmed">
+          {issues.length === 0
+            ? "No issues"
+            : `${rangeStart}–${rangeEnd} of ${issues.length}`}
+        </Text>
+
+        <Group gap="sm" wrap="wrap">
+          <Select
+            size="xs"
+            w={72}
+            data={[...PAGE_SIZES]}
+            value={String(pageSize)}
+            onChange={(value) => {
+              if (value) {
+                setPageSize(Number(value));
+                setPage(1);
+              }
+            }}
+            aria-label="Issues per page"
+          />
+          <Pagination
+            size="sm"
+            total={totalPages}
+            value={page}
+            onChange={setPage}
+            withEdges
+          />
+        </Group>
+      </Group>
     </Box>
   );
 }
@@ -173,12 +235,7 @@ export function IssueDetailPanel({ issue, onClose }: IssueDetailPanelProps) {
       </Text>
 
       <ScrollArea.Autosize mah="calc(100vh - 320px)" type="auto">
-        <Text
-          size="sm"
-          style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}
-        >
-          {issue.description}
-        </Text>
+        <IssueDescription content={issue.description} />
       </ScrollArea.Autosize>
     </Box>
   );
@@ -225,9 +282,7 @@ export function IssueDetailDrawer({ issue, opened, onClose }: IssueDetailDrawerP
           >
             Description
           </Text>
-          <Text size="sm" style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>
-            {issue.description}
-          </Text>
+          <IssueDescription content={issue.description} />
         </Stack>
       ) : null}
     </Drawer>
