@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "prepare-data": "python3 scripts/prepare_issues.py",
+    "prepare-data": "../.venv/bin/python3 scripts/prepare_issues.py",
     "predev": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
     "dev": "vite",
     "prebuild": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",

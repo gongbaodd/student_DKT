@@ -1,0 +1,102 @@
+[
+  {
+    "cluster": 0,
+    "clusterName": "Responsive layout and UI fixes",
+    "issueCount": 71
+  },
+  {
+    "cluster": 1,
+    "clusterName": "File management UI/UX fixes",
+    "issueCount": 38
+  },
+  {
+    "cluster": 2,
+    "clusterName": "Event API Refactoring and Coverage",
+    "issueCount": 84
+  },
+  {
+    "cluster": 3,
+    "clusterName": "Deprecation and Cleanup Tasks",
+    "issueCount": 42
+  },
+  {
+    "cluster": 4,
+    "clusterName": "Event logging refactoring",
+    "issueCount": 45
+  },
+  {
+    "cluster": 5,
+    "clusterName": "User data and profile management",
+    "issueCount": 52
+  },
+  {
+    "cluster": 6,
+    "clusterName": "Competency and Learning Plans",
+    "issueCount": 86
+  },
+  {
+    "cluster": 7,
+    "clusterName": "Logging and Reporting Improvements",
+    "issueCount": 35
+  },
+  {
+    "cluster": 8,
+    "clusterName": "Course structure and UI issues",
+    "issueCount": 43
+  },
+  {
+    "cluster": 9,
+    "clusterName": "Gradebook weighting and calculation",
+    "issueCount": 39
+  },
+  {
+    "cluster": 10,
+    "clusterName": "Testing and Core Functionality Issues",
+    "issueCount": 69
+  },
+  {
+    "cluster": 11,
+    "clusterName": "PDF Editing Functionality Improvements",
+    "issueCount": 39
+  },
+  {
+    "cluster": 12,
+    "clusterName": "Atto editor improvements and fixes",
+    "issueCount": 72
+  },
+  {
+    "cluster": 13,
+    "clusterName": "Core Feature Modernization",
+    "issueCount": 68
+  },
+  {
+    "cluster": 14,
+    "clusterName": "Accessibility and UX improvements",
+    "issueCount": 67
+  },
+  {
+    "cluster": 15,
+    "clusterName": "Atto and core functionality improvements",
+    "issueCount": 79
+  },
+  {
+    "cluster": 16,
+    "clusterName": "Course restoration and display issues",
+    "issueCount": 70
+  },
+  {
+    "cluster": 17,
+    "clusterName": "YUI and JavaScript refactoring",
+    "issueCount": 50
+  },
+  {
+    "cluster": 18,
+    "clusterName": "Gradebook functionality improvements",
+    "issueCount": 86
+  },
+  {
+    "cluster": 19,
+    "clusterName": "Third party library upgrades",
+    "issueCount": 31
+  }
+]

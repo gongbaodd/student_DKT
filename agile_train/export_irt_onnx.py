@@ -5,12 +5,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 import torch
 import torch.nn as nn
 
-from agile_train.components import COMPONENTS
+from agile_train.components import component_name, _refresh_components
 from agile_train.data import build_team_seq, build_tickets, load_issues
 from agile_train.irt_model import (
     EMBED_DIM,
@@ -22,7 +27,6 @@ from agile_train.irt_model import (
     train_model,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "agile_web" / "public" / "irt.onnx"
 DEFAULT_METADATA = ROOT / "agile_web" / "public" / "model-metadata.json"
 OPSET_VERSION = 17
@@ -42,7 +46,9 @@ def export_onnx(
     t_to_idx = ticket_index(ticket_ids)
     team_seq = build_team_seq(done)
 
-    num_components = len(COMPONENTS)
+    _refresh_components()
+    num_components = max(ticket.component for ticket in tickets.values()) + 1
+    component_labels = [component_name(i) for i in range(num_components)]
     samples = build_training_samples(team_seq, tickets, t_to_idx)
 
     if verbose:
@@ -97,7 +103,7 @@ def export_onnx(
         "hiddenDim": HIDDEN_DIM,
         "numComponents": num_components,
         "numTickets": len(ticket_ids),
-        "components": COMPONENTS,
+        "components": component_labels,
         "tickets": tickets_meta,
         "maxHistory": 64,
         "opset": OPSET_VERSION,

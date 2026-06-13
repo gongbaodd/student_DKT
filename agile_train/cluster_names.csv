@@ -1,0 +1,21 @@
+cluster,cluster_name,issue_count
+0,Responsive layout and UI fixes,71
+1,File management UI/UX fixes,38
+2,Event API Refactoring and Coverage,84
+3,Deprecation and Cleanup Tasks,42
+4,Event logging refactoring,45
+5,User data and profile management,52
+6,Competency and Learning Plans,86
+7,Logging and Reporting Improvements,35
+8,Course structure and UI issues,43
+9,Gradebook weighting and calculation,39
+10,Testing and Core Functionality Issues,69
+11,PDF Editing Functionality Improvements,39
+12,Atto editor improvements and fixes,72
+13,Core Feature Modernization,68
+14,Accessibility and UX improvements,67
+15,Atto and core functionality improvements,79
+16,Course restoration and display issues,70
+17,YUI and JavaScript refactoring,50
+18,Gradebook functionality improvements,86
+19,Third party library upgrades,31

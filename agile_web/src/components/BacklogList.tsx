@@ -16,24 +16,71 @@ import { useEffect, useMemo, useState } from "react";
 
 import type { IrtModel } from "../irt/model";
 import type { DoneHistoryEntry } from "../irt/types";
-import type { DoneIssue, TodoIssue } from "../types";
+import {
+  clusterColorFor,
+  clusterNameFor,
+  type ClusterNameMap,
+  type DoneIssue,
+  type TodoIssue,
+} from "../types";
 import { IssueDescription } from "./IssueDescription";
 
 const PAGE_SIZES = ["25", "50", "100"] as const;
 
-interface BacklogListProps<T extends { issueKey: string; title: string }> {
+function ClusterBadge({
+  component,
+  clusterNames,
+  truncate = false,
+}: {
+  component: number;
+  clusterNames: ClusterNameMap | null;
+  truncate?: boolean;
+}) {
+  const name = clusterNameFor(component, clusterNames);
+
+  return (
+    <Badge
+      variant="light"
+      color={clusterColorFor(component)}
+      radius="sm"
+      size="sm"
+      title={name}
+      styles={
+        truncate
+          ? {
+              root: {
+                maxWidth: 210,
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+                display: "block",
+              },
+            }
+          : undefined
+      }
+    >
+      {name}
+    </Badge>
+  );
+}
+
+interface BacklogListProps<T extends { issueKey: string; title: string; component: number }> {
   issues: T[];
   selectedKey: string | null;
   onSelect: (issue: T) => void;
   showStoryPoints: boolean;
+  clusterNames: ClusterNameMap | null;
   getStoryPoints?: (issue: T) => number;
 }
 
-export function BacklogList<T extends { issueKey: string; title: string }>({
+export function BacklogList<
+  T extends { issueKey: string; title: string; component: number },
+>({
   issues,
   selectedKey,
   onSelect,
   showStoryPoints,
+  clusterNames,
   getStoryPoints,
 }: BacklogListProps<T>) {
   const [page, setPage] = useState(1);
@@ -78,6 +125,13 @@ export function BacklogList<T extends { issueKey: string; title: string }>({
           <Text size="sm" lineClamp={2}>
             {issue.title}
           </Text>
+        </Table.Td>
+        <Table.Td w={220}>
+          <ClusterBadge
+            component={issue.component}
+            clusterNames={clusterNames}
+            truncate
+          />
         </Table.Td>
         {showStoryPoints && getStoryPoints ? (
           <Table.Td w={80} ta="center">
@@ -127,6 +181,7 @@ export function BacklogList<T extends { issueKey: string; title: string }>({
           <Table.Tr>
             <Table.Th>Key</Table.Th>
             <Table.Th>Summary</Table.Th>
+            <Table.Th>Cluster</Table.Th>
             {showStoryPoints ? <Table.Th ta="center">SP</Table.Th> : null}
             <Table.Th w={32} />
           </Table.Tr>
@@ -183,6 +238,7 @@ interface TodoDetailDrawerProps {
   model: IrtModel | null;
   modelLoading: boolean;
   doneHistory: DoneHistoryEntry[];
+  clusterNames: ClusterNameMap | null;
   onClose: () => void;
 }
 
@@ -192,6 +248,7 @@ export function TodoDetailDrawer({
   model,
   modelLoading,
   doneHistory,
+  clusterNames,
   onClose,
 }: TodoDetailDrawerProps) {
   const [predicted, setPredicted] = useState<number | null>(null);
@@ -238,6 +295,7 @@ export function TodoDetailDrawer({
             <Badge variant="outline" color="gray">
               Original: {issue.originalStoryPoints} SP
             </Badge>
+            <ClusterBadge component={issue.component} clusterNames={clusterNames} />
           </Group>
         ) : null
       }
@@ -289,10 +347,16 @@ export function TodoDetailDrawer({
 interface DoneDetailDrawerProps {
   issue: DoneIssue | null;
   opened: boolean;
+  clusterNames: ClusterNameMap | null;
   onClose: () => void;
 }
 
-export function DoneDetailDrawer({ issue, opened, onClose }: DoneDetailDrawerProps) {
+export function DoneDetailDrawer({
+  issue,
+  opened,
+  clusterNames,
+  onClose,
+}: DoneDetailDrawerProps) {
   return (
     <Drawer
       opened={opened && issue !== null}
@@ -306,6 +370,7 @@ export function DoneDetailDrawer({ issue, opened, onClose }: DoneDetailDrawerPro
             <Badge variant="light" color="gray">
               {issue.storyPoints} SP
             </Badge>
+            <ClusterBadge component={issue.component} clusterNames={clusterNames} />
           </Group>
         ) : null
       }

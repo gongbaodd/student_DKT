@@ -226,3 +226,6 @@ museum_web/dist/
 
 # Downloaded agile datasets
 agile_data/deep-se/
+
+# Generated issue title embeddings (rebuild with agile_train/embed.py)
+agile_train/embedding/
