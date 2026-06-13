@@ -59,7 +59,7 @@ export default function App() {
                 Moodle Backlog
               </Title>
               <Text size="sm" c="blue.1">
-                Deep-SE · JIRA-style product backlog
+                Deep-SE
               </Text>
             </Group>
           </Group>
