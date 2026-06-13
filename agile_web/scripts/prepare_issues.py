@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
-"""Convert agile_data/deep-se/moodle.csv to agile_web/public/issues.json."""
+"""Convert agile_data/deep-se/moodle.csv to done.json + todos.json."""
 
 from __future__ import annotations
 
 import csv
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+
+from agile_train.components import assign_component  # noqa: E402
+
 SRC = ROOT / "agile_data" / "deep-se" / "moodle.csv"
-OUT = Path(__file__).resolve().parents[1] / "public" / "issues.json"
+OUT_DIR = Path(__file__).resolve().parents[1] / "public"
+DONE_OUT = OUT_DIR / "done.json"
+TODOS_OUT = OUT_DIR / "todos.json"
 MAX_STORY_POINTS = 50
+SPLIT_RATIO = 0.2
 
 
 def main() -> None:
@@ -26,20 +34,53 @@ def main() -> None:
             if story_points > MAX_STORY_POINTS:
                 skipped += 1
                 continue
+            title = row["title"]
             issues.append(
                 {
                     "project": row["project"],
                     "issueKey": row["issuekey"],
-                    "title": row["title"],
+                    "title": title,
                     "description": row["description"],
                     "storyPoints": story_points,
+                    "component": assign_component(title),
                 }
             )
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(issues, ensure_ascii=False, indent=2), encoding="utf-8")
+    split_index = int(len(issues) * SPLIT_RATIO)
+    todos_raw = issues[:split_index]
+    done_raw = issues[split_index:]
+
+    todos = [
+        {
+            "project": issue["project"],
+            "issueKey": issue["issueKey"],
+            "title": issue["title"],
+            "description": issue["description"],
+            "originalStoryPoints": issue["storyPoints"],
+            "component": issue["component"],
+        }
+        for issue in todos_raw
+    ]
+
+    done = [
+        {
+            "project": issue["project"],
+            "issueKey": issue["issueKey"],
+            "title": issue["title"],
+            "description": issue["description"],
+            "storyPoints": issue["storyPoints"],
+            "component": issue["component"],
+        }
+        for issue in done_raw
+    ]
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    DONE_OUT.write_text(json.dumps(done, ensure_ascii=False, indent=2), encoding="utf-8")
+    TODOS_OUT.write_text(json.dumps(todos, ensure_ascii=False, indent=2), encoding="utf-8")
+
     print(
-        f"Wrote {len(issues)} issues to {OUT} "
+        f"Wrote {len(done)} done issues to {DONE_OUT} "
+        f"and {len(todos)} todos to {TODOS_OUT} "
         f"(skipped {skipped} with story points > {MAX_STORY_POINTS})"
     )
 

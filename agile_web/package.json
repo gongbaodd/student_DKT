@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "prepare-data": "python3 scripts/prepare_issues.py",
-    "predev": "npm run prepare-data",
+    "predev": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
     "dev": "vite",
-    "prebuild": "npm run prepare-data",
+    "prebuild": "npm run prepare-data && test -f public/irt.onnx || (echo 'Run: PYTHONPATH=. python agile_train/export_irt_onnx.py' && exit 1)",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },
@@ -15,6 +15,7 @@
     "@mantine/core": "^8.0.0",
     "@mantine/hooks": "^8.0.0",
     "@tabler/icons-react": "^3.31.0",
+    "onnxruntime-web": "^1.22.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0"

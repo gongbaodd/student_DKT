@@ -1,8 +1,10 @@
 import {
   Badge,
   Box,
+  Button,
   Drawer,
   Group,
+  Loader,
   Pagination,
   ScrollArea,
   Select,
@@ -14,18 +16,28 @@ import {
 import { IconChevronRight } from "@tabler/icons-react";
 import { useEffect, useMemo, useState } from "react";
 
-import type { Issue } from "../types";
+import type { IrtModel } from "../irt/model";
+import type { DoneHistoryEntry } from "../irt/types";
+import type { DoneIssue, TodoIssue } from "../types";
 import { IssueDescription } from "./IssueDescription";
 
 const PAGE_SIZES = ["25", "50", "100"] as const;
 
-interface BacklogListProps {
-  issues: Issue[];
+interface BacklogListProps<T extends { issueKey: string; title: string }> {
+  issues: T[];
   selectedKey: string | null;
-  onSelect: (issue: Issue) => void;
+  onSelect: (issue: T) => void;
+  showStoryPoints: boolean;
+  getStoryPoints?: (issue: T) => number;
 }
 
-export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps) {
+export function BacklogList<T extends { issueKey: string; title: string }>({
+  issues,
+  selectedKey,
+  onSelect,
+  showStoryPoints,
+  getStoryPoints,
+}: BacklogListProps<T>) {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState<number>(15);
 
@@ -60,12 +72,7 @@ export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps)
         }}
       >
         <Table.Td w={120}>
-          <Text
-            ff="monospace"
-            size="sm"
-            c="blue.7"
-            fw={600}
-          >
+          <Text ff="monospace" size="sm" c="blue.7" fw={600}>
             {issue.issueKey}
           </Text>
         </Table.Td>
@@ -74,17 +81,19 @@ export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps)
             {issue.title}
           </Text>
         </Table.Td>
-        <Table.Td w={80} ta="center">
-          <Badge
-            variant="light"
-            color="gray"
-            radius="sm"
-            size="md"
-            style={{ minWidth: 36 }}
-          >
-            {issue.storyPoints}
-          </Badge>
-        </Table.Td>
+        {showStoryPoints && getStoryPoints ? (
+          <Table.Td w={80} ta="center">
+            <Badge
+              variant="light"
+              color="gray"
+              radius="sm"
+              size="md"
+              style={{ minWidth: 36 }}
+            >
+              {getStoryPoints(issue)}
+            </Badge>
+          </Table.Td>
+        ) : null}
         <Table.Td w={32}>
           <IconChevronRight
             size={16}
@@ -120,7 +129,7 @@ export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps)
           <Table.Tr>
             <Table.Th>Key</Table.Th>
             <Table.Th>Summary</Table.Th>
-            <Table.Th ta="center">SP</Table.Th>
+            {showStoryPoints ? <Table.Th ta="center">SP</Table.Th> : null}
             <Table.Th w={32} />
           </Table.Tr>
         </Table.Thead>
@@ -170,12 +179,12 @@ export function BacklogList({ issues, selectedKey, onSelect }: BacklogListProps)
   );
 }
 
-interface IssueDetailPanelProps {
-  issue: Issue | null;
+interface DoneDetailPanelProps {
+  issue: DoneIssue | null;
   onClose: () => void;
 }
 
-export function IssueDetailPanel({ issue, onClose }: IssueDetailPanelProps) {
+export function DoneDetailPanel({ issue, onClose }: DoneDetailPanelProps) {
   if (!issue) {
     return (
       <Box
@@ -184,11 +193,11 @@ export function IssueDetailPanel({ issue, onClose }: IssueDetailPanelProps) {
           border: "1px dashed var(--mantine-color-gray-4)",
           borderRadius: "var(--mantine-radius-sm)",
           background: "var(--mantine-color-gray-0)",
-          minHeight: 200,
+          minHeight: 120,
         }}
       >
-        <Text c="dimmed" ta="center" mt="xl">
-          Select an issue to view its description
+        <Text c="dimmed" ta="center" mt="md">
+          Select a done issue to view details
         </Text>
       </Box>
     );
@@ -219,35 +228,253 @@ export function IssueDetailPanel({ issue, onClose }: IssueDetailPanelProps) {
         </UnstyledButton>
       </Group>
 
-      <Text fw={600} size="lg" mb="md">
+      <Text fw={600} size="md" mb="md">
         {issue.title}
       </Text>
 
-      <Text
-        size="xs"
-        tt="uppercase"
-        fw={700}
-        c="dimmed"
-        mb="xs"
-        style={{ letterSpacing: "0.04em" }}
-      >
-        Description
-      </Text>
-
-      <ScrollArea.Autosize mah="calc(100vh - 320px)" type="auto">
+      <ScrollArea.Autosize mah={280} type="auto">
         <IssueDescription content={issue.description} />
       </ScrollArea.Autosize>
     </Box>
   );
 }
 
-interface IssueDetailDrawerProps {
-  issue: Issue | null;
+interface TodoDetailPanelProps {
+  issue: TodoIssue | null;
+  model: IrtModel | null;
+  modelLoading: boolean;
+  doneHistory: DoneHistoryEntry[];
+  onClose: () => void;
+}
+
+export function TodoDetailPanel({
+  issue,
+  model,
+  modelLoading,
+  doneHistory,
+  onClose,
+}: TodoDetailPanelProps) {
+  const [predicted, setPredicted] = useState<number | null>(null);
+  const [estimating, setEstimating] = useState(false);
+  const [estimateError, setEstimateError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPredicted(null);
+    setEstimateError(null);
+  }, [issue?.issueKey]);
+
+  async function handleEstimate() {
+    if (!issue || !model) return;
+
+    setEstimating(true);
+    setEstimateError(null);
+    try {
+      const points = await model.predictStoryPoints(doneHistory, issue.issueKey);
+      setPredicted(points);
+    } catch (err: unknown) {
+      setEstimateError(
+        err instanceof Error ? err.message : "Failed to estimate story points",
+      );
+    } finally {
+      setEstimating(false);
+    }
+  }
+
+  if (!issue) {
+    return (
+      <Box
+        p="xl"
+        style={{
+          border: "1px dashed var(--mantine-color-gray-4)",
+          borderRadius: "var(--mantine-radius-sm)",
+          background: "var(--mantine-color-gray-0)",
+          minHeight: 120,
+        }}
+      >
+        <Text c="dimmed" ta="center" mt="md">
+          Select a todo to estimate story points
+        </Text>
+      </Box>
+    );
+  }
+
+  return (
+    <Box
+      p="lg"
+      style={{
+        border: "1px solid var(--mantine-color-gray-3)",
+        borderRadius: "var(--mantine-radius-sm)",
+        background: "white",
+      }}
+    >
+      <Group justify="space-between" mb="md" wrap="nowrap">
+        <Group gap="sm" wrap="nowrap" style={{ flex: 1, minWidth: 0 }}>
+          <Text ff="monospace" c="blue.7" fw={700} size="sm">
+            {issue.issueKey}
+          </Text>
+          {predicted !== null ? (
+            <Badge variant="light" color="blue">
+              {predicted} SP predicted
+            </Badge>
+          ) : null}
+          <Badge variant="outline" color="gray">
+            Original: {issue.originalStoryPoints} SP
+          </Badge>
+        </Group>
+        <UnstyledButton onClick={onClose} aria-label="Close issue detail">
+          <Text size="sm" c="dimmed">
+            Close
+          </Text>
+        </UnstyledButton>
+      </Group>
+
+      <Text fw={600} size="md" mb="md">
+        {issue.title}
+      </Text>
+
+      <Group mb="md">
+        <Button
+          onClick={handleEstimate}
+          loading={estimating}
+          disabled={modelLoading || !model}
+        >
+          Estimate story points
+        </Button>
+        {modelLoading ? (
+          <Group gap="xs">
+            <Loader size="xs" />
+            <Text size="sm" c="dimmed">
+              Loading model…
+            </Text>
+          </Group>
+        ) : null}
+      </Group>
+
+      {estimateError ? (
+        <Text size="sm" c="red" mb="md">
+          {estimateError}
+        </Text>
+      ) : null}
+
+      {predicted !== null ? (
+        <Text size="sm" c="dimmed" mb="md">
+          Predicted {predicted} SP vs original {issue.originalStoryPoints} SP
+          {predicted === issue.originalStoryPoints ? " — match" : ""}
+        </Text>
+      ) : null}
+
+      <ScrollArea.Autosize mah={240} type="auto">
+        <IssueDescription content={issue.description} />
+      </ScrollArea.Autosize>
+    </Box>
+  );
+}
+
+interface TodoDetailDrawerProps {
+  issue: TodoIssue | null;
+  opened: boolean;
+  model: IrtModel | null;
+  modelLoading: boolean;
+  doneHistory: DoneHistoryEntry[];
+  onClose: () => void;
+}
+
+export function TodoDetailDrawer({
+  issue,
+  opened,
+  model,
+  modelLoading,
+  doneHistory,
+  onClose,
+}: TodoDetailDrawerProps) {
+  const [predicted, setPredicted] = useState<number | null>(null);
+  const [estimating, setEstimating] = useState(false);
+  const [estimateError, setEstimateError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPredicted(null);
+    setEstimateError(null);
+  }, [issue?.issueKey]);
+
+  async function handleEstimate() {
+    if (!issue || !model) return;
+
+    setEstimating(true);
+    setEstimateError(null);
+    try {
+      const points = await model.predictStoryPoints(doneHistory, issue.issueKey);
+      setPredicted(points);
+    } catch (err: unknown) {
+      setEstimateError(
+        err instanceof Error ? err.message : "Failed to estimate story points",
+      );
+    } finally {
+      setEstimating(false);
+    }
+  }
+
+  return (
+    <Drawer
+      opened={opened && issue !== null}
+      onClose={onClose}
+      title={
+        issue ? (
+          <Group gap="sm">
+            <Text ff="monospace" c="blue.7" fw={700} size="sm">
+              {issue.issueKey}
+            </Text>
+            {predicted !== null ? (
+              <Badge variant="light" color="blue">
+                {predicted} SP
+              </Badge>
+            ) : null}
+            <Badge variant="outline" color="gray">
+              Original: {issue.originalStoryPoints} SP
+            </Badge>
+          </Group>
+        ) : null
+      }
+      position="right"
+      size="lg"
+      padding="lg"
+    >
+      {issue ? (
+        <Stack gap="md">
+          <Text fw={600} size="lg">
+            {issue.title}
+          </Text>
+          <Button
+            onClick={handleEstimate}
+            loading={estimating}
+            disabled={modelLoading || !model}
+            w="fit-content"
+          >
+            Estimate story points
+          </Button>
+          {estimateError ? (
+            <Text size="sm" c="red">
+              {estimateError}
+            </Text>
+          ) : null}
+          {predicted !== null ? (
+            <Text size="sm" c="dimmed">
+              Predicted {predicted} SP vs original {issue.originalStoryPoints} SP
+            </Text>
+          ) : null}
+          <IssueDescription content={issue.description} />
+        </Stack>
+      ) : null}
+    </Drawer>
+  );
+}
+
+interface DoneDetailDrawerProps {
+  issue: DoneIssue | null;
   opened: boolean;
   onClose: () => void;
 }
 
-export function IssueDetailDrawer({ issue, opened, onClose }: IssueDetailDrawerProps) {
+export function DoneDetailDrawer({ issue, opened, onClose }: DoneDetailDrawerProps) {
   return (
     <Drawer
       opened={opened && issue !== null}
@@ -272,15 +499,6 @@ export function IssueDetailDrawer({ issue, opened, onClose }: IssueDetailDrawerP
         <Stack gap="md">
           <Text fw={600} size="lg">
             {issue.title}
-          </Text>
-          <Text
-            size="xs"
-            tt="uppercase"
-            fw={700}
-            c="dimmed"
-            style={{ letterSpacing: "0.04em" }}
-          >
-            Description
           </Text>
           <IssueDescription content={issue.description} />
         </Stack>

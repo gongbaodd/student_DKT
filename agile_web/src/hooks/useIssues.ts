@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 
-import type { Issue } from "../types";
+import type { DoneIssue, TodoIssue } from "../types";
 
-export function useIssues() {
-  const [issues, setIssues] = useState<Issue[]>([]);
+function useJsonFetch<T>(url: string) {
+  const [data, setData] = useState<T[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
-    fetch("/issues.json")
+    fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json() as Promise<Issue[]>;
+        return res.json() as Promise<T[]>;
       })
-      .then((data) => {
-        if (!cancelled) setIssues(data);
+      .then((items) => {
+        if (!cancelled) setData(items);
       })
       .catch((err: unknown) => {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load issues");
+          setError(err instanceof Error ? err.message : `Failed to load ${url}`);
         }
       })
       .finally(() => {
@@ -30,7 +30,15 @@ export function useIssues() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [url]);
 
-  return { issues, isLoading, error };
+  return { data, isLoading, error };
+}
+
+export function useDoneIssues() {
+  return useJsonFetch<DoneIssue>("/done.json");
+}
+
+export function useTodoIssues() {
+  return useJsonFetch<TodoIssue>("/todos.json");
 }

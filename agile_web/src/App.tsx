@@ -12,14 +12,31 @@ import { useDebouncedValue, useMediaQuery } from "@mantine/hooks";
 import { IconSearch } from "@tabler/icons-react";
 import { useMemo, useState } from "react";
 
-import { BacklogList, IssueDetailDrawer, IssueDetailPanel } from "./components/BacklogList";
-import { useIssues } from "./hooks/useIssues";
-import type { Issue } from "./types";
+import {
+  BacklogList,
+  DoneDetailDrawer,
+  DoneDetailPanel,
+  TodoDetailDrawer,
+  TodoDetailPanel,
+} from "./components/BacklogList";
+import { useDoneIssues, useTodoIssues } from "./hooks/useIssues";
+import { useIrtModel } from "./hooks/useIrtModel";
+import type { DoneHistoryEntry } from "./irt/types";
+import type { DoneIssue, TodoIssue } from "./types";
 
-function filterIssues(issues: Issue[], query: string): Issue[] {
+function filterDone(issues: DoneIssue[], query: string): DoneIssue[] {
   const q = query.trim().toLowerCase();
   if (!q) return issues;
+  return issues.filter(
+    (issue) =>
+      issue.issueKey.toLowerCase().includes(q) ||
+      issue.title.toLowerCase().includes(q),
+  );
+}
 
+function filterTodos(issues: TodoIssue[], query: string): TodoIssue[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return issues;
   return issues.filter(
     (issue) =>
       issue.issueKey.toLowerCase().includes(q) ||
@@ -28,21 +45,43 @@ function filterIssues(issues: Issue[], query: string): Issue[] {
 }
 
 export default function App() {
-  const { issues, isLoading, error } = useIssues();
+  const { data: doneIssues, isLoading: doneLoading, error: doneError } = useDoneIssues();
+  const { data: todoIssues, isLoading: todosLoading, error: todosError } = useTodoIssues();
+  const { model, isLoading: modelLoading, error: modelError } = useIrtModel();
+
   const [search, setSearch] = useState("");
   const [debouncedSearch] = useDebouncedValue(search, 200);
-  const [selected, setSelected] = useState<Issue | null>(null);
+  const [selectedDone, setSelectedDone] = useState<DoneIssue | null>(null);
+  const [selectedTodo, setSelectedTodo] = useState<TodoIssue | null>(null);
   const isMobile = useMediaQuery("(max-width: 62em)");
 
-  const filtered = useMemo(
-    () => filterIssues(issues, debouncedSearch),
-    [issues, debouncedSearch],
+  const filteredDone = useMemo(
+    () => filterDone(doneIssues, debouncedSearch),
+    [doneIssues, debouncedSearch],
   );
 
-  const totalPoints = useMemo(
-    () => filtered.reduce((sum, issue) => sum + issue.storyPoints, 0),
-    [filtered],
+  const filteredTodos = useMemo(
+    () => filterTodos(todoIssues, debouncedSearch),
+    [todoIssues, debouncedSearch],
   );
+
+  const doneTotalPoints = useMemo(
+    () => filteredDone.reduce((sum, issue) => sum + issue.storyPoints, 0),
+    [filteredDone],
+  );
+
+  const doneHistory: DoneHistoryEntry[] = useMemo(
+    () =>
+      doneIssues.map((issue) => ({
+        issueKey: issue.issueKey,
+        storyPoints: issue.storyPoints,
+        component: issue.component,
+      })),
+    [doneIssues],
+  );
+
+  const isLoading = doneLoading || todosLoading;
+  const loadError = doneError ?? todosError;
 
   return (
     <AppShell header={{ height: 56 }} padding="md">
@@ -59,7 +98,7 @@ export default function App() {
                 Moodle Backlog
               </Title>
               <Text size="sm" c="blue.1">
-                Deep-SE
+                Deep-SE · IRT Story Points
               </Text>
             </Group>
           </Group>
@@ -68,8 +107,10 @@ export default function App() {
 
       <AppShell.Main style={{ background: "var(--mantine-color-gray-0)" }}>
         <Container size="xl" py="md">
-          {error ? (
-            <Text c="red">Failed to load backlog: {error}</Text>
+          {loadError ? (
+            <Text c="red">Failed to load backlog: {loadError}</Text>
+          ) : modelError ? (
+            <Text c="red">Failed to load IRT model: {modelError}</Text>
           ) : isLoading ? (
             <Stack align="center" py="xl" gap="md">
               <Loader color="blue" />
@@ -86,41 +127,69 @@ export default function App() {
                   style={{ flex: 1, maxWidth: 420 }}
                 />
                 <Text size="sm" c="dimmed">
-                  {filtered.length} issues · {totalPoints} story points
+                  {filteredDone.length} done · {doneTotalPoints} SP ·{" "}
+                  {filteredTodos.length} todos
                 </Text>
               </Group>
 
               <Group align="flex-start" gap="md" wrap={isMobile ? "wrap" : "nowrap"}>
-                <Stack gap="xs" style={{ flex: 1, minWidth: 0, width: isMobile ? "100%" : undefined }}>
+                <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
                   <Text size="xs" tt="uppercase" fw={700} c="dimmed">
-                    Backlog
+                    Done (B)
                   </Text>
                   <BacklogList
-                    issues={filtered}
-                    selectedKey={selected?.issueKey ?? null}
-                    onSelect={setSelected}
+                    issues={filteredDone}
+                    selectedKey={selectedDone?.issueKey ?? null}
+                    onSelect={setSelectedDone}
+                    showStoryPoints
+                    getStoryPoints={(issue) => issue.storyPoints}
                   />
+                  {!isMobile && (
+                    <DoneDetailPanel
+                      issue={selectedDone}
+                      onClose={() => setSelectedDone(null)}
+                    />
+                  )}
                 </Stack>
 
-                {!isMobile && (
-                  <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
-                    <Text size="xs" tt="uppercase" fw={700} c="dimmed">
-                      Issue detail
-                    </Text>
-                    <IssueDetailPanel
-                      issue={selected}
-                      onClose={() => setSelected(null)}
+                <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
+                  <Text size="xs" tt="uppercase" fw={700} c="dimmed">
+                    Todos (A)
+                  </Text>
+                  <BacklogList
+                    issues={filteredTodos}
+                    selectedKey={selectedTodo?.issueKey ?? null}
+                    onSelect={setSelectedTodo}
+                    showStoryPoints={false}
+                  />
+                  {!isMobile && (
+                    <TodoDetailPanel
+                      issue={selectedTodo}
+                      model={model}
+                      modelLoading={modelLoading}
+                      doneHistory={doneHistory}
+                      onClose={() => setSelectedTodo(null)}
                     />
-                  </Stack>
-                )}
+                  )}
+                </Stack>
               </Group>
 
               {isMobile && (
-                <IssueDetailDrawer
-                  issue={selected}
-                  opened={selected !== null}
-                  onClose={() => setSelected(null)}
-                />
+                <>
+                  <DoneDetailDrawer
+                    issue={selectedDone}
+                    opened={selectedDone !== null}
+                    onClose={() => setSelectedDone(null)}
+                  />
+                  <TodoDetailDrawer
+                    issue={selectedTodo}
+                    opened={selectedTodo !== null}
+                    model={model}
+                    modelLoading={modelLoading}
+                    doneHistory={doneHistory}
+                    onClose={() => setSelectedTodo(null)}
+                  />
+                </>
               )}
             </Stack>
           )}
