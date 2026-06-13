@@ -223,3 +223,6 @@ museum_web/dist/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Downloaded agile datasets
+agile_data/deep-se/
