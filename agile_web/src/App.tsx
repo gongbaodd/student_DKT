@@ -137,7 +137,7 @@ export default function App() {
       </AppShell.Header>
 
       <AppShell.Main style={{ background: "var(--mantine-color-gray-0)" }}>
-        <Container size="xl" py="md">
+        <Container fluid py="md">
           {loadError ? (
             <Text c="red">Failed to load backlog: {loadError}</Text>
           ) : modelError ? (
