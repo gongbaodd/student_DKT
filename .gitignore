@@ -227,5 +227,9 @@ museum_web/dist/
 # Downloaded agile datasets
 agile_data/deep-se/
 
+# Downloaded electricity dataset
+electricity_data/electricityloaddiagrams20112014.zip
+electricity_data/months/
+
 # Generated issue title embeddings (rebuild with agile_train/embed.py)
 agile_train/embedding/
