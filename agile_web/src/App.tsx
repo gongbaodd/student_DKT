@@ -15,9 +15,7 @@ import { useMemo, useState } from "react";
 import {
   BacklogList,
   DoneDetailDrawer,
-  DoneDetailPanel,
   TodoDetailDrawer,
-  TodoDetailPanel,
 } from "./components/BacklogList";
 import { useDoneIssues, useTodoIssues } from "./hooks/useIssues";
 import { useIrtModel } from "./hooks/useIrtModel";
@@ -144,12 +142,6 @@ export default function App() {
                     showStoryPoints
                     getStoryPoints={(issue) => issue.storyPoints}
                   />
-                  {!isMobile && (
-                    <DoneDetailPanel
-                      issue={selectedDone}
-                      onClose={() => setSelectedDone(null)}
-                    />
-                  )}
                 </Stack>
 
                 <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
@@ -162,35 +154,22 @@ export default function App() {
                     onSelect={setSelectedTodo}
                     showStoryPoints={false}
                   />
-                  {!isMobile && (
-                    <TodoDetailPanel
-                      issue={selectedTodo}
-                      model={model}
-                      modelLoading={modelLoading}
-                      doneHistory={doneHistory}
-                      onClose={() => setSelectedTodo(null)}
-                    />
-                  )}
                 </Stack>
               </Group>
 
-              {isMobile && (
-                <>
-                  <DoneDetailDrawer
-                    issue={selectedDone}
-                    opened={selectedDone !== null}
-                    onClose={() => setSelectedDone(null)}
-                  />
-                  <TodoDetailDrawer
-                    issue={selectedTodo}
-                    opened={selectedTodo !== null}
-                    model={model}
-                    modelLoading={modelLoading}
-                    doneHistory={doneHistory}
-                    onClose={() => setSelectedTodo(null)}
-                  />
-                </>
-              )}
+              <DoneDetailDrawer
+                issue={selectedDone}
+                opened={selectedDone !== null}
+                onClose={() => setSelectedDone(null)}
+              />
+              <TodoDetailDrawer
+                issue={selectedTodo}
+                opened={selectedTodo !== null}
+                model={model}
+                modelLoading={modelLoading}
+                doneHistory={doneHistory}
+                onClose={() => setSelectedTodo(null)}
+              />
             </Stack>
           )}
         </Container>

@@ -6,12 +6,10 @@ import {
   Group,
   Loader,
   Pagination,
-  ScrollArea,
   Select,
   Stack,
   Table,
   Text,
-  UnstyledButton,
 } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 import { useEffect, useMemo, useState } from "react";
@@ -179,197 +177,6 @@ export function BacklogList<T extends { issueKey: string; title: string }>({
   );
 }
 
-interface DoneDetailPanelProps {
-  issue: DoneIssue | null;
-  onClose: () => void;
-}
-
-export function DoneDetailPanel({ issue, onClose }: DoneDetailPanelProps) {
-  if (!issue) {
-    return (
-      <Box
-        p="xl"
-        style={{
-          border: "1px dashed var(--mantine-color-gray-4)",
-          borderRadius: "var(--mantine-radius-sm)",
-          background: "var(--mantine-color-gray-0)",
-          minHeight: 120,
-        }}
-      >
-        <Text c="dimmed" ta="center" mt="md">
-          Select a done issue to view details
-        </Text>
-      </Box>
-    );
-  }
-
-  return (
-    <Box
-      p="lg"
-      style={{
-        border: "1px solid var(--mantine-color-gray-3)",
-        borderRadius: "var(--mantine-radius-sm)",
-        background: "white",
-      }}
-    >
-      <Group justify="space-between" mb="md" wrap="nowrap">
-        <Group gap="sm" wrap="nowrap" style={{ flex: 1, minWidth: 0 }}>
-          <Text ff="monospace" c="blue.7" fw={700} size="sm">
-            {issue.issueKey}
-          </Text>
-          <Badge variant="light" color="gray">
-            {issue.storyPoints} SP
-          </Badge>
-        </Group>
-        <UnstyledButton onClick={onClose} aria-label="Close issue detail">
-          <Text size="sm" c="dimmed">
-            Close
-          </Text>
-        </UnstyledButton>
-      </Group>
-
-      <Text fw={600} size="md" mb="md">
-        {issue.title}
-      </Text>
-
-      <ScrollArea.Autosize mah={280} type="auto">
-        <IssueDescription content={issue.description} />
-      </ScrollArea.Autosize>
-    </Box>
-  );
-}
-
-interface TodoDetailPanelProps {
-  issue: TodoIssue | null;
-  model: IrtModel | null;
-  modelLoading: boolean;
-  doneHistory: DoneHistoryEntry[];
-  onClose: () => void;
-}
-
-export function TodoDetailPanel({
-  issue,
-  model,
-  modelLoading,
-  doneHistory,
-  onClose,
-}: TodoDetailPanelProps) {
-  const [predicted, setPredicted] = useState<number | null>(null);
-  const [estimating, setEstimating] = useState(false);
-  const [estimateError, setEstimateError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setPredicted(null);
-    setEstimateError(null);
-  }, [issue?.issueKey]);
-
-  async function handleEstimate() {
-    if (!issue || !model) return;
-
-    setEstimating(true);
-    setEstimateError(null);
-    try {
-      const points = await model.predictStoryPoints(doneHistory, issue.issueKey);
-      setPredicted(points);
-    } catch (err: unknown) {
-      setEstimateError(
-        err instanceof Error ? err.message : "Failed to estimate story points",
-      );
-    } finally {
-      setEstimating(false);
-    }
-  }
-
-  if (!issue) {
-    return (
-      <Box
-        p="xl"
-        style={{
-          border: "1px dashed var(--mantine-color-gray-4)",
-          borderRadius: "var(--mantine-radius-sm)",
-          background: "var(--mantine-color-gray-0)",
-          minHeight: 120,
-        }}
-      >
-        <Text c="dimmed" ta="center" mt="md">
-          Select a todo to estimate story points
-        </Text>
-      </Box>
-    );
-  }
-
-  return (
-    <Box
-      p="lg"
-      style={{
-        border: "1px solid var(--mantine-color-gray-3)",
-        borderRadius: "var(--mantine-radius-sm)",
-        background: "white",
-      }}
-    >
-      <Group justify="space-between" mb="md" wrap="nowrap">
-        <Group gap="sm" wrap="nowrap" style={{ flex: 1, minWidth: 0 }}>
-          <Text ff="monospace" c="blue.7" fw={700} size="sm">
-            {issue.issueKey}
-          </Text>
-          {predicted !== null ? (
-            <Badge variant="light" color="blue">
-              {predicted} SP predicted
-            </Badge>
-          ) : null}
-          <Badge variant="outline" color="gray">
-            Original: {issue.originalStoryPoints} SP
-          </Badge>
-        </Group>
-        <UnstyledButton onClick={onClose} aria-label="Close issue detail">
-          <Text size="sm" c="dimmed">
-            Close
-          </Text>
-        </UnstyledButton>
-      </Group>
-
-      <Text fw={600} size="md" mb="md">
-        {issue.title}
-      </Text>
-
-      <Group mb="md">
-        <Button
-          onClick={handleEstimate}
-          loading={estimating}
-          disabled={modelLoading || !model}
-        >
-          Estimate story points
-        </Button>
-        {modelLoading ? (
-          <Group gap="xs">
-            <Loader size="xs" />
-            <Text size="sm" c="dimmed">
-              Loading model…
-            </Text>
-          </Group>
-        ) : null}
-      </Group>
-
-      {estimateError ? (
-        <Text size="sm" c="red" mb="md">
-          {estimateError}
-        </Text>
-      ) : null}
-
-      {predicted !== null ? (
-        <Text size="sm" c="dimmed" mb="md">
-          Predicted {predicted} SP vs original {issue.originalStoryPoints} SP
-          {predicted === issue.originalStoryPoints ? " — match" : ""}
-        </Text>
-      ) : null}
-
-      <ScrollArea.Autosize mah={240} type="auto">
-        <IssueDescription content={issue.description} />
-      </ScrollArea.Autosize>
-    </Box>
-  );
-}
-
 interface TodoDetailDrawerProps {
   issue: TodoIssue | null;
   opened: boolean;
@@ -443,14 +250,24 @@ export function TodoDetailDrawer({
           <Text fw={600} size="lg">
             {issue.title}
           </Text>
-          <Button
-            onClick={handleEstimate}
-            loading={estimating}
-            disabled={modelLoading || !model}
-            w="fit-content"
-          >
-            Estimate story points
-          </Button>
+          <Group>
+            <Button
+              onClick={handleEstimate}
+              loading={estimating}
+              disabled={modelLoading || !model}
+              w="fit-content"
+            >
+              Estimate story points
+            </Button>
+            {modelLoading ? (
+              <Group gap="xs">
+                <Loader size="xs" />
+                <Text size="sm" c="dimmed">
+                  Loading model…
+                </Text>
+              </Group>
+            ) : null}
+          </Group>
           {estimateError ? (
             <Text size="sm" c="red">
               {estimateError}
@@ -459,6 +276,7 @@ export function TodoDetailDrawer({
           {predicted !== null ? (
             <Text size="sm" c="dimmed">
               Predicted {predicted} SP vs original {issue.originalStoryPoints} SP
+              {predicted === issue.originalStoryPoints ? " — match" : ""}
             </Text>
           ) : null}
           <IssueDescription content={issue.description} />
