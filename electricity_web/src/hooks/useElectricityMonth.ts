@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 
-import type { CalendarBand, ChartRow, ElectricityMonthData } from "../types";
+import type { CalendarBand, ChartRow, ElectricityMonthData, PeakBand } from "../types";
 import { buildCalendarBands, toChartRows } from "../utils/calendarBands";
+import { buildPeakBands } from "../utils/peakBands";
 
 interface UseElectricityMonthResult {
   data: ElectricityMonthData | null;
   chartRows: ChartRow[];
   calendarBands: CalendarBand[];
+  peakBands: PeakBand[];
   isLoading: boolean;
   error: string | null;
 }
@@ -53,5 +55,7 @@ export function useElectricityMonth(): UseElectricityMonthResult {
     [chartRows, data],
   );
 
-  return { data, chartRows, calendarBands, isLoading, error };
+  const peakBands = useMemo(() => buildPeakBands(chartRows), [chartRows]);
+
+  return { data, chartRows, calendarBands, peakBands, isLoading, error };
 }

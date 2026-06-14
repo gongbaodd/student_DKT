@@ -1,85 +1,106 @@
-import { LineChart } from "@mantine/charts";
-import {
-  Group,
-  Paper,
-  Stack,
-  Switch,
-  Text,
-  Title,
-} from "@mantine/core";
-import { useMemo, useState } from "react";
-import { ReferenceArea } from "recharts";
+import { Group, Paper, Stack, Switch, Text, Title } from "@mantine/core";
+import type { ECharts } from "echarts";
+import ReactECharts from "echarts-for-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import type { CalendarBand, ChartRow } from "../types";
-import { chartColors } from "../theme";
+import type { CalendarBand, ChartRow, PeakBand, Trade } from "../types";
+import { buildEchartsOption } from "../utils/echartsOptions";
 
 interface TemperatureChartProps {
   chartRows: ChartRow[];
   calendarBands: CalendarBand[];
+  peakBands: PeakBand[];
   holidays: { date: string; name: string }[];
-}
-
-function ChartLegend() {
-  const items = [
-    { color: chartColors.weekend, label: "Weekend" },
-    { color: chartColors.holiday, label: "Public holiday (Portugal)" },
-    { color: chartColors.temp, label: "Lisbon temperature (°C)" },
-    { color: chartColors.load, label: "Total load (kW)" },
-  ];
-
-  return (
-    <Group gap="md">
-      {items.map((item) => (
-        <Group key={item.label} gap={6}>
-          <span
-            style={{
-              width: 12,
-              height: 12,
-              borderRadius: 2,
-              background: item.color,
-              display: "inline-block",
-            }}
-          />
-          <Text size="xs" c="dimmed">
-            {item.label}
-          </Text>
-        </Group>
-      ))}
-    </Group>
-  );
+  trades: Trade[];
+  selectedTs: number | null;
+  selectedTradeId: string | null;
+  onSelectInterval: (ts: number) => void;
+  onSelectTrade: (tradeId: string) => void;
 }
 
 export function TemperatureChart({
   chartRows,
   calendarBands,
+  peakBands,
   holidays,
+  trades,
+  selectedTs,
+  selectedTradeId,
+  onSelectInterval,
+  onSelectTrade,
 }: TemperatureChartProps) {
-  const [showLoad, setShowLoad] = useState(false);
+  const [showLoadDebug, setShowLoadDebug] = useState(false);
+  const chartRef = useRef<ReactECharts>(null);
+  const intervalHandlerRef = useRef(onSelectInterval);
+  const tradeHandlerRef = useRef(onSelectTrade);
+  const markPointClickAtRef = useRef(0);
 
-  const series = useMemo(() => {
-    if (showLoad) {
-      return [
-        {
-          name: "loadKw",
-          color: chartColors.load,
-          label: "Total load (kW)",
-        },
-        {
-          name: "tempC",
-          color: chartColors.temp,
-          label: "Lisbon temperature (°C)",
-          yAxisId: "right",
-        },
-      ];
-    }
-    return [
-      {
-        name: "tempC",
-        color: chartColors.temp,
-        label: "Lisbon temperature (°C)",
-      },
-    ];
-  }, [showLoad]);
+  intervalHandlerRef.current = onSelectInterval;
+  tradeHandlerRef.current = onSelectTrade;
+
+  const option = useMemo(
+    () =>
+      buildEchartsOption({
+        chartRows,
+        calendarBands,
+        peakBands,
+        trades,
+        selectedTs,
+        selectedTradeId,
+        showLoadDebug,
+      }),
+    [
+      chartRows,
+      calendarBands,
+      peakBands,
+      trades,
+      selectedTs,
+      selectedTradeId,
+      showLoadDebug,
+    ],
+  );
+
+  const bindChartEvents = useCallback((chart: ECharts) => {
+    chart.off("click");
+    chart.on("click", (params) => {
+      if (params.componentType === "markPoint") {
+        const tradeId = (params.data as { tradeId?: string }).tradeId;
+        if (tradeId) {
+          markPointClickAtRef.current = Date.now();
+          tradeHandlerRef.current(tradeId);
+          return;
+        }
+      }
+    });
+
+    chart.getZr().off("click");
+    chart.getZr().on("click", (event) => {
+      if (Date.now() - markPointClickAtRef.current < 100) return;
+
+      const pointInGrid = chart.convertFromPixel({ gridIndex: 0 }, [
+        event.offsetX,
+        event.offsetY,
+      ]);
+      if (!pointInGrid) return;
+
+      const ts = pointInGrid[0];
+      if (typeof ts === "number" && Number.isFinite(ts)) {
+        intervalHandlerRef.current(ts);
+      }
+    });
+  }, []);
+
+  const handleChartReady = useCallback(
+    (chart: ECharts) => {
+      bindChartEvents(chart);
+    },
+    [bindChartEvents],
+  );
+
+  useEffect(() => {
+    const chart = chartRef.current?.getEchartsInstance();
+    if (chart) bindChartEvents(chart);
+  }, [bindChartEvents, option]);
 
   return (
     <Paper p="lg" radius="md" withBorder h="100%">
@@ -88,13 +109,13 @@ export function TemperatureChart({
           <Stack gap={4}>
             <Title order={4}>Lisbon temperature — June 2014</Title>
             <Text size="sm" c="dimmed">
-              {chartRows.length.toLocaleString()} intervals · 15 min
+              Click chart to add · click a dot to inspect or remove
             </Text>
           </Stack>
           <Switch
-            label="Show electricity load"
-            checked={showLoad}
-            onChange={(event) => setShowLoad(event.currentTarget.checked)}
+            label="Show load (debug)"
+            checked={showLoadDebug}
+            onChange={(event) => setShowLoadDebug(event.currentTarget.checked)}
           />
         </Group>
 
@@ -105,42 +126,14 @@ export function TemperatureChart({
           </Text>
         )}
 
-        <LineChart
-          h={360}
-          data={chartRows}
-          dataKey="date"
-          series={series}
-          withRightYAxis={showLoad}
-          yAxisLabel={showLoad ? "kW" : "°C"}
-          rightYAxisLabel={showLoad ? "°C" : undefined}
-          curveType="linear"
-          strokeWidth={1.2}
-          gridAxis="xy"
-          tickLine="xy"
-          withDots={false}
-          xAxisProps={{
-            tickFormatter: (value: string) => {
-              const parts = value.split(" ");
-              return parts.length >= 2 ? `${parts[0]} ${parts[1]}` : value;
-            },
-            minTickGap: 48,
-            interval: "preserveStartEnd",
-          }}
-        >
-          {calendarBands.map((band) => (
-            <ReferenceArea
-              key={`${band.type}-${band.x1}`}
-              x1={band.x1}
-              x2={band.x2}
-              fill={band.type === "holiday" ? chartColors.holiday : chartColors.weekend}
-              fillOpacity={band.type === "holiday" ? 0.12 : 0.1}
-              strokeOpacity={0}
-              ifOverflow="extendDomain"
-            />
-          ))}
-        </LineChart>
-
-        <ChartLegend />
+        <ReactECharts
+          ref={chartRef}
+          option={option}
+          notMerge
+          onChartReady={handleChartReady}
+          style={{ height: 420, width: "100%", cursor: "crosshair" }}
+          opts={{ renderer: "canvas" }}
+        />
       </Stack>
     </Paper>
   );

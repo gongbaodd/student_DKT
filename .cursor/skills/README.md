@@ -9,5 +9,6 @@ DKT (Deep Knowledge Tracing) skills for this repo, split by layer:
 | **Export** | [dkt-onnx-export](dkt-onnx-export/SKILL.md) | PyTorch → ONNX + metadata |
 | **Frontend ORT** | [dkt-frontend-onnx](dkt-frontend-onnx/SKILL.md) | onnxruntime-web + Vite + DktModel |
 | **Mantine UI** | [dkt-mantine-showcase](dkt-mantine-showcase/SKILL.md) | React showcase, session hook, dashboard |
+| **Electricity dashboard** | [electricity-web-dashboard](electricity-web-dashboard/SKILL.md) | electricity_web battery-agent demo, load/temp charts |
 
 Each skill has a `reference.md` with code snippets and troubleshooting for that layer only.

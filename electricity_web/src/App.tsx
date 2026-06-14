@@ -1,8 +1,9 @@
 import {
   AppShell,
+  Box,
   Container,
+  Flex,
   Loader,
-  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -10,6 +11,8 @@ import {
 
 import { BatteryIconPanel } from "./components/BatteryIconPanel";
 import { TemperatureChart } from "./components/TemperatureChart";
+import { TradingCostPanel } from "./components/TradingCostPanel";
+import { useBatteryTrading } from "./hooks/useBatteryTrading";
 import { useElectricityMonth } from "./hooks/useElectricityMonth";
 
 function AppHeader() {
@@ -20,11 +23,11 @@ function AppHeader() {
         borderBottom: "1px solid var(--mantine-color-gray-3)",
       }}
     >
-      <Container size="xl" h="100%">
+      <Container fluid h="100%" px="md">
         <Stack justify="center" h="100%" gap={0}>
           <Title order={3}>Battery Agent Measurement Demo</Title>
           <Text size="xs" c="dimmed">
-            UCI electricity load · Lisbon temperature
+            Battery arbitrage on June 2014 · Lisbon temperature chart
           </Text>
         </Stack>
       </Container>
@@ -33,15 +36,21 @@ function AppHeader() {
 }
 
 export default function App() {
-  const { data, chartRows, calendarBands, isLoading, error } =
+  const { data, chartRows, calendarBands, peakBands, isLoading, error } =
     useElectricityMonth();
+  const trading = useBatteryTrading(chartRows);
+  const selectedTrade =
+    trading.selectedTradeId === null
+      ? null
+      : trading.trades.find((trade) => trade.id === trading.selectedTradeId) ??
+        null;
 
   if (error) {
     return (
       <AppShell header={{ height: 64 }} padding="md">
         <AppHeader />
         <AppShell.Main style={{ background: "var(--mantine-color-gray-0)" }}>
-          <Container size="xl" py="xl">
+          <Container fluid py="xl" px="md">
             <Text c="red">Failed to load: {error}</Text>
           </Container>
         </AppShell.Main>
@@ -54,7 +63,7 @@ export default function App() {
       <AppShell header={{ height: 64 }} padding="md">
         <AppHeader />
         <AppShell.Main style={{ background: "var(--mantine-color-gray-0)" }}>
-          <Container size="xl" py="xl">
+          <Container fluid py="xl" px="md">
             <Stack align="center" gap="md">
               <Loader color="blue" />
               <Text c="dimmed">Loading June 2014 data…</Text>
@@ -69,15 +78,46 @@ export default function App() {
     <AppShell header={{ height: 64 }} padding="md">
       <AppHeader />
       <AppShell.Main style={{ background: "var(--mantine-color-gray-0)" }}>
-        <Container size="xl">
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-            <BatteryIconPanel />
-            <TemperatureChart
-              chartRows={chartRows}
-              calendarBands={calendarBands}
-              holidays={data.holidays}
-            />
-          </SimpleGrid>
+        <Container fluid px="md">
+          <Flex
+            gap="lg"
+            align="stretch"
+            direction={{ base: "column", sm: "row" }}
+          >
+            <Box w={{ base: "100%", sm: 260 }} style={{ flexShrink: 0 }}>
+              <BatteryIconPanel
+                stats={trading.stats}
+                capacity={trading.capacity}
+                amount={trading.amount}
+                selectedTs={trading.selectedTs}
+                selectedTradeId={trading.selectedTradeId}
+                selectedTrade={selectedTrade}
+                chargeAtSelection={trading.chargeAtSelection}
+                maxBuyAmount={trading.maxBuyAmount}
+                onAmountChange={trading.setAmount}
+                onAddTrade={trading.addTrade}
+                onRemoveTrade={trading.removeTrade}
+              />
+            </Box>
+            <Stack style={{ flex: 1, minWidth: 0 }} gap="lg">
+              <TemperatureChart
+                chartRows={chartRows}
+                calendarBands={calendarBands}
+                peakBands={peakBands}
+                holidays={data.holidays}
+                trades={trading.trades}
+                selectedTs={trading.selectedTs}
+                selectedTradeId={trading.selectedTradeId}
+                onSelectInterval={trading.selectInterval}
+                onSelectTrade={trading.selectTrade}
+              />
+              <TradingCostPanel
+                stats={trading.stats}
+                onRandomGenerate={trading.randomGenerate}
+                onClearTrades={trading.clearTrades}
+              />
+            </Stack>
+          </Flex>
         </Container>
       </AppShell.Main>
     </AppShell>

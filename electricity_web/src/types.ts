@@ -28,6 +28,7 @@ export interface ElectricityMonthData {
 
 export interface ChartRow {
   date: string;
+  ts: number;
   loadKw: number;
   tempC: number;
   timestamp: string;
@@ -35,9 +36,36 @@ export interface ChartRow {
 
 export type CalendarBandType = "weekend" | "holiday";
 
+export type PeakBandKind = "morning" | "evening";
+
+export interface PeakBand {
+  kind: PeakBandKind;
+  x1: number;
+  x2: number;
+}
+
 export interface CalendarBand {
   type: CalendarBandType;
-  x1: string;
-  x2: string;
+  x1: number;
+  x2: number;
   label?: string;
+}
+
+export type TradeAction = "buy" | "sell";
+
+export interface Trade {
+  id: string;
+  ts: number;
+  action: TradeAction;
+  amount: number;
+  price: number;
+}
+
+export interface TradingStats {
+  charge: number;
+  netCost: number;
+  totalBuyCost: number;
+  totalSellRevenue: number;
+  tradeCount: number;
+  isValidEnd: boolean;
 }
