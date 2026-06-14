@@ -1,31 +1,34 @@
-import { system, System } from "@lastolivegames/becsy";
+import { createSystem } from "elics";
 
+import { num } from "../../globals";
 import { Bobbing, Transform } from "../components";
 
-@system
-export class BobbingSystem extends System {
-  sked = this.schedule((s) => s.afterWritersOf(Transform));
+const queries = {
+  bobbers: { required: [Bobbing, Transform] },
+};
 
-  private readonly bobbers = this.query((q) =>
-    q.current.with(Bobbing).read.and.with(Transform).write,
-  );
-
+export class BobbingSystem extends createSystem(queries) {
   private elapsed = 0;
 
-  execute(): void {
-    this.elapsed += this.delta;
+  update(delta: number): void {
+    this.elapsed += delta;
 
-    for (const entity of this.bobbers.current) {
-      const bob = entity.read(Bobbing);
-      const transform = entity.write(Transform);
+    for (const entity of this.queries.bobbers.entities) {
+      const baseY = num(entity.getValue(Bobbing, "baseY"));
+      const amplitude = num(entity.getValue(Bobbing, "amplitude"));
+      const phase = num(entity.getValue(Bobbing, "phase"));
+      const rollAmount = num(entity.getValue(Bobbing, "rollAmount"));
 
       const wave =
-        Math.sin(this.elapsed * 1.4 + bob.phase) * bob.amplitude +
-        Math.sin(this.elapsed * 2.1 + bob.phase * 1.7) * bob.amplitude * 0.35;
+        Math.sin(this.elapsed * 1.4 + phase) * amplitude +
+        Math.sin(this.elapsed * 2.1 + phase * 1.7) * amplitude * 0.35;
 
-      transform.y = bob.baseY + wave;
-      transform.roll =
-        Math.sin(this.elapsed * 1.8 + bob.phase) * bob.rollAmount;
+      entity.setValue(Transform, "y", baseY + wave);
+      entity.setValue(
+        Transform,
+        "roll",
+        Math.sin(this.elapsed * 1.8 + phase) * rollAmount,
+      );
     }
   }
 }

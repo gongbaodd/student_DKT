@@ -21,15 +21,17 @@ export interface BoatSpawn {
   isPlayer: boolean;
 }
 
+const MESH_SCALE = 0.1;
+
 export const BOAT_DEFS: BoatDef[] = [
-  { id: "boat-row-small", scale: 2.5 },
-  { id: "boat-row-large", scale: 3.0 },
-  { id: "ship-small", scale: 4.0 },
-  { id: "ship-medium", scale: 5.0 },
-  { id: "ship-large", scale: 6.0 },
-  { id: "ship-pirate-small", scale: 4.5 },
-  { id: "ship-pirate-medium", scale: 5.5 },
-  { id: "ship-pirate-large", scale: 6.5 },
+  { id: "boat-row-small", scale: 2.5 * MESH_SCALE },
+  { id: "boat-row-large", scale: 3.0 * MESH_SCALE },
+  { id: "ship-small", scale: 4.0 * MESH_SCALE },
+  { id: "ship-medium", scale: 5.0 * MESH_SCALE },
+  { id: "ship-large", scale: 6.0 * MESH_SCALE },
+  { id: "ship-pirate-small", scale: 4.5 * MESH_SCALE },
+  { id: "ship-pirate-medium", scale: 5.5 * MESH_SCALE },
+  { id: "ship-pirate-large", scale: 6.5 * MESH_SCALE },
 ];
 
 const RING_RADIUS = 45;

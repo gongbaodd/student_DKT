@@ -1,16 +1,15 @@
-import { system, System } from "@lastolivegames/becsy";
+import { createSystem } from "elics";
 
-import { gameContext } from "../../gameContext";
+import { getGlobalsFromSystem } from "../../globals";
 
-@system
-export class OceanShaderSystem extends System {
+export class OceanShaderSystem extends createSystem({}) {
   private elapsed = 0;
 
-  execute(): void {
-    const material = gameContext.oceanMaterial;
+  update(delta: number): void {
+    const material = getGlobalsFromSystem(this.globals).oceanMaterial;
     if (!material) return;
 
-    this.elapsed += this.delta;
+    this.elapsed += delta;
     material.setFloat("time", this.elapsed);
   }
 }

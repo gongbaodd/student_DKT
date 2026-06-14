@@ -12,7 +12,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "experimentalDecorators": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,

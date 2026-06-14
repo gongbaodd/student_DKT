@@ -1,27 +1,24 @@
-import { system, System } from "@lastolivegames/becsy";
+import { createSystem } from "elics";
+import type { TransformNode } from "@babylonjs/core/Meshes/transformNode";
 
+import { num } from "../../globals";
 import { MeshRef, Transform } from "../components";
 
-@system
-export class MeshSyncSystem extends System {
-  sked = this.schedule((s) => s.afterWritersOf(Transform));
+const queries = {
+  synced: { required: [Transform, MeshRef] },
+};
 
-  private readonly synced = this.query((q) =>
-    q.current.with(Transform).read.and.with(MeshRef).read,
-  );
-
-  execute(): void {
-    for (const entity of this.synced.current) {
-      const transform = entity.read(Transform);
-      const meshRef = entity.read(MeshRef);
-      const node = meshRef.node;
+export class MeshSyncSystem extends createSystem(queries) {
+  update(): void {
+    for (const entity of this.queries.synced.entities) {
+      const node = entity.getValue(MeshRef, "node") as TransformNode | null;
       if (!node) continue;
 
-      node.position.x = transform.x;
-      node.position.y = transform.y;
-      node.position.z = transform.z;
-      node.rotation.y = transform.yaw;
-      node.rotation.z = transform.roll;
+      node.position.x = num(entity.getValue(Transform, "x"));
+      node.position.y = num(entity.getValue(Transform, "y"));
+      node.position.z = num(entity.getValue(Transform, "z"));
+      node.rotation.y = num(entity.getValue(Transform, "yaw"));
+      node.rotation.z = num(entity.getValue(Transform, "roll"));
     }
   }
 }

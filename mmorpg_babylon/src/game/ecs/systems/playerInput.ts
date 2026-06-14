@@ -1,32 +1,24 @@
-import { system, System } from "@lastolivegames/becsy";
+import { createSystem } from "elics";
 
-import { gameContext } from "../../gameContext";
+import { getGlobalsFromSystem, num } from "../../globals";
 import { Facing, PlayerControlled, Velocity } from "../components";
 
 const MOVE_SPEED = 12;
 
-@system
-export class PlayerInputSystem extends System {
-  sked = this.schedule((s) => s.beforeWritersOf(Facing));
+const queries = {
+  players: { required: [PlayerControlled, Facing, Velocity] },
+};
 
-  private readonly players = this.query((q) =>
-    q.current
-      .with(PlayerControlled)
-      .read.and.with(Facing)
-      .read.and.with(Velocity)
-      .write,
-  );
-
-  execute(): void {
-    const keys = gameContext.keysPressed;
+export class PlayerInputSystem extends createSystem(queries) {
+  update(): void {
+    const keys = getGlobalsFromSystem(this.globals).keysPressed;
     const forward = keys.has("w") || keys.has("W");
     const back = keys.has("s") || keys.has("S");
     const left = keys.has("a") || keys.has("A");
     const right = keys.has("d") || keys.has("D");
 
-    for (const entity of this.players.current) {
-      const facing = entity.read(Facing);
-      const velocity = entity.write(Velocity);
+    for (const entity of this.queries.players.entities) {
+      const facingYaw = num(entity.getValue(Facing, "yaw"));
 
       let localX = 0;
       let localZ = 0;
@@ -41,13 +33,13 @@ export class PlayerInputSystem extends System {
         localZ /= len;
       }
 
-      const sin = Math.sin(facing.yaw);
-      const cos = Math.cos(facing.yaw);
+      const sin = Math.sin(facingYaw);
+      const cos = Math.cos(facingYaw);
       const worldX = localX * cos + localZ * sin;
       const worldZ = -localX * sin + localZ * cos;
 
-      velocity.vx = worldX * MOVE_SPEED;
-      velocity.vz = worldZ * MOVE_SPEED;
+      entity.setValue(Velocity, "vx", worldX * MOVE_SPEED);
+      entity.setValue(Velocity, "vz", worldZ * MOVE_SPEED);
     }
   }
 }

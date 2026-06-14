@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import { createGame, type GameHandle } from "./createGame";
-import { gameContext } from "./gameContext";
+import { getKeysPressed } from "./globals";
 
 export default function GameCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -14,11 +14,11 @@ export default function GameCanvas() {
     let game: GameHandle | null = null;
 
     const onKeyDown = (event: KeyboardEvent) => {
-      gameContext.keysPressed.add(event.key);
+      getKeysPressed().add(event.key);
     };
 
     const onKeyUp = (event: KeyboardEvent) => {
-      gameContext.keysPressed.delete(event.key);
+      getKeysPressed().delete(event.key);
     };
 
     window.addEventListener("keydown", onKeyDown);
@@ -26,7 +26,7 @@ export default function GameCanvas() {
 
     void createGame(canvas).then((handle) => {
       if (cancelled) {
-        void handle.dispose();
+        handle.dispose();
         return;
       }
       game = handle;
@@ -36,8 +36,8 @@ export default function GameCanvas() {
       cancelled = true;
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
-      gameContext.keysPressed.clear();
-      void game?.dispose();
+      getKeysPressed().clear();
+      game?.dispose();
     };
   }, []);
 
