@@ -17,3 +17,6 @@ export const chartColors = {
   morningPeak: "#f59e0b",
   eveningPeak: "#8b5cf6",
 } as const;
+
+/** Coin unit label for ECharts canvas (matches timeline table semantics). */
+export const coinUnitLabel = "🪙";

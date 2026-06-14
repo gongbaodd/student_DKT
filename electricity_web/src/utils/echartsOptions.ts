@@ -1,7 +1,7 @@
 import type { EChartsOption, LineSeriesOption } from "echarts";
 
 import type { CalendarBand, ChartRow, PeakBand, Trade } from "../types";
-import { chartColors } from "../theme";
+import { chartColors, coinUnitLabel } from "../theme";
 import { formatAxisDate } from "./dateTime";
 
 interface MarkAreaBand {
@@ -127,6 +127,8 @@ function buildTradeMarkPoints(
   return points;
 }
 
+const PRICE_DEBUG_SERIES = "Price (debug)";
+
 export function buildEchartsOption({
   chartRows,
   calendarBands,
@@ -150,7 +152,7 @@ export function buildEchartsOption({
     "Lisbon temperature (°C)",
     "Buy",
     "Sell",
-    ...(showLoadDebug ? ["Electricity load (debug kW)"] : []),
+    ...(showLoadDebug ? [PRICE_DEBUG_SERIES] : []),
     "Weekend",
     "Public holiday (Portugal)",
     "Morning peak (07:30–09:30)",
@@ -197,11 +199,11 @@ export function buildEchartsOption({
 
   if (showLoadDebug) {
     series.push({
-      name: "Electricity load (debug kW)",
+      name: PRICE_DEBUG_SERIES,
       type: "line",
       yAxisIndex: 1,
       showSymbol: false,
-      lineStyle: { width: 1, color: chartColors.load, type: "dashed" },
+      lineStyle: { width: 1.5, color: chartColors.load, type: "dashed" },
       itemStyle: { color: chartColors.load },
       label: { show: false },
       data: priceData,
@@ -220,8 +222,8 @@ export function buildEchartsOption({
         },
         {
           type: "value",
-          name: "kW",
-          nameTextStyle: { color: chartColors.load },
+          name: coinUnitLabel,
+          nameTextStyle: { color: chartColors.load, fontSize: 14 },
           axisLabel: { color: chartColors.load },
           splitLine: { show: false },
         },

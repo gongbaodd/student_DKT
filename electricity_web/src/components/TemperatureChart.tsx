@@ -1,4 +1,5 @@
 import { Group, Paper, Stack, Switch, Text, Title } from "@mantine/core";
+import { IconCoin } from "@tabler/icons-react";
 import type { ECharts } from "echarts";
 import ReactECharts from "echarts-for-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -160,7 +161,12 @@ export function TemperatureChart({
             </Text>
           </Stack>
           <Switch
-            label="Show load (debug)"
+            label={
+              <Group gap={6} wrap="nowrap">
+                <IconCoin size={14} stroke={1.5} aria-hidden />
+                <span>Show price (debug)</span>
+              </Group>
+            }
             checked={showLoadDebug}
             onChange={(event) => setShowLoadDebug(event.currentTarget.checked)}
           />
