@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "prepare-data": "../.venv/bin/python3 scripts/prepare_june.py",
-    "predev": "npm run prepare-data",
+    "predev": "npm run prepare-data && test -f public/dkt.onnx || (echo 'Run: python export_electricity_dkt_onnx.py' && exit 1)",
     "dev": "vite",
     "prebuild": "npm run prepare-data",
     "build": "tsc --noEmit && vite build",
@@ -17,6 +17,7 @@
     "@tabler/icons-react": "^3.31.0",
     "echarts": "^6.0.0",
     "echarts-for-react": "^3.0.6",
+    "onnxruntime-web": "^1.22.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

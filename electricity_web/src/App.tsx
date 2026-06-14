@@ -13,6 +13,7 @@ import { BatteryIconPanel } from "./components/BatteryIconPanel";
 import { TemperatureChart } from "./components/TemperatureChart";
 import { TradingCostPanel } from "./components/TradingCostPanel";
 import { useBatteryTrading } from "./hooks/useBatteryTrading";
+import { useDktSolutionReport } from "./hooks/useDktSolutionReport";
 import { useElectricityMonth } from "./hooks/useElectricityMonth";
 
 function AppHeader() {
@@ -39,6 +40,12 @@ export default function App() {
   const { data, chartRows, calendarBands, peakBands, isLoading, error } =
     useElectricityMonth();
   const trading = useBatteryTrading(chartRows);
+  const dktReport = useDktSolutionReport(
+    chartRows,
+    trading.trades,
+    trading.stats,
+    trading.amount,
+  );
   const selectedTrade =
     trading.selectedTradeId === null
       ? null
@@ -116,6 +123,9 @@ export default function App() {
                 stats={trading.stats}
                 selectedTradeId={trading.selectedTradeId}
                 capacity={trading.capacity}
+                dktReport={dktReport.report}
+                dktLoading={dktReport.isLoading}
+                dktError={dktReport.loadError}
                 onSelectTrade={trading.selectTrade}
                 onRandomGenerate={trading.randomGenerate}
                 onClearTrades={trading.clearTrades}

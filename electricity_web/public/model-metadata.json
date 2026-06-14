@@ -1,0 +1,11 @@
+{
+  "numSkills": 3,
+  "inputDim": 6,
+  "hiddenDim": 50,
+  "skills": [
+    "Buy",
+    "Hold",
+    "Sell"
+  ],
+  "opset": 17
+}
