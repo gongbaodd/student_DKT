@@ -2,6 +2,8 @@ import type { PerspectiveCamera, Scene, ShaderMaterial, WebGLRenderer } from "th
 import type { Object3D } from "three";
 import type { World } from "elics";
 
+import type { JoltWorld } from "./physics/joltWorld";
+
 export interface CameraOrbit {
   yaw: number;
   pitch: number;
@@ -33,6 +35,7 @@ export interface GameGlobals {
   boatTemplates: Map<string, Object3D>;
   keysPressed: Set<string>;
   cameraOrbit: CameraOrbit;
+  joltWorld: JoltWorld | null;
   initialized: boolean;
 }
 

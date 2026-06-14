@@ -2,6 +2,7 @@ import { createSystem } from "elics";
 
 import { BOAT_DEFS, BASE_BOAT_Y, buildSpawnLayout } from "../../assets/boatCatalog";
 import { getGlobalsFromSystem } from "../../globals";
+import { createBoatBody } from "../../physics/boatBody";
 import { cloneBoat, loadBoatTemplate } from "../../three/loadBoat";
 import { createOcean } from "../../three/createOcean";
 import {
@@ -10,8 +11,9 @@ import {
   Facing,
   MeshRef,
   PlayerControlled,
+  PhysicsBody,
+  Throttle,
   Transform,
-  Velocity,
 } from "../components";
 
 export class InitWorldSystem extends createSystem({}) {
@@ -44,6 +46,12 @@ export class InitWorldSystem extends createSystem({}) {
       });
       entity.addComponent(MeshRef, { object3D });
       entity.addComponent(BoatKind, { kind: spawn.id });
+      entity.addComponent(PhysicsBody, {
+        bodyId:
+          globals.joltWorld != null
+            ? createBoatBody(globals.joltWorld, spawn.id, spawn.x, spawn.z, spawn.yaw)
+            : -1,
+      });
       entity.addComponent(Bobbing, {
         baseY: BASE_BOAT_Y,
         amplitude: spawn.isPlayer ? 0.08 : 0.15,
@@ -54,7 +62,7 @@ export class InitWorldSystem extends createSystem({}) {
       if (spawn.isPlayer) {
         entity.addComponent(PlayerControlled);
         entity.addComponent(Facing, { yaw: spawn.yaw });
-        entity.addComponent(Velocity, { vx: 0, vz: 0 });
+        entity.addComponent(Throttle, { amount: 0 });
       }
     }
 

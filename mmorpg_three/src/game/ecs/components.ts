@@ -8,9 +8,12 @@ export const Transform = createComponent("Transform", {
   roll: { type: Types.Float32, default: 0 },
 });
 
-export const Velocity = createComponent("Velocity", {
-  vx: { type: Types.Float32, default: 0 },
-  vz: { type: Types.Float32, default: 0 },
+export const Throttle = createComponent("Throttle", {
+  amount: { type: Types.Float32, default: 0 },
+});
+
+export const PhysicsBody = createComponent("PhysicsBody", {
+  bodyId: { type: Types.Int32, default: -1 },
 });
 
 export const Facing = createComponent("Facing", {

@@ -12,10 +12,12 @@ import {
   Bobbing,
   Facing,
   MeshRef,
+  PhysicsBody,
   PlayerControlled,
+  Throttle,
   Transform,
-  Velocity,
 } from "./ecs/components";
+import { BoatPhysicsSystem } from "./ecs/systems/boatPhysics";
 import { BobbingSystem } from "./ecs/systems/bobbing";
 import { CameraFollowSystem } from "./ecs/systems/cameraFollow";
 import {
@@ -23,9 +25,9 @@ import {
   preloadBoatTemplates,
 } from "./ecs/systems/initWorld";
 import { MeshSyncSystem } from "./ecs/systems/meshSync";
-import { MovementSystem } from "./ecs/systems/movement";
 import { OceanShaderSystem } from "./ecs/systems/oceanShader";
 import { PlayerInputSystem } from "./ecs/systems/playerInput";
+import { createJoltWorld } from "./physics/joltWorld";
 import {
   clearActiveGame,
   DEFAULT_CAMERA_ORBIT_PITCH,
@@ -71,6 +73,9 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     isDragging: false,
   };
 
+  await preloadBoatTemplates(scene, boatTemplates);
+  const joltWorld = await createJoltWorld();
+
   const globals: GameGlobals = {
     scene,
     renderer,
@@ -79,10 +84,9 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     boatTemplates,
     keysPressed,
     cameraOrbit,
+    joltWorld,
     initialized: false,
   };
-
-  await preloadBoatTemplates(scene, boatTemplates);
 
   const world = new World({
     entityCapacity: 64,
@@ -94,19 +98,20 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
 
   world
     .registerComponent(Transform)
-    .registerComponent(Velocity)
     .registerComponent(Facing)
+    .registerComponent(PhysicsBody)
+    .registerComponent(Throttle)
     .registerComponent(MeshRef)
     .registerComponent(PlayerControlled)
     .registerComponent(Bobbing)
     .registerComponent(BoatKind)
     .registerSystem(InitWorldSystem)
-    .registerSystem(PlayerInputSystem, { priority: 600 })
-    .registerSystem(MovementSystem, { priority: 500 })
-    .registerSystem(BobbingSystem, { priority: 400 })
-    .registerSystem(MeshSyncSystem, { priority: 300 })
+    .registerSystem(OceanShaderSystem, { priority: 100 })
     .registerSystem(CameraFollowSystem, { priority: 200 })
-    .registerSystem(OceanShaderSystem, { priority: 100 });
+    .registerSystem(PlayerInputSystem, { priority: 300 })
+    .registerSystem(BoatPhysicsSystem, { priority: 400 })
+    .registerSystem(BobbingSystem, { priority: 500 })
+    .registerSystem(MeshSyncSystem, { priority: 600 });
 
   let frameId = 0;
   let elapsed = 0;
@@ -138,6 +143,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
       window.removeEventListener("resize", onResize);
       keysPressed.clear();
       clearActiveGame();
+      joltWorld.dispose();
 
       scene.traverse((object) => {
         if ("geometry" in object) {
@@ -157,6 +163,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
 
       renderer.dispose();
       boatTemplates.clear();
+      globals.joltWorld = null;
       globals.oceanMaterial = null;
       globals.initialized = false;
     },
