@@ -52,7 +52,9 @@ export class InitWorldSystem extends createSystem({}) {
       entity.addComponent(PhysicsBody, {
         bodyId:
           globals.joltWorld != null
-            ? createBoatBody(globals.joltWorld, spawn.id, spawn.x, spawn.z, spawn.yaw)
+            ? createBoatBody(globals.joltWorld, spawn.id, spawn.x, spawn.z, spawn.yaw, {
+                static: !spawn.isPlayer,
+              })
             : -1,
       });
       entity.addComponent(Bobbing, {

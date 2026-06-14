@@ -24,7 +24,6 @@ export interface JoltWorld {
 function setupCollisionFiltering(Jolt: JoltModule, settings: InstanceType<JoltModule["JoltSettings"]>) {
   const objectFilter = new Jolt.ObjectLayerPairFilterTable(NUM_LAYERS);
   objectFilter.EnableCollision(LAYER_STATIC, LAYER_SHIP);
-  objectFilter.EnableCollision(LAYER_SHIP, LAYER_SHIP);
 
   const bpStatic = new Jolt.BroadPhaseLayer(0);
   const bpShip = new Jolt.BroadPhaseLayer(1);
@@ -105,6 +104,7 @@ export async function createJoltWorld(): Promise<JoltWorld> {
 }
 
 export const SHIP_LAYER = LAYER_SHIP;
+export const WORLD_BOUNDS = 180;
 
 export function yawToQuat(Jolt: JoltModule, yaw: number) {
   const axis = new Jolt.Vec3(0, 1, 0);

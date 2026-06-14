@@ -25,15 +25,22 @@ export function getBoatHull(kind: BoatKindId): BoatHullDef {
   return HULL_BY_KIND[kind];
 }
 
+export interface CreateBoatBodyOptions {
+  /** NPC hulls are static so they do not block the player via dynamic friction. */
+  static?: boolean;
+}
+
 export function createBoatBody(
   world: JoltWorld,
   kind: BoatKindId,
   x: number,
   z: number,
   yaw: number,
+  options: CreateBoatBodyOptions = {},
 ): number {
   const { Jolt, bodyInterface } = world;
   const hull = getBoatHull(kind);
+  const isStatic = options.static ?? false;
 
   const shape = new Jolt.BoxShape(
     new Jolt.Vec3(hull.halfX, hull.halfY, hull.halfZ),
@@ -44,19 +51,21 @@ export function createBoatBody(
     shape,
     new Jolt.RVec3(x, BASE_BOAT_Y, z),
     yawToQuat(Jolt, yaw),
-    Jolt.EMotionType_Dynamic,
+    isStatic ? Jolt.EMotionType_Static : Jolt.EMotionType_Dynamic,
     SHIP_LAYER,
   );
 
-  settings.mAllowedDOFs = Jolt.EAllowedDOFs_Plane2D;
-  settings.mOverrideMassProperties = Jolt.EOverrideMassProperties_MassAndInertiaProvided;
-  const boxSize = new Jolt.Vec3(hull.halfX * 2, hull.halfY * 2, hull.halfZ * 2);
-  settings.mMassPropertiesOverride.SetMassAndInertiaOfSolidBox(boxSize, 1);
-  settings.mMassPropertiesOverride.ScaleToMass(hull.mass);
-  Jolt.destroy(boxSize);
-  settings.mLinearDamping = 0.5;
-  settings.mAngularDamping = 1.0;
-  settings.mAllowSleeping = false;
+  if (!isStatic) {
+    settings.mAllowedDOFs = Jolt.EAllowedDOFs_Plane2D;
+    settings.mOverrideMassProperties = Jolt.EOverrideMassProperties_MassAndInertiaProvided;
+    const boxSize = new Jolt.Vec3(hull.halfX * 2, hull.halfY * 2, hull.halfZ * 2);
+    settings.mMassPropertiesOverride.SetMassAndInertiaOfSolidBox(boxSize, 1);
+    settings.mMassPropertiesOverride.ScaleToMass(hull.mass);
+    Jolt.destroy(boxSize);
+    settings.mLinearDamping = 0.5;
+    settings.mAngularDamping = 1.0;
+    settings.mAllowSleeping = false;
+  }
   settings.mFriction = 0.4;
   settings.mRestitution = 0.05;
 
