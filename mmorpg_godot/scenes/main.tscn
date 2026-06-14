@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dcjdwb777miuq"]
+
+[ext_resource type="Script" uid="uid://djckqnfqkyuxl" path="res://scripts/game_world.gd" id="1_game_world"]
+[ext_resource type="Script" uid="uid://bk8fa2fk845fr" path="res://scripts/ocean.gd" id="2_ocean"]
+[ext_resource type="Script" uid="uid://cae5w3edwjuqb" path="res://scripts/camera_follow.gd" id="3_camera"]
+
+[sub_resource type="Environment" id="Environment_main"]
+background_mode = 1
+background_color = Color(0.45098, 0.721569, 0.921569, 1)
+ambient_light_source = 1
+ambient_light_color = Color(0.14902, 0.227451, 0.34902, 1)
+ambient_light_energy = 1.1
+
+[node name="Main" type="Node3D" unique_id=535076]
+script = ExtResource("1_game_world")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1450082763]
+environment = SubResource("Environment_main")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1936083909]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 20, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Ocean" type="MeshInstance3D" parent="." unique_id=1780086774]
+script = ExtResource("2_ocean")
+
+[node name="Boats" type="Node3D" parent="." unique_id=2121808811]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1147147016]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 10, -18)
+fov = 60.0
+near = 0.5
+far = 500.0
+script = ExtResource("3_camera")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1870160959]
+
+[node name="Hint" type="Label" parent="UI" unique_id=1980035637]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -48.0
+offset_right = 120.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.92)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.55)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 18
+text = "WASD — sail your ship"
+horizontal_alignment = 1

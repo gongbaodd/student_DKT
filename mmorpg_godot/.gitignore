@@ -21,6 +21,9 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+# Copied pirate-kit models (run scripts/prepare_assets.py)
+assets/models/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db
