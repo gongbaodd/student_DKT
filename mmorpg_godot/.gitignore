@@ -1,0 +1,26 @@
+# Godot 4+ editor cache and imported assets
+.godot/
+.nomedia
+
+# Godot 3 legacy import cache
+.import/
+
+# Export configuration (may contain platform-specific paths)
+export.cfg
+export_credentials.cfg
+
+# Temporary files
+*.tmp
+~*.dll
+
+# Imported translations (generated from CSV)
+*.translation
+
+# Mono / C# build artifacts
+.mono/
+data_*/
+mono_crash.*.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
