@@ -6,10 +6,12 @@ import {
   Scene,
   WebGLRenderer,
 } from "three";
+import { BatchedRenderer } from "three.quarks";
 
 import {
   BoatKind,
   Bobbing,
+  ExhaustSmoke,
   Facing,
   MeshRef,
   PhysicsBody,
@@ -17,6 +19,7 @@ import {
   Throttle,
   Transform,
 } from "./ecs/components";
+import { BoatSmokeSystem } from "./ecs/systems/boatSmoke";
 import { BoatPhysicsSystem } from "./ecs/systems/boatPhysics";
 import { BobbingSystem } from "./ecs/systems/bobbing";
 import { CameraFollowSystem } from "./ecs/systems/cameraFollow";
@@ -76,6 +79,9 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
   await preloadBoatTemplates(scene, boatTemplates);
   const joltWorld = await createJoltWorld();
 
+  const quarksRenderer = new BatchedRenderer();
+  scene.add(quarksRenderer);
+
   const globals: GameGlobals = {
     scene,
     renderer,
@@ -85,6 +91,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     keysPressed,
     cameraOrbit,
     joltWorld,
+    quarksRenderer,
     initialized: false,
   };
 
@@ -105,13 +112,15 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     .registerComponent(PlayerControlled)
     .registerComponent(Bobbing)
     .registerComponent(BoatKind)
+    .registerComponent(ExhaustSmoke)
     .registerSystem(InitWorldSystem)
     .registerSystem(OceanShaderSystem, { priority: 100 })
     .registerSystem(CameraFollowSystem, { priority: 200 })
     .registerSystem(PlayerInputSystem, { priority: 300 })
     .registerSystem(BoatPhysicsSystem, { priority: 400 })
     .registerSystem(BobbingSystem, { priority: 500 })
-    .registerSystem(MeshSyncSystem, { priority: 600 });
+    .registerSystem(MeshSyncSystem, { priority: 600 })
+    .registerSystem(BoatSmokeSystem, { priority: 700 });
 
   let frameId = 0;
   let elapsed = 0;
@@ -165,6 +174,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
       boatTemplates.clear();
       globals.joltWorld = null;
       globals.oceanMaterial = null;
+      globals.quarksRenderer = null;
       globals.initialized = false;
     },
   };

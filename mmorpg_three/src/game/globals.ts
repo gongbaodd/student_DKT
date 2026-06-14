@@ -1,6 +1,7 @@
 import type { PerspectiveCamera, Scene, ShaderMaterial, WebGLRenderer } from "three";
 import type { Object3D } from "three";
 import type { World } from "elics";
+import type { BatchedRenderer } from "three.quarks";
 
 import type { JoltWorld } from "./physics/joltWorld";
 
@@ -36,6 +37,7 @@ export interface GameGlobals {
   keysPressed: Set<string>;
   cameraOrbit: CameraOrbit;
   joltWorld: JoltWorld | null;
+  quarksRenderer: BatchedRenderer | null;
   initialized: boolean;
 }
 

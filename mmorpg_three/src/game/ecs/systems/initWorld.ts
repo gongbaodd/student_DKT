@@ -1,13 +1,16 @@
 import { createSystem } from "elics";
 
-import { BOAT_DEFS, BASE_BOAT_Y, buildSpawnLayout } from "../../assets/boatCatalog";
+import { BOAT_DEFS, BASE_BOAT_Y, buildSpawnLayout, type BoatKindId } from "../../assets/boatCatalog";
 import { getGlobalsFromSystem } from "../../globals";
 import { createBoatBody } from "../../physics/boatBody";
 import { cloneBoat, loadBoatTemplate } from "../../three/loadBoat";
+import { createBoatSmoke } from "../../three/createBoatSmoke";
+import { QuarksUtil } from "three.quarks";
 import { createOcean } from "../../three/createOcean";
 import {
   BoatKind,
   Bobbing,
+  ExhaustSmoke,
   Facing,
   MeshRef,
   PlayerControlled,
@@ -63,6 +66,13 @@ export class InitWorldSystem extends createSystem({}) {
         entity.addComponent(PlayerControlled);
         entity.addComponent(Facing, { yaw: spawn.yaw });
         entity.addComponent(Throttle, { amount: 0 });
+
+        const smoke = createBoatSmoke(spawn.id as BoatKindId);
+        object3D.add(smoke);
+        if (globals.quarksRenderer) {
+          QuarksUtil.addToBatchRenderer(smoke, globals.quarksRenderer);
+        }
+        entity.addComponent(ExhaustSmoke, { effectRoot: smoke });
       }
     }
 

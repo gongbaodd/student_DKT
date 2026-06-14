@@ -36,3 +36,7 @@ export const Bobbing = createComponent("Bobbing", {
 export const BoatKind = createComponent("BoatKind", {
   kind: { type: Types.String, default: "" },
 });
+
+export const ExhaustSmoke = createComponent("ExhaustSmoke", {
+  effectRoot: { type: Types.Object, default: null },
+});

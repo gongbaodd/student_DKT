@@ -1,4 +1,6 @@
 import { createSystem } from "elics";
+import type { PerspectiveCamera } from "three";
+import { Vector3 } from "three";
 
 import { getGlobalsFromSystem, num } from "../../globals";
 import { quatToYaw, yawToQuat } from "../../physics/joltWorld";
@@ -12,15 +14,26 @@ import {
 
 const MAX_SPEED = 12;
 const COAST_DAMPING = 4;
+const camForward = new Vector3();
 
 const queries = {
   ships: { required: [PhysicsBody, Transform] },
   players: { required: [PlayerControlled, PhysicsBody, Facing, Throttle, Transform] },
 };
 
+function cameraForwardYaw(camera: PerspectiveCamera): number {
+  camera.getWorldDirection(camForward);
+  camForward.y = 0;
+  if (camForward.lengthSq() < 1e-8) {
+    return 0;
+  }
+  camForward.normalize();
+  return Math.atan2(camForward.x, camForward.z);
+}
+
 export class BoatPhysicsSystem extends createSystem(queries) {
   update(delta: number): void {
-    const { joltWorld } = getGlobalsFromSystem(this.globals);
+    const { joltWorld, camera } = getGlobalsFromSystem(this.globals);
     if (!joltWorld) return;
 
     const { Jolt, bodyInterface } = joltWorld;
@@ -30,10 +43,13 @@ export class BoatPhysicsSystem extends createSystem(queries) {
       if (bodyIdValue < 0) continue;
 
       const bodyId = new Jolt.BodyID(bodyIdValue);
-      const yaw = num(entity.getValue(Facing, "yaw"));
+      let yaw = num(entity.getValue(Facing, "yaw"));
       const throttle = num(entity.getValue(Throttle, "amount"));
 
-      if (throttle > 0) {
+      if (throttle > 0 && camera) {
+        yaw = cameraForwardYaw(camera);
+        entity.setValue(Facing, "yaw", yaw);
+
         const speed = MAX_SPEED * throttle;
         const vel = new Jolt.Vec3(
           Math.sin(yaw) * speed,

@@ -2,12 +2,12 @@ import { createSystem } from "elics";
 import { Vector3 } from "three";
 
 import { getGlobalsFromSystem, clampCameraOrbitPitch, num } from "../../globals";
-import { Facing, PlayerControlled, Transform } from "../components";
+import { PlayerControlled, Transform } from "../components";
 
 const lookTarget = new Vector3();
 
 const queries = {
-  players: { required: [PlayerControlled, Transform, Facing] },
+  players: { required: [PlayerControlled, Transform] },
 };
 
 export class CameraFollowSystem extends createSystem(queries) {
@@ -22,9 +22,6 @@ export class CameraFollowSystem extends createSystem(queries) {
       const orbitYaw = cameraOrbit.yaw;
       const orbitPitch = clampCameraOrbitPitch(cameraOrbit.pitch);
       cameraOrbit.pitch = orbitPitch;
-
-      entity.setValue(Facing, "yaw", orbitYaw);
-      entity.setValue(Transform, "yaw", orbitYaw);
 
       const horizDist = cameraOrbit.distance * Math.cos(orbitPitch);
       const vertOffset = cameraOrbit.distance * Math.sin(orbitPitch);
