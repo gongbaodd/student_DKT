@@ -26,6 +26,8 @@ export const MeshRef = createComponent("MeshRef", {
 
 export const PlayerControlled = createComponent("PlayerControlled", {});
 
+export const Npc = createComponent("Npc", {});
+
 export const Bobbing = createComponent("Bobbing", {
   baseY: { type: Types.Float32, default: 0 },
   amplitude: { type: Types.Float32, default: 0.15 },

@@ -5,6 +5,11 @@ import type { BatchedRenderer } from "three.quarks";
 
 import type { JoltWorld } from "./physics/joltWorld";
 
+export interface NpcPickEntry {
+  root: Object3D;
+  entityIndex: number;
+}
+
 export interface CameraOrbit {
   yaw: number;
   pitch: number;
@@ -39,6 +44,7 @@ export interface GameGlobals {
   joltWorld: JoltWorld | null;
   quarksRenderer: BatchedRenderer | null;
   initialized: boolean;
+  npcPickTargets: NpcPickEntry[];
 }
 
 let activeGlobals: GameGlobals | null = null;

@@ -3,6 +3,7 @@ import { createSystem } from "elics";
 import { BOAT_DEFS, BASE_BOAT_Y, buildSpawnLayout, type BoatKindId } from "../../assets/boatCatalog";
 import { getGlobalsFromSystem } from "../../globals";
 import { createBoatBody } from "../../physics/boatBody";
+import { registerNpcPickTarget } from "../../interaction/npcPickTargets";
 import { cloneBoat, loadBoatTemplate } from "../../three/loadBoat";
 import { createBoatSmoke } from "../../three/createBoatSmoke";
 import { QuarksUtil } from "three.quarks";
@@ -13,6 +14,7 @@ import {
   ExhaustSmoke,
   Facing,
   MeshRef,
+  Npc,
   PlayerControlled,
   PhysicsBody,
   Throttle,
@@ -40,6 +42,8 @@ export class InitWorldSystem extends createSystem({}) {
       globals.scene.add(object3D);
 
       const entity = this.createEntity();
+      object3D.userData.entityIndex = entity.index;
+      object3D.userData.isNpc = !spawn.isPlayer;
       entity.addComponent(Transform, {
         x: spawn.x,
         y: BASE_BOAT_Y,
@@ -63,6 +67,11 @@ export class InitWorldSystem extends createSystem({}) {
         phase: Math.random() * Math.PI * 2,
         rollAmount: spawn.isPlayer ? 0.03 : 0.06,
       });
+
+      if (!spawn.isPlayer) {
+        entity.addComponent(Npc);
+        registerNpcPickTarget(globals, object3D, entity.index);
+      }
 
       if (spawn.isPlayer) {
         entity.addComponent(PlayerControlled);

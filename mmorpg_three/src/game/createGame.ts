@@ -14,6 +14,7 @@ import {
   ExhaustSmoke,
   Facing,
   MeshRef,
+  Npc,
   PhysicsBody,
   PlayerControlled,
   Throttle,
@@ -28,6 +29,7 @@ import {
   preloadBoatTemplates,
 } from "./ecs/systems/initWorld";
 import { MeshSyncSystem } from "./ecs/systems/meshSync";
+import { NpcInteractionSystem } from "./ecs/systems/npcInteraction";
 import { OceanShaderSystem } from "./ecs/systems/oceanShader";
 import { PlayerInputSystem } from "./ecs/systems/playerInput";
 import { createJoltWorld } from "./physics/joltWorld";
@@ -93,6 +95,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     joltWorld,
     quarksRenderer,
     initialized: false,
+    npcPickTargets: [],
   };
 
   const world = new World({
@@ -113,10 +116,12 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     .registerComponent(Bobbing)
     .registerComponent(BoatKind)
     .registerComponent(ExhaustSmoke)
+    .registerComponent(Npc)
     .registerSystem(InitWorldSystem)
     .registerSystem(OceanShaderSystem, { priority: 100 })
     .registerSystem(CameraFollowSystem, { priority: 200 })
     .registerSystem(PlayerInputSystem, { priority: 300 })
+    .registerSystem(NpcInteractionSystem, { priority: 350 })
     .registerSystem(BoatPhysicsSystem, { priority: 400 })
     .registerSystem(BobbingSystem, { priority: 500 })
     .registerSystem(MeshSyncSystem, { priority: 600 })

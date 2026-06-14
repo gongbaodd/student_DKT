@@ -31,6 +31,7 @@ export function createOcean(scene: Scene): ShaderMaterial {
   const ocean = new Mesh(geometry, material);
   ocean.name = "ocean";
   ocean.renderOrder = 0;
+  ocean.raycast = () => {};
   scene.add(ocean);
 
   return material;

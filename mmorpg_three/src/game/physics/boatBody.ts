@@ -75,3 +75,12 @@ export function createBoatBody(
   bodyInterface.AddBody(body.GetID(), Jolt.EActivation_Activate);
   return body.GetID().GetIndexAndSequenceNumber();
 }
+
+export function removeBoatBody(world: JoltWorld, bodyIdValue: number): void {
+  if (bodyIdValue < 0) return;
+
+  const { Jolt, bodyInterface } = world;
+  const bodyId = new Jolt.BodyID(bodyIdValue);
+  bodyInterface.RemoveBody(bodyId);
+  bodyInterface.DestroyBody(bodyId);
+}
