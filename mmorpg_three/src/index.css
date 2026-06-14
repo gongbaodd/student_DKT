@@ -17,6 +17,11 @@ canvas {
   height: 100%;
   display: block;
   touch-action: none;
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
 }
 
 .hud-hint {

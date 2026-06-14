@@ -28,6 +28,7 @@ import { OceanShaderSystem } from "./ecs/systems/oceanShader";
 import { PlayerInputSystem } from "./ecs/systems/playerInput";
 import {
   clearActiveGame,
+  DEFAULT_CAMERA_ORBIT_PITCH,
   setActiveGame,
   type GameGlobals,
 } from "./globals";
@@ -63,6 +64,12 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
   const clock = new Clock();
   const boatTemplates = new Map();
   const keysPressed = new Set<string>();
+  const cameraOrbit = {
+    yaw: 0,
+    pitch: DEFAULT_CAMERA_ORBIT_PITCH,
+    distance: 18,
+    isDragging: false,
+  };
 
   const globals: GameGlobals = {
     scene,
@@ -71,6 +78,7 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     oceanMaterial: null,
     boatTemplates,
     keysPressed,
+    cameraOrbit,
     initialized: false,
   };
 

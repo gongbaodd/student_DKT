@@ -1,31 +1,36 @@
 import { createSystem } from "elics";
 import { Vector3 } from "three";
 
-import { getGlobalsFromSystem, num } from "../../globals";
-import { PlayerControlled, Transform } from "../components";
+import { getGlobalsFromSystem, clampCameraOrbitPitch, num } from "../../globals";
+import { Facing, PlayerControlled, Transform } from "../components";
 
-const FOLLOW_DIST = 18;
-const FOLLOW_HEIGHT = 10;
 const lookTarget = new Vector3();
 
 const queries = {
-  players: { required: [PlayerControlled, Transform] },
+  players: { required: [PlayerControlled, Transform, Facing] },
 };
 
 export class CameraFollowSystem extends createSystem(queries) {
   update(delta: number): void {
-    const { camera } = getGlobalsFromSystem(this.globals);
+    const { camera, cameraOrbit } = getGlobalsFromSystem(this.globals);
     if (!camera) return;
 
     for (const entity of this.queries.players.entities) {
       const x = num(entity.getValue(Transform, "x"));
       const y = num(entity.getValue(Transform, "y"));
       const z = num(entity.getValue(Transform, "z"));
-      const yaw = num(entity.getValue(Transform, "yaw"));
+      const orbitYaw = cameraOrbit.yaw;
+      const orbitPitch = clampCameraOrbitPitch(cameraOrbit.pitch);
+      cameraOrbit.pitch = orbitPitch;
 
-      const desiredX = x - Math.sin(yaw) * FOLLOW_DIST;
-      const desiredZ = z - Math.cos(yaw) * FOLLOW_DIST;
-      const desiredY = FOLLOW_HEIGHT;
+      entity.setValue(Facing, "yaw", orbitYaw);
+      entity.setValue(Transform, "yaw", orbitYaw);
+
+      const horizDist = cameraOrbit.distance * Math.cos(orbitPitch);
+      const vertOffset = cameraOrbit.distance * Math.sin(orbitPitch);
+      const desiredX = x - Math.sin(orbitYaw) * horizDist;
+      const desiredZ = z - Math.cos(orbitYaw) * horizDist;
+      const desiredY = y + vertOffset;
 
       const lerp = 1 - Math.pow(0.001, delta);
       camera.position.x += (desiredX - camera.position.x) * lerp;

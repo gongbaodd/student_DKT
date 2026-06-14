@@ -4,7 +4,7 @@ export default function App() {
   return (
     <>
       <GameCanvas />
-      <p className="hud-hint">WASD — sail your ship</p>
+      <p className="hud-hint">Drag to orbit · W to sail forward</p>
     </>
   );
 }

@@ -2,6 +2,29 @@ import type { PerspectiveCamera, Scene, ShaderMaterial, WebGLRenderer } from "th
 import type { Object3D } from "three";
 import type { World } from "elics";
 
+export interface CameraOrbit {
+  yaw: number;
+  pitch: number;
+  distance: number;
+  isDragging: boolean;
+}
+
+/** Minimum elevation above the horizon (radians). */
+export const CAMERA_ORBIT_MIN_PITCH = (12 * Math.PI) / 180;
+/** Maximum elevation above the horizon (radians). */
+export const CAMERA_ORBIT_MAX_PITCH = (55 * Math.PI) / 180;
+
+export function clampCameraOrbitPitch(pitch: number): number {
+  return Math.max(
+    CAMERA_ORBIT_MIN_PITCH,
+    Math.min(CAMERA_ORBIT_MAX_PITCH, pitch),
+  );
+}
+
+export const DEFAULT_CAMERA_ORBIT_PITCH = clampCameraOrbitPitch(
+  Math.atan2(10, 18),
+);
+
 export interface GameGlobals {
   scene: Scene;
   renderer: WebGLRenderer;
@@ -9,6 +32,7 @@ export interface GameGlobals {
   oceanMaterial: ShaderMaterial | null;
   boatTemplates: Map<string, Object3D>;
   keysPressed: Set<string>;
+  cameraOrbit: CameraOrbit;
   initialized: boolean;
 }
 
