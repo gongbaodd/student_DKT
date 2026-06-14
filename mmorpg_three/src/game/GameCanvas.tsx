@@ -1,13 +1,15 @@
 import { useEffect, useRef } from "react";
 
 import { createGame, type GameHandle } from "./createGame";
+import { isDebugPickEnabled } from "./interaction/debugPick";
 import {
   closeNpcMenu,
   getNpcMenuState,
   openNpcMenu,
   resetNpcInteractionStore,
 } from "./interaction/npcInteractionStore";
-import { pickNpcBoatAtScreen } from "./interaction/pickNpcBoat";
+import { setLastPickReport } from "./interaction/pickDebugStore";
+import { buildNpcPickReport } from "./interaction/pickNpcBoat";
 import { getActiveGlobals, getKeysPressed, clampCameraOrbitPitch } from "./globals";
 
 const ORBIT_SENSITIVITY = 0.005;
@@ -27,13 +29,26 @@ export default function GameCanvas() {
       const globals = getActiveGlobals();
       if (!globals?.initialized) return false;
 
-      const pick = pickNpcBoatAtScreen(
+      const report = buildNpcPickReport(
         globals.camera,
         canvas,
         globals.npcPickTargets,
         clientX,
         clientY,
       );
+
+      if (isDebugPickEnabled()) {
+        setLastPickReport(report);
+        console.table(
+          report.candidates.map((c) => ({
+            name: c.name,
+            dist: c.distPx.toFixed(0),
+            behind: c.behindCamera,
+          })),
+        );
+      }
+
+      const pick = report.pick;
 
       if (pick) {
         openNpcMenu(pick.entityIndex, clientX, clientY);

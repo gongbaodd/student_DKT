@@ -32,10 +32,13 @@ import { MeshSyncSystem } from "./ecs/systems/meshSync";
 import { NpcInteractionSystem } from "./ecs/systems/npcInteraction";
 import { OceanShaderSystem } from "./ecs/systems/oceanShader";
 import { PlayerInputSystem } from "./ecs/systems/playerInput";
+import { buildNpcPickReport } from "./interaction/pickNpcBoat";
 import { createJoltWorld } from "./physics/joltWorld";
 import {
   clearActiveGame,
   DEFAULT_CAMERA_ORBIT_PITCH,
+  getActiveGlobals,
+  getGlobalsFromSystem,
   setActiveGame,
   type GameGlobals,
 } from "./globals";
@@ -84,7 +87,12 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
   const quarksRenderer = new BatchedRenderer();
   scene.add(quarksRenderer);
 
-  const globals: GameGlobals = {
+  const world = new World({
+    entityCapacity: 64,
+    checksOn: import.meta.env.DEV,
+  });
+
+  Object.assign(world.globals, {
     scene,
     renderer,
     camera,
@@ -96,15 +104,31 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
     quarksRenderer,
     initialized: false,
     npcPickTargets: [],
-  };
+  } satisfies GameGlobals);
 
-  const world = new World({
-    entityCapacity: 64,
-    checksOn: import.meta.env.DEV,
-  });
+  setActiveGame(world, getGlobalsFromSystem(world.globals));
 
-  Object.assign(world.globals, globals);
-  setActiveGame(world, globals);
+  if (import.meta.env.DEV) {
+    (window as Window & {
+      __mmorpgDebug?: {
+        globals: () => GameGlobals | null;
+        pickAt: (clientX: number, clientY: number) => ReturnType<typeof buildNpcPickReport> | null;
+      };
+    }).__mmorpgDebug = {
+      globals: () => getActiveGlobals(),
+      pickAt: (clientX, clientY) => {
+        const active = getActiveGlobals();
+        if (!active?.initialized) return null;
+        return buildNpcPickReport(
+          active.camera,
+          canvas,
+          active.npcPickTargets,
+          clientX,
+          clientY,
+        );
+      },
+    };
+  }
 
   world
     .registerComponent(Transform)
@@ -177,10 +201,13 @@ export async function createGame(canvas: HTMLCanvasElement): Promise<GameHandle>
 
       renderer.dispose();
       boatTemplates.clear();
-      globals.joltWorld = null;
-      globals.oceanMaterial = null;
-      globals.quarksRenderer = null;
-      globals.initialized = false;
+      const active = getActiveGlobals();
+      if (active) {
+        active.joltWorld = null;
+        active.oceanMaterial = null;
+        active.quarksRenderer = null;
+        active.initialized = false;
+      }
     },
   };
 }
