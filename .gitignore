@@ -233,3 +233,7 @@ electricity_data/months/
 
 # Generated issue title embeddings (rebuild with agile_train/embed.py)
 agile_train/embedding/
+
+# Downloaded Kenney Pirate Kit assets
+mmorpg_assets/kenney_pirate-kit.zip
+mmorpg_assets/pirate-kit/
