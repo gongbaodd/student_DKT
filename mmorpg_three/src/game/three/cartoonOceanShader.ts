@@ -24,15 +24,10 @@ void main() {
 export const cartoonOceanFragmentShader = `
 uniform vec3 shallowColor;
 uniform vec3 deepColor;
-uniform float time;
 
 varying vec2 vUV;
 varying vec3 vWorldPos;
 varying float vWaveHeight;
-
-float hash(vec2 p) {
-  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
-}
 
 void main() {
   float dist = length(vWorldPos.xz) / 180.0;
@@ -40,10 +35,8 @@ void main() {
   float bands = floor(depth * 5.0) / 5.0;
   vec3 waterColor = mix(shallowColor, deepColor, bands);
 
-  float foam = smoothstep(0.08, 0.15, vWaveHeight);
-  float noise = hash(vWorldPos.xz * 0.5 + time * 0.3);
-  foam *= step(0.55, noise);
-  waterColor = mix(waterColor, vec3(1.0), foam * 0.6);
+  float foam = smoothstep(0.06, 0.2, vWaveHeight);
+  waterColor = mix(waterColor, vec3(1.0), foam * 0.45);
 
   gl_FragColor = vec4(waterColor, 1.0);
 }
