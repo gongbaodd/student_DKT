@@ -112,7 +112,11 @@ export default function App() {
                 onSelectTrade={trading.selectTrade}
               />
               <TradingCostPanel
+                trades={trading.trades}
                 stats={trading.stats}
+                selectedTradeId={trading.selectedTradeId}
+                capacity={trading.capacity}
+                onSelectTrade={trading.selectTrade}
                 onRandomGenerate={trading.randomGenerate}
                 onClearTrades={trading.clearTrades}
               />

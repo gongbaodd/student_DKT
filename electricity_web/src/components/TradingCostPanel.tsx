@@ -1,10 +1,32 @@
-import { Badge, Button, Group, Paper, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import {
+  Badge,
+  Button,
+  Group,
+  Paper,
+  ScrollArea,
+  SimpleGrid,
+  Stack,
+  Table,
+  Text,
+  Title,
+} from "@mantine/core";
+import { IconCoin } from "@tabler/icons-react";
 
-import type { TradingStats } from "../types";
-import { formatMoney } from "../utils/batteryTrading";
+import { chartColors } from "../theme";
+import type { Trade, TradingStats } from "../types";
+import {
+  buildTradeTimeline,
+  formatMoney,
+  formatPrice,
+} from "../utils/batteryTrading";
+import { formatIntervalTs } from "../utils/dateTime";
 
 interface TradingCostPanelProps {
+  trades: Trade[];
   stats: TradingStats;
+  selectedTradeId: string | null;
+  capacity: number;
+  onSelectTrade: (tradeId: string) => void;
   onRandomGenerate: () => void;
   onClearTrades: () => void;
 }
@@ -23,10 +45,16 @@ function StatBlock({ label, value }: { label: string; value: string }) {
 }
 
 export function TradingCostPanel({
+  trades,
   stats,
+  selectedTradeId,
+  capacity,
+  onSelectTrade,
   onRandomGenerate,
   onClearTrades,
 }: TradingCostPanelProps) {
+  const timeline = buildTradeTimeline(trades);
+
   const netLabel =
     stats.netCost > 0
       ? `${formatMoney(stats.netCost)} spent`
@@ -76,6 +104,98 @@ export function TradingCostPanel({
             ? "Valid end state: battery empty"
             : `Invalid end state: ${stats.charge} units remaining`}
         </Badge>
+
+        <Stack gap="xs">
+          <Text size="sm" fw={600}>
+            Trade timeline
+          </Text>
+          <Text size="xs" c="dimmed">
+            Battery status after each trade in chronological order
+          </Text>
+
+          {timeline.length === 0 ? (
+            <Text size="sm" c="dimmed">
+              No trades yet. Add trades on the chart or generate a random
+              solution.
+            </Text>
+          ) : (
+            <ScrollArea.Autosize mah={280} type="auto">
+              <Table
+                striped
+                highlightOnHover
+                withTableBorder
+                withColumnBorders
+                verticalSpacing="xs"
+                fz="sm"
+              >
+                <Table.Thead>
+                  <Table.Tr>
+                    <Table.Th w={40}>#</Table.Th>
+                    <Table.Th>Time</Table.Th>
+                    <Table.Th>Action</Table.Th>
+                    <Table.Th ta="right">Amount</Table.Th>
+                    <Table.Th ta="right">
+                      <Group justify="flex-end" gap={4} wrap="nowrap">
+                        <IconCoin size={14} stroke={1.5} aria-hidden />
+                        <span>Price</span>
+                      </Group>
+                    </Table.Th>
+                    <Table.Th ta="right">Battery</Table.Th>
+                    <Table.Th ta="right">Flow</Table.Th>
+                  </Table.Tr>
+                </Table.Thead>
+                <Table.Tbody>
+                  {timeline.map((entry, index) => {
+                    const { trade, chargeAfter, tradeValue } = entry;
+                    const isSelected = trade.id === selectedTradeId;
+                    const isBuy = trade.action === "buy";
+                    const flowColor = isBuy ? chartColors.sell : chartColors.buy;
+
+                    return (
+                      <Table.Tr
+                        key={trade.id}
+                        onClick={() => onSelectTrade(trade.id)}
+                        style={{
+                          cursor: "pointer",
+                          backgroundColor: isSelected
+                            ? "var(--mantine-color-blue-0)"
+                            : undefined,
+                        }}
+                      >
+                        <Table.Td c="dimmed">{index + 1}</Table.Td>
+                        <Table.Td>{formatIntervalTs(trade.ts)}</Table.Td>
+                        <Table.Td>
+                          <Badge
+                            color={trade.action === "buy" ? "green" : "red"}
+                            variant="light"
+                            size="sm"
+                          >
+                            {trade.action}
+                          </Badge>
+                        </Table.Td>
+                        <Table.Td ta="right">{trade.amount}</Table.Td>
+                        <Table.Td ta="right" c="dimmed">
+                          <Group justify="flex-end" gap={4} wrap="nowrap">
+                            <IconCoin size={14} stroke={1.5} aria-hidden />
+                            <span>{formatPrice(trade.price)}</span>
+                          </Group>
+                        </Table.Td>
+                        <Table.Td ta="right" fw={500}>
+                          {chargeAfter} / {capacity}
+                        </Table.Td>
+                        <Table.Td ta="right" c={flowColor} fw={500}>
+                          {isBuy
+                            ? `−${formatMoney(tradeValue)}`
+                            : `+${formatMoney(tradeValue)}`}
+                        </Table.Td>
+                      </Table.Tr>
+                    );
+                  })}
+                </Table.Tbody>
+              </Table>
+            </ScrollArea.Autosize>
+          )}
+        </Stack>
       </Stack>
     </Paper>
   );

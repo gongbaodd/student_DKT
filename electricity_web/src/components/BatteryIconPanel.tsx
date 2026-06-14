@@ -59,8 +59,8 @@ export function BatteryIconPanel({
           </Text>
           {selectedTrade && chargeAtSelection !== null && (
             <Text size="xs" c="dimmed" ta="center">
-              After {selectedTrade.action} of {selectedTrade.amount} at{" "}
-              {formatIntervalTs(selectedTrade.ts)}
+              Battery after {selectedTrade.action} of {selectedTrade.amount}{" "}
+              units at {formatIntervalTs(selectedTrade.ts)}
             </Text>
           )}
         </Stack>

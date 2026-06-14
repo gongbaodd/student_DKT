@@ -22,7 +22,13 @@ export function computeCharge(trades: Trade[]): number {
   return trades.reduce((charge, trade) => applyTrade(charge, trade), 0);
 }
 
-export function computeChargeUpToTrade(trades: Trade[], tradeId: string): number {
+export interface TradeTimelineEntry {
+  trade: Trade;
+  chargeAfter: number;
+  tradeValue: number;
+}
+
+export function buildTradeTimeline(trades: Trade[]): TradeTimelineEntry[] {
   const ordered = trades
     .map((trade, index) => ({ trade, index }))
     .sort(
@@ -30,11 +36,21 @@ export function computeChargeUpToTrade(trades: Trade[], tradeId: string): number
     );
 
   let charge = 0;
-  for (const { trade } of ordered) {
+  return ordered.map(({ trade }) => {
     charge = applyTrade(charge, trade);
-    if (trade.id === tradeId) return charge;
-  }
-  return charge;
+    return {
+      trade,
+      chargeAfter: charge,
+      tradeValue: trade.amount * trade.price,
+    };
+  });
+}
+
+export function computeChargeUpToTrade(trades: Trade[], tradeId: string): number {
+  const entry = buildTradeTimeline(trades).find(
+    (item) => item.trade.id === tradeId,
+  );
+  return entry?.chargeAfter ?? 0;
 }
 
 export function computeStats(trades: Trade[]): TradingStats {
@@ -197,5 +213,12 @@ export function generateRandomSolution(
 export function formatMoney(value: number): string {
   return value.toLocaleString(undefined, {
     maximumFractionDigits: 0,
+  });
+}
+
+export function formatPrice(value: number): string {
+  return value.toLocaleString(undefined, {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 2,
   });
 }
