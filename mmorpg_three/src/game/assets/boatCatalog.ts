@@ -24,8 +24,8 @@ export interface BoatSpawn {
 const MESH_SCALE = 0.1;
 
 export const BOAT_DEFS: BoatDef[] = [
-  { id: "boat-row-small", scale: 2.5 * MESH_SCALE },
-  { id: "boat-row-large", scale: 3.0 * MESH_SCALE },
+  // { id: "boat-row-small", scale: 2.5 * MESH_SCALE },
+  // { id: "boat-row-large", scale: 3.0 * MESH_SCALE },
   { id: "ship-small", scale: 4.0 * MESH_SCALE },
   { id: "ship-medium", scale: 5.0 * MESH_SCALE },
   { id: "ship-large", scale: 6.0 * MESH_SCALE },
