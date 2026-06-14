@@ -117,12 +117,12 @@ export function createTrade(
   };
 }
 
-function medianPrice(chartRows: ChartRow[]): number {
-  const prices = chartRows.map((row) => row.loadKw).sort((a, b) => a - b);
-  const mid = Math.floor(prices.length / 2);
-  return prices.length % 2 === 0
-    ? (prices[mid - 1] + prices[mid]) / 2
-    : prices[mid];
+function medianTemp(chartRows: ChartRow[]): number {
+  const temps = chartRows.map((row) => row.tempC).sort((a, b) => a - b);
+  const mid = Math.floor(temps.length / 2);
+  return temps.length % 2 === 0
+    ? (temps[mid - 1] + temps[mid]) / 2
+    : temps[mid];
 }
 
 function buildDrainTrades(
@@ -151,7 +151,7 @@ export function generateRandomSolution(
 ): Trade[] {
   if (chartRows.length === 0) return [];
 
-  const median = medianPrice(chartRows);
+  const median = medianTemp(chartRows);
   const candidateIndices = chartRows
     .map((_, index) => index)
     .sort(() => Math.random() - 0.5)
@@ -161,17 +161,18 @@ export function generateRandomSolution(
   const trades: Trade[] = [];
   let charge = 0;
 
+  // Action choice uses tempC only; loadKw is applied later in createTrade for cost accounting.
   for (const index of candidateIndices) {
     const row = chartRows[index];
-    const lowPrice = row.loadKw <= median;
-    const highPrice = row.loadKw >= median;
+    const lowTemp = row.tempC <= median;
+    const highTemp = row.tempC >= median;
 
     let action: TradeAction | null = null;
-    if (charge === 0 && lowPrice && canTrade(charge, "buy", amountStep, capacity)) {
+    if (charge === 0 && lowTemp && canTrade(charge, "buy", amountStep, capacity)) {
       action = "buy";
     } else if (
       charge >= amountStep &&
-      highPrice &&
+      highTemp &&
       canTrade(charge, "sell", amountStep, capacity)
     ) {
       action = "sell";
