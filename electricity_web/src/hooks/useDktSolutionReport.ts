@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { DktModel } from "../dkt/model";
 import type { ChartRow, Trade, TradingStats } from "../types";
@@ -6,9 +6,12 @@ import { DEFAULT_TRADE_AMOUNT } from "../utils/batteryTrading";
 import { buildSolutionReport, type DktSolutionReport } from "../utils/dktReport";
 
 export interface UseDktSolutionReportResult {
-  isLoading: boolean;
+  modelLoading: boolean;
+  reportLoading: boolean;
   loadError: string | null;
   report: DktSolutionReport | null;
+  canGenerate: boolean;
+  generateReport: () => void;
 }
 
 export function useDktSolutionReport(
@@ -52,45 +55,40 @@ export function useDktSolutionReport(
   }, []);
 
   useEffect(() => {
-    if (!model || !canReport) {
-      setReport(null);
-      return;
-    }
+    setReport(null);
+  }, [trades, stats.isValidEnd]);
 
-    const activeModel = model;
-    let cancelled = false;
+  const generateReport = useCallback(() => {
+    if (!model || !canReport) return;
 
-    async function computeReport() {
+    void (async () => {
       setReportLoading(true);
+      setLoadError(null);
       try {
         const nextReport = await buildSolutionReport(
           chartRows,
           trades,
-          activeModel,
+          model,
           amountStep,
         );
-        if (!cancelled) setReport(nextReport);
+        setReport(nextReport);
       } catch (error) {
-        if (!cancelled) {
-          setLoadError(
-            error instanceof Error ? error.message : "Failed to build DKT report",
-          );
-          setReport(null);
-        }
+        setLoadError(
+          error instanceof Error ? error.message : "Failed to build DKT report",
+        );
+        setReport(null);
       } finally {
-        if (!cancelled) setReportLoading(false);
+        setReportLoading(false);
       }
-    }
-
-    void computeReport();
-    return () => {
-      cancelled = true;
-    };
+    })();
   }, [model, canReport, chartRows, trades, amountStep]);
 
   return {
-    isLoading: modelLoading || reportLoading,
+    modelLoading,
+    reportLoading,
     loadError,
     report: canReport ? report : null,
+    canGenerate: canReport && model !== null && !modelLoading,
+    generateReport,
   };
 }

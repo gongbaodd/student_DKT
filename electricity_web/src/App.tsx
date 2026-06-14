@@ -28,7 +28,8 @@ function AppHeader() {
         <Stack justify="center" h="100%" gap={0}>
           <Title order={3}>Battery Agent Measurement Demo</Title>
           <Text size="xs" c="dimmed">
-            Battery arbitrage on June 2014 · Lisbon temperature chart
+            You are an electricity trade agent — buy and sell electricity, and
+            clear out the battery by the end.
           </Text>
         </Stack>
       </Container>
@@ -96,12 +97,15 @@ export default function App() {
                 stats={trading.stats}
                 capacity={trading.capacity}
                 amount={trading.amount}
+                tradeMode={trading.tradeMode}
                 selectedTs={trading.selectedTs}
                 selectedTradeId={trading.selectedTradeId}
                 selectedTrade={selectedTrade}
                 chargeAtSelection={trading.chargeAtSelection}
                 maxBuyAmount={trading.maxBuyAmount}
+                maxSellAmount={trading.maxSellAmount}
                 onAmountChange={trading.setAmount}
+                onTradeModeChange={trading.setTradeMode}
                 onAddTrade={trading.addTrade}
                 onRemoveTrade={trading.removeTrade}
               />
@@ -124,8 +128,11 @@ export default function App() {
                 selectedTradeId={trading.selectedTradeId}
                 capacity={trading.capacity}
                 dktReport={dktReport.report}
-                dktLoading={dktReport.isLoading}
+                dktModelLoading={dktReport.modelLoading}
+                dktReportLoading={dktReport.reportLoading}
                 dktError={dktReport.loadError}
+                dktCanGenerate={dktReport.canGenerate}
+                onGenerateDktReport={dktReport.generateReport}
                 onSelectTrade={trading.selectTrade}
                 onRandomGenerate={trading.randomGenerate}
                 onClearTrades={trading.clearTrades}

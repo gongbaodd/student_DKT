@@ -30,8 +30,11 @@ interface TradingCostPanelProps {
   selectedTradeId: string | null;
   capacity: number;
   dktReport: DktSolutionReport | null;
-  dktLoading: boolean;
+  dktModelLoading: boolean;
+  dktReportLoading: boolean;
   dktError: string | null;
+  dktCanGenerate: boolean;
+  onGenerateDktReport: () => void;
   onSelectTrade: (tradeId: string) => void;
   onRandomGenerate: () => void;
   onClearTrades: () => void;
@@ -60,7 +63,12 @@ function TradingCostContent({
   onClearTrades,
 }: Omit<
   TradingCostPanelProps,
-  "dktReport" | "dktLoading" | "dktError"
+  | "dktReport"
+  | "dktModelLoading"
+  | "dktReportLoading"
+  | "dktError"
+  | "dktCanGenerate"
+  | "onGenerateDktReport"
 >) {
   const timeline = buildTradeTimeline(trades);
 
@@ -213,8 +221,11 @@ export function TradingCostPanel({
   selectedTradeId,
   capacity,
   dktReport,
-  dktLoading,
+  dktModelLoading,
+  dktReportLoading,
   dktError,
+  dktCanGenerate,
+  onGenerateDktReport,
   onSelectTrade,
   onRandomGenerate,
   onClearTrades,
@@ -248,8 +259,11 @@ export function TradingCostPanel({
             <Tabs.Panel value="dkt" pt="md">
               <DktSolutionReportPanel
                 report={dktReport}
-                isLoading={dktLoading}
+                modelLoading={dktModelLoading}
+                reportLoading={dktReportLoading}
                 loadError={dktError}
+                canGenerate={dktCanGenerate}
+                onGenerateReport={onGenerateDktReport}
               />
             </Tabs.Panel>
           ) : null}

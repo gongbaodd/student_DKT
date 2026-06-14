@@ -5,25 +5,29 @@ import {
   NumberInput,
   Paper,
   Progress,
+  SegmentedControl,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 
-import type { Trade, TradingStats } from "../types";
+import type { Trade, TradeAction, TradingStats } from "../types";
 import { formatIntervalTs } from "../utils/dateTime";
 
 interface BatteryIconPanelProps {
   stats: TradingStats;
   capacity: number;
   amount: number;
+  tradeMode: TradeAction;
   selectedTs: number | null;
   selectedTradeId: string | null;
   selectedTrade: Trade | null;
   chargeAtSelection: number | null;
   maxBuyAmount: number;
+  maxSellAmount: number;
   onAmountChange: (amount: number) => void;
+  onTradeModeChange: (mode: TradeAction) => void;
   onAddTrade: () => void;
   onRemoveTrade: () => void;
 }
@@ -32,20 +36,33 @@ export function BatteryIconPanel({
   stats,
   capacity,
   amount,
+  tradeMode,
   selectedTs,
   selectedTradeId,
   selectedTrade,
   chargeAtSelection,
   maxBuyAmount,
+  maxSellAmount,
   onAmountChange,
+  onTradeModeChange,
   onAddTrade,
   onRemoveTrade,
 }: BatteryIconPanelProps) {
   const displayCharge = chargeAtSelection ?? stats.charge;
   const chargePercent = (displayCharge / capacity) * 100;
-  const maxAmount = Math.max(maxBuyAmount, 1);
-  const canAdd = selectedTs !== null && maxBuyAmount >= amount;
+  const isBuyMode = tradeMode === "buy";
+  const maxForMode = isBuyMode ? maxBuyAmount : maxSellAmount;
+  const maxAmount = Math.max(maxForMode, 1);
+  const canAdd =
+    selectedTs !== null &&
+    maxForMode >= amount &&
+    (isBuyMode || maxSellAmount > 0);
   const canRemove = selectedTradeId !== null;
+  const amountDescription = isBuyMode
+    ? `Buy max ${maxBuyAmount} units`
+    : maxSellAmount > 0
+      ? `Sell max ${maxSellAmount} units`
+      : "Nothing to sell — battery is empty";
 
   return (
     <Paper p="lg" radius="md" withBorder h="100%">
@@ -65,12 +82,24 @@ export function BatteryIconPanel({
           )}
         </Stack>
 
+        <SegmentedControl
+          value={tradeMode}
+          onChange={(value) => onTradeModeChange(value as TradeAction)}
+          data={[
+            { label: "Buy", value: "buy" },
+            { label: "Sell", value: "sell" },
+          ]}
+          color={isBuyMode ? "green" : "red"}
+          fullWidth
+        />
+
         <NumberInput
           label="Trade amount"
-          description={`Add max ${maxBuyAmount} units`}
+          description={amountDescription}
           value={amount}
           min={1}
           max={maxAmount}
+          disabled={!isBuyMode && maxSellAmount <= 0}
           onChange={(value) => onAmountChange(Number(value) || 1)}
         />
 
@@ -81,7 +110,7 @@ export function BatteryIconPanel({
           <Group grow>
             <Button
               leftSection={<IconPlus size={16} />}
-              color="green"
+              color={isBuyMode ? "green" : "red"}
               variant="light"
               disabled={!canAdd}
               onClick={onAddTrade}

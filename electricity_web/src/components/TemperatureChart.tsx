@@ -157,7 +157,7 @@ export function TemperatureChart({
           <Stack gap={4}>
             <Title order={4}>Lisbon temperature — June 2014</Title>
             <Text size="sm" c="dimmed">
-              Click chart to add · click a dot to inspect or remove
+              Click chart to select an interval, choose Buy or Sell, then Add
             </Text>
           </Stack>
           <Switch
