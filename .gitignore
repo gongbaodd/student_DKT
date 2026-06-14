@@ -237,3 +237,6 @@ agile_train/embedding/
 # Downloaded Kenney Pirate Kit assets
 mmorpg_assets/kenney_pirate-kit.zip
 mmorpg_assets/pirate-kit/
+
+# Copied pirate-kit models for mmorpg_web dev/build
+mmorpg_babylon/public/assets/
