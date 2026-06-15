@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.23.9"
-app = marimo.App(width="medium")
+app = marimo.App(width="full")
 
 
 @app.cell
@@ -55,7 +55,102 @@ def _(INTERACTIONS_PER_STUDENT, NUM_STUDENTS, SKILLS, populate_data):
     assert len(data) == NUM_STUDENTS * INTERACTIONS_PER_STUDENT
     assert len(student_counts) == NUM_STUDENTS
     assert all(count == INTERACTIONS_PER_STUDENT for count in student_counts.values())
-    return (data,)
+    return accuracy, correct_count, data
+
+
+@app.cell
+def _():
+    import marimo as mo
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from matplotlib.colors import ListedColormap
+    from matplotlib.patches import Patch
+
+    return ListedColormap, Patch, mo, np, plt
+
+
+@app.cell
+def _(INTERACTIONS_PER_STUDENT, NUM_STUDENTS, accuracy, correct_count, mo):
+    mo.md(f"""
+    ## Interaction outcome heatmaps (by skill)
+
+    One chart per skill. **White** = another skill at that step; **green** = correct;
+    **grey** = incorrect.
+
+    **{correct_count:,}** correct / **{NUM_STUDENTS * INTERACTIONS_PER_STUDENT - correct_count:,}** incorrect
+    ({accuracy:.1%} accuracy across {NUM_STUDENTS:,} students).
+    """)
+    return
+
+
+@app.cell
+def _(
+    INTERACTIONS_PER_STUDENT,
+    ListedColormap,
+    NUM_STUDENTS,
+    Patch,
+    SKILLS,
+    data,
+    np,
+    plt,
+):
+    skills = np.zeros((NUM_STUDENTS, INTERACTIONS_PER_STUDENT), dtype=int)
+    outcome = np.zeros((NUM_STUDENTS, INTERACTIONS_PER_STUDENT), dtype=int)
+    step_by_student = np.zeros(NUM_STUDENTS, dtype=int)
+    for _user_id, _skill_id, _correct in data:
+        _step = step_by_student[_user_id]
+        skills[_user_id, _step] = _skill_id
+        outcome[_user_id, _step] = _correct
+        step_by_student[_user_id] += 1
+
+    panel_cmap = ListedColormap(["#ffffff", "#8b949e", "#39d353"])
+
+    _fig, _axes = plt.subplots(len(SKILLS), 1, figsize=(12, 10), sharex=True)
+    if len(SKILLS) == 1:
+        _axes = [_axes]
+
+    for _skill_id, (_ax, _skill_name) in enumerate(zip(_axes, SKILLS, strict=True)):
+        _panel = np.zeros((NUM_STUDENTS, INTERACTIONS_PER_STUDENT), dtype=int)
+        _is_skill = skills == _skill_id
+        _panel[_is_skill & (outcome == 0)] = 1
+        _panel[_is_skill & (outcome == 1)] = 2
+
+        _ax.imshow(
+            _panel,
+            aspect="auto",
+            interpolation="nearest",
+            cmap=panel_cmap,
+            vmin=0,
+            vmax=2,
+        )
+        _ax.set_ylabel("Student")
+        _ax.set_title(_skill_name)
+        _ax.set_yticks(range(0, NUM_STUDENTS, 10))
+        _ax.set_yticklabels(range(0, NUM_STUDENTS, 10))
+
+    _axes[-1].set_xlabel("Interaction step")
+    _axes[-1].set_xticks(range(INTERACTIONS_PER_STUDENT))
+    _axes[-1].set_xticklabels(range(1, INTERACTIONS_PER_STUDENT + 1))
+
+    _fig.legend(
+        handles=[
+            Patch(facecolor="#ffffff", edgecolor="#d0d7de", label="Other skill"),
+            Patch(facecolor="#39d353", edgecolor="#30363d", label="Correct"),
+            Patch(facecolor="#8b949e", edgecolor="#30363d", label="Incorrect"),
+        ],
+        loc="upper right",
+        bbox_to_anchor=(0.99, 1.02),
+        ncol=3,
+        framealpha=0.9,
+        fontsize=8,
+    )
+    _fig.suptitle(
+        f"Student interactions by skill ({NUM_STUDENTS} × {INTERACTIONS_PER_STUDENT})",
+        y=1.02,
+    )
+    _fig.tight_layout()
+    _fig
+    return
 
 
 @app.cell
@@ -83,7 +178,7 @@ def _():
 
     from dkt_model import DKT, build_student_sequences, dkt_loss, train_dkt
 
-    return DKT, build_student_sequences, dkt_loss, torch, train_dkt
+    return (train_dkt,)
 
 
 @app.cell

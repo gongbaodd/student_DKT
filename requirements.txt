@@ -7,3 +7,4 @@ scikit-learn>=1.4
 lmstudio>=1.0
 python-dotenv>=1.0
 holidays>=0.40
+matplotlib>=3.8
