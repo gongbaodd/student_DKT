@@ -3,17 +3,15 @@ import { useEffect, useState } from "react";
 import {
   closeNpcMenu,
   getNpcMenuState,
+  NPC_MENU_ACTIONS,
   selectNpcAction,
   subscribeNpcMenu,
-  type NpcMenuAction,
   type NpcMenuState,
 } from "../game/interaction/npcInteractionStore";
-
-const MENU_ACTIONS: NpcMenuAction[] = ["Kill", "WalkAround", "AskForQuest", "Talk"];
 const MENU_RADIUS = 80;
 
 function actionPosition(index: number): { left: number; top: number } {
-  const angle = (index / MENU_ACTIONS.length) * Math.PI * 2 - Math.PI / 2;
+  const angle = (index / NPC_MENU_ACTIONS.length) * Math.PI * 2 - Math.PI / 2;
   return {
     left: Math.cos(angle) * MENU_RADIUS,
     top: Math.sin(angle) * MENU_RADIUS,
@@ -51,7 +49,7 @@ export default function NpcRadialMenu() {
         style={{ left: menu.screenX, top: menu.screenY }}
         onClick={(event) => event.stopPropagation()}
       >
-        {MENU_ACTIONS.map((action, index) => {
+        {NPC_MENU_ACTIONS.map((action, index) => {
           const offset = actionPosition(index);
           return (
             <button

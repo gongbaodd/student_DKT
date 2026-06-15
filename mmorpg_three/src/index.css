@@ -149,3 +149,45 @@ canvas:active {
   white-space: nowrap;
   z-index: 23;
 }
+
+.npc-prediction-radar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 15;
+  width: 280px;
+  padding: 0.75rem 0.75rem 0.25rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.npc-prediction-radar__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.npc-prediction-radar__title {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.npc-prediction-radar__meta {
+  font-family: system-ui, sans-serif;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.npc-prediction-radar__error {
+  margin: 0.5rem 0 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: #ffb4ab;
+}
