@@ -231,6 +231,9 @@ agile_data/deep-se/
 electricity_data/electricityloaddiagrams20112014.zip
 electricity_data/months/
 
+# Downloaded IEEE fraud detection competition data
+fraud_detect_data/ieee-fraud-detection/
+
 # Generated issue title embeddings (rebuild with agile_train/embed.py)
 agile_train/embedding/
 
