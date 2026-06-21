@@ -1,0 +1,13 @@
+{
+  "modelType": "next-action-lstm",
+  "numActions": 4,
+  "inputDim": 4,
+  "hiddenDim": 50,
+  "actions": [
+    "Kill",
+    "WalkAround",
+    "AskForQuest",
+    "Talk"
+  ],
+  "opset": 17
+}

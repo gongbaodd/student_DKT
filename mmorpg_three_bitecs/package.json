@@ -1,0 +1,33 @@
+{
+  "name": "mmorpg-three-bitecs",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prepare-assets": "node scripts/prepare_assets.mjs",
+    "predev": "npm run prepare-assets && test -f public/next-action.onnx || (echo 'Run: python mmorpg_lstm/export_mmorpg_action_onnx.py' && exit 1)",
+    "dev": "vite",
+    "prebuild": "npm run prepare-assets",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0",
+    "echarts-for-react": "^3.0.6",
+    "bitecs": "^0.4.0",
+    "onnxruntime-web": "^1.22.0",
+    "jolt-physics": "^1.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.175.0",
+    "three.quarks": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/three": "^0.175.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
