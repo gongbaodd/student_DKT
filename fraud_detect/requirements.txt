@@ -5,3 +5,4 @@ scikit-learn>=1.4
 lightgbm>=4.0
 marimo>=0.10
 matplotlib>=3.8
+onnx>=1.16

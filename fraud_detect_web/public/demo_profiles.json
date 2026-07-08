@@ -1,0 +1,1079 @@
+{
+  "profiles": [
+    {
+      "id": "demo-1",
+      "label": "Mixed activity",
+      "description": "11 legit and 1 flagged transaction(s) in history.",
+      "userId": 7644,
+      "transactions": [
+        {
+          "productCD": "H",
+          "amount": 30.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 50.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 25.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 25.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 100.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 25.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 286.95,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 100.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 100.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 75.0,
+          "isFraud": false
+        }
+      ]
+    },
+    {
+      "id": "demo-2",
+      "label": "High-risk pattern",
+      "description": "4 fraudulent transactions out of 133 total.",
+      "userId": 465,
+      "transactions": [
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 25.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 39.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 60.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 425.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 30.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 261.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 77.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 52.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 52.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 41.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 365.0,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 365.0,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 214.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 67.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 39.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 47.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 25.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 25.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 77.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 25.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 191.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 397.36,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 30.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 30.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 38.97,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 445.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 445.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 445.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 59.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 82.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 30.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 43.97,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 66.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 59.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 171.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 67.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 43.97,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 39.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 47.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 56.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 24.99,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 42.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 47.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 77.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 213.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 42.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 30.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 29.5,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 25.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 44.99,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 87.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 42.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 82.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 171.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 108.5,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 42.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 47.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 35.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 25.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 311.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 47.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 67.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 82.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "H",
+          "amount": 30.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 15.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 201.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 59.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 49.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 15.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        }
+      ]
+    },
+    {
+      "id": "demo-3",
+      "label": "Mixed activity",
+      "description": "11 legit and 1 flagged transaction(s) in history.",
+      "userId": 11828,
+      "transactions": [
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 200.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 117.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 105.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 218.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 445.0,
+          "isFraud": true
+        },
+        {
+          "productCD": "W",
+          "amount": 107.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "R",
+          "amount": 175.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 57.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 261.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 549.0,
+          "isFraud": false
+        }
+      ]
+    },
+    {
+      "id": "demo-4",
+      "label": "Trusted cardholder",
+      "description": "13 legitimate transactions across product categories.",
+      "userId": 24739,
+      "transactions": [
+        {
+          "productCD": "W",
+          "amount": 10.99,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.99,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 92.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 21.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 25.95,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 97.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 107.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 97.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 97.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 97.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 97.0,
+          "isFraud": false
+        }
+      ]
+    },
+    {
+      "id": "demo-5",
+      "label": "Trusted cardholder",
+      "description": "37 legitimate transactions across product categories.",
+      "userId": 1732,
+      "transactions": [
+        {
+          "productCD": "W",
+          "amount": 200.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 300.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 200.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 300.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 652.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 280.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 280.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 445.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 323.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 280.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 201.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 317.5,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 554.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 323.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 433.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 280.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 255.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 196.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 184.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 159.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 323.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 335.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 193.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 206.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 214.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 255.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        },
+        {
+          "productCD": "W",
+          "amount": 226.0,
+          "isFraud": false
+        }
+      ]
+    }
+  ]
+}

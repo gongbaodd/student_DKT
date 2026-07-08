@@ -1,0 +1,37 @@
+{
+  "numSkills": 20,
+  "inputDim": 40,
+  "hiddenDim": 128,
+  "skills": [
+    "C_Q1",
+    "C_Q2",
+    "C_Q3",
+    "C_Q4",
+    "H_Q1",
+    "H_Q2",
+    "H_Q3",
+    "H_Q4",
+    "R_Q1",
+    "R_Q2",
+    "R_Q3",
+    "R_Q4",
+    "S_Q1",
+    "S_Q2",
+    "S_Q3",
+    "S_Q4",
+    "W_Q1",
+    "W_Q2",
+    "W_Q3",
+    "W_Q4"
+  ],
+  "productCodes": [
+    "C",
+    "H",
+    "R",
+    "S",
+    "W"
+  ],
+  "amountQuartiles": 4,
+  "populationFraudRate": 0.03499000914417313,
+  "opset": 17
+}

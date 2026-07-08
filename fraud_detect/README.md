@@ -41,6 +41,18 @@ python fraud_detect/predict.py --model dkt
 
 Use `--max-users 50000` on DKT training for faster dev runs.
 
+## Web demo
+
+Interactive browser UI at [`fraud_detect_web/`](../fraud_detect_web/):
+
+```bash
+python fraud_detect/export_fraud_dkt_onnx.py
+python fraud_detect/prepare_fraud_web_data.py
+cd fraud_detect_web && npm install && npm run dev
+```
+
+See [`fraud_detect_web/README.md`](../fraud_detect_web/README.md) for details.
+
 ## Outputs
 
 Artifacts are written to `fraud_detect/artifacts/`:

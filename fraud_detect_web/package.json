@@ -1,0 +1,30 @@
+{
+  "name": "fraud-detect-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "test -f public/dkt.onnx || (echo 'Run: python fraud_detect/export_fraud_dkt_onnx.py && python fraud_detect/prepare_fraud_web_data.py' && exit 1)",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.0.0",
+    "@mantine/hooks": "^8.0.0",
+    "@tabler/icons-react": "^3.31.0",
+    "onnxruntime-web": "^1.22.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "postcss": "^8.5.3",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
